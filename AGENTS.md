@@ -1,23 +1,24 @@
-# CalcuLust project notes
+# ElectraLab project notes
 
-- This is an offline-first React app built with Vite.
-- Learning history is stored in the browser under `calculust-progress`; the solver uses a local deterministic math engine.
-- Applied calculus scenarios are generated locally for engineering optimization, RC circuit response, and gradient descent.
+- Offline-first React app built with Vite, adapted from the CalcuLust codebase. NCERT Physics Class 12: Unit 3 (Current Electricity) and Unit 14 (Semiconductors).
+- Learning history is stored in the browser under `electralab-progress`; the solver uses a local deterministic physics engine in `src/math.js` (8 skills: Ohm's Law, Power, Series/Parallel, Drift Velocity, Carrier Concentration, Diode Equation, BJT Gains, JFET/MOSFET).
+- Applied physics scenarios are generated locally for Circuit Analysis, Semiconductor Devices, and Electronic Design (`createAppliedProblem` returns `skill: 'Applied Physics'`).
+- All offline content lives in `src/data/electra_data.json` (`courseChapters`, `vocabulary`, `solverSkills`, `quizTopics`, `appliedFields`); `practice.value` fields must reference real solver skill names.
+- UI theme is Nvidia-inspired neon green (`#76B900`) on black; base layout styles in `src/styles.css` are recolored by `dark-theme.css`, `brand-theme.css`, `brand-accent-overrides.css`, and `background-gradients.css`.
 - Run `npm run dev` for the Vite app and local Ollama API together; Vite opens the browser. `npm test` runs the unit/API checks and `npm run build` makes a production build. `npm start` builds and opens the production app; `npm run start:server` serves it without opening a browser.
 - The development API runs with Node watch mode so server telemetry changes are picked up without leaving an old API process running.
 - The local tutor API forwards requests only to an Ollama instance bound to localhost; `OLLAMA_URL` can select a different localhost port.
 - Ollama models are discovered from the local tags endpoint, with embedding-only models excluded from the chat picker.
-- Scratch-pad drawings and notes are stored in browser local storage and are not sent to Ollama; only explicitly shared typed context is included in tutoring requests.
-- Applied-calculus and quiz help actions pass the active question as context and preserve the learner's in-progress session while they visit the tutor or scratch pad.
+- Scratch-pad drawings and notes are stored in browser local storage (`electralab-scratchpad`) and are not sent to Ollama; only explicitly shared typed context is included in tutoring requests.
+- Applied-physics and quiz help actions pass the active question as context and preserve the learner's in-progress session while they visit the tutor or scratch pad.
 - The production service worker caches the app shell and same-origin assets for offline use.
 - Mathematical expressions use locally bundled KaTeX fonts and rendering; keep math content in TeX notation so exponents, fractions, and units typeset consistently offline.
 - The AI Agent playground streams local Ollama output from `/api/agent/stream`; its optional walkthrough is a concise learner-facing derivation, not private chain-of-thought. `MathContent` renders Markdown tables and fenced code blocks alongside equations.
-- Scratch pad is available as a standalone page and a reusable modal; both persist the same local drawing and notes.
+- Scratch pad is available as a standalone page and a reusable modal; both persist the same local drawing and notes data.
 - The AI Performance tab reads local Ollama runtime metrics from `/api/ollama/metrics`; inference records include prompt/output tokens, timings, and generation tokens per second.
 - Agent availability follows `/api/ollama/status` (the same installed-model health check as Tutor); failures from optional `/api/ollama/metrics` telemetry must not mark a healthy Ollama instance offline.
-- Inference history is stored locally in `calculust-inference-history`; tutor conversations themselves are not persisted.
+- Inference history is stored locally in `electralab-inference-history`; tutor conversations themselves are not persisted.
 - Tutor turns stream from `/api/agent/stream`; Stop and conversation rewind abort the local inference, while revising a prompt removes all later turns from the in-memory chat.
 - If an older local API responds without inference metrics, the UI shows an explicitly approximate client-side tokens-per-second estimate until the API is restarted.
 - Matrix operations live in the pure helpers in `src/matrix.js` and should remain independently testable.
-- The offline Coursebook content lives in `src/courseContent.js`; reading progress is stored locally under `calculust-course-progress`.
-- The global scratch-pad utility modal and standalone Scratch Pad page share the same local-storage drawing and notes data.
+- Reading progress is stored locally under `electralab-course-progress`.

@@ -2,13 +2,13 @@
   min-width:112px;
   display:grid;
   gap:3px;
-  color:#d0d1d6;
+  color:#CCC;
   font-size:8px;
   line-height:1.2;
 }
 .scratch-width-control>span{display:flex;justify-content:space-between;gap:6px}
-.scratch-width-control output{color:#72d9f1;font-variant-numeric:tabular-nums}
-.scratch-width-control input{width:100%;height:12px;margin:0;accent-color:#0fb7e0;cursor:pointer}
+.scratch-width-control output{color:#76B900;font-variant-numeric:tabular-nums}
+.scratch-width-control input{width:100%;height:12px;margin:0;accent-color:#76B900;cursor:pointer}
 .scratch-toolbar{
   width:100%;
   min-width:0;
@@ -34,27 +34,27 @@
   align-items:center;
   gap:8px;
   padding:9px 12px;
-  border-top:1px solid #36373d;
-  background:#1c1d21;
+  border-top:1px solid #333;
+  background:#0D0D0D;
 }
-.scratch-number-entry label{display:grid;gap:2px;color:#f0f0f2;font-size:10px;font-weight:650}
-.scratch-number-entry label span{color:#9b9ca4;font-size:8px;font-weight:400}
+.scratch-number-entry label{display:grid;gap:2px;color:#FFF;font-size:10px;font-weight:650}
+.scratch-number-entry label span{color:#888;font-size:8px;font-weight:400}
 .scratch-number-entry input{
   min-width:0;
   width:100%;
   height:34px;
   padding:0 10px;
-  border:1px solid #51525b;
+  border:1px solid #444;
   border-radius:6px;
-  background:#17181d;
-  color:#f0f0f2;
+  background:#0D0D0D;
+  color:#FFF;
   font:600 14px var(--mono);
 }
-.scratch-number-entry input:focus{outline:2px solid #0fb7e0;outline-offset:1px}
+.scratch-number-entry input:focus{outline:2px solid #76B900;outline-offset:1px}
 .scratch-number-submit{min-height:34px;padding:0 12px;font-size:9px}
 .scratch-symbol-picker{position:relative;z-index:5;display:block;min-width:0}
 .scratch-symbol-toggle{min-height:34px;padding:0 10px;font-size:9px;white-space:nowrap}
-.scratch-symbol-toggle span{margin-left:4px;color:#78dff4}
+.scratch-symbol-toggle span{margin-left:4px;color:#76B900}
 .scratch-symbol-popover{
   position:absolute;
   top:calc(100% + 5px);
@@ -67,12 +67,12 @@
   max-height:230px;
   overflow:auto;
   padding:10px;
-  border:1px solid #44464f;
+  border:1px solid #333;
   border-radius:8px;
-  background:#202126;
-  box-shadow:0 8px 24px #0006;
+  background:#1A1A1A;
+  box-shadow:0 8px 24px #0009;
 }
-.scratch-notes-notation{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:8px 0;color:#aeb0b8;font-size:8px}
+.scratch-notes-notation{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:8px 0;color:#888;font-size:8px}
 .scratch-notes-symbol-picker .scratch-symbol-popover{width:min(240px,calc(100vw - 48px));grid-template-columns:repeat(2,minmax(0,1fr))}
 .scratch-notes-symbol-picker .scratch-symbol-toggle{min-height:30px;padding:0 9px}
 .tutor-composer-tools{
@@ -83,7 +83,7 @@
   justify-content:space-between;
   gap:8px;
   margin-top:6px;
-  color:#aeb0b8;
+  color:#888;
   font-size:8px;
 }
 .tutor-formula-picker .scratch-symbol-popover{
@@ -93,16 +93,16 @@
   grid-template-columns:repeat(3,minmax(0,1fr));
   max-height:min(300px,50vh);
 }
-.scratch-symbol-group h3{margin:0 0 6px;color:#aeb0b8;font-size:8px;font-weight:650}
+.scratch-symbol-group h3{margin:0 0 6px;color:#888;font-size:8px;font-weight:650}
 .scratch-symbol-group>div{display:flex;flex-wrap:wrap;gap:5px}
 .scratch-symbol-option{
   min-width:52px;
   min-height:38px;
   padding:4px 6px;
-  border:1px solid #4b4d56;
+  border:1px solid #444;
   border-radius:5px;
-  background:#292b31;
-  color:#f0f0f2;
+  background:#2D2D2D;
+  color:#FFF;
   display:grid;
   justify-items:center;
   align-content:center;
@@ -110,14 +110,14 @@
   cursor:pointer;
 }
 .scratch-symbol-option strong{font:600 13px "Atkinson Hyperlegible Next",sans-serif}
-.scratch-symbol-option span{color:#aeb0b8;font-size:6px;line-height:1.1}
-.scratch-symbol-option:hover,.scratch-symbol-option:focus-visible{border-color:#0fb7e0;background:#173642;color:#c5f5fd}
-.scratch-number-error{grid-column:1/-1;color:#ff9caa;font-size:9px}
+.scratch-symbol-option span{color:#888;font-size:6px;line-height:1.1}
+.scratch-symbol-option:hover,.scratch-symbol-option:focus-visible{border-color:#76B900;background:#0D2B1A;color:#76B900}
+.scratch-number-error{grid-column:1/-1;color:#FFB86B;font-size:9px}
 .scratch-placement-hint{
   padding:8px 12px;
-  border-top:1px solid #305461;
-  background:#173642;
-  color:#c1f3fb;
+  border-top:1px solid #2D5A1A;
+  background:#0D2B1A;
+  color:#76B900;
   font-size:10px;
 }
 .scratch-canvas.place-text-cursor{cursor:copy}

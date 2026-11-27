@@ -1,17 +1,17 @@
-html,body{min-height:100%;background:#1c1d21}
-.app-shell{min-height:100vh;background:#1c1d21}
+html,body{min-height:100%;background:#000}
+.app-shell{min-height:100vh;background:#000}
 .main-area{
   background:
-    radial-gradient(ellipse 68% 58% at 96% 0%,rgba(124,40,82,.16),transparent 72%),
-    radial-gradient(ellipse 58% 54% at 48% 100%,rgba(15,183,224,.075),transparent 72%),
-    linear-gradient(145deg,#202127 0%,#1c1d21 50%,#191e25 100%)!important;
+    radial-gradient(ellipse 68% 58% at 96% 0%,rgba(118,185,0,.12),transparent 72%),
+    radial-gradient(ellipse 58% 54% at 48% 100%,rgba(118,185,0,.06),transparent 72%),
+    linear-gradient(145deg,#0D0D0D 0%,#000 50%,#0A0A0A 100%)!important;
   background-attachment:fixed!important;
 }
 .sidebar{
-  background:linear-gradient(180deg,#311a2a 0%,#251c2b 42%,#191b26 72%,#141d28 100%)!important;
+  background:linear-gradient(180deg,#0D0D0D 0%,#0A0A0A 42%,#050505 72%,#000 100%)!important;
 }
 .topbar{
-  background:linear-gradient(100deg,#242128 0%,#202126 48%,#20252b 100%)!important;
+  background:linear-gradient(100deg,#1A1A1A 0%,#0D0D0D 48%,#050505 100%)!important;
 }
 @media(max-width:640px){
   .main-area{background-attachment:scroll!important}

@@ -3,21 +3,21 @@
   margin-top: 7px;
   padding: 8px 10px;
   overflow: auto;
-  border: 1px solid #414249;
+  border: 1px solid #333;
   border-radius: 6px;
-  background: #1c1d21;
+  background: #1A1A1A;
 }
 
 .tutor-draft-preview-label {
   display: block;
   margin-bottom: 5px;
-  color: #0fb7e0;
+  color: #76B900;
   font: 600 8px var(--mono);
   letter-spacing: .55px;
 }
 
 .tutor-draft-preview-content {
-  color: #e2e2e7;
+  color: #EEE;
   font-size: 10px;
   line-height: 1.6;
   overflow-wrap: anywhere;
@@ -29,7 +29,7 @@
 
 .tutor-draft-preview-content h3 {
   margin: 7px 0 4px;
-  color: #77dff4;
+  color: #76B900;
   font-size: 10px;
 }
 
@@ -60,39 +60,39 @@
 
 .tutor-message-action {
   padding: 3px 6px;
-  border: 1px solid #50515a;
+  border: 1px solid #444;
   border-radius: 4px;
-  background: #2b2c32;
-  color: #e4e4e8;
+  background: #2D2D2D;
+  color: #CCC;
   font-size: 8px;
   cursor: pointer;
 }
 
 .tutor-message-action:hover {
-  border-color: #0fb7e0;
-  color: #fff;
+  border-color: #76B900;
+  color: #FFF;
 }
 
 .tutor-stop-button {
   min-height: 30px;
   padding: 0 12px;
-  border: 1px solid #80505b;
+  border: 1px solid #8E2A2A;
   border-radius: 5px;
-  background: #4a2d36;
-  color: #ffe9ed;
+  background: #2D1A1A;
+  color: #FFE1C4;
   font-size: 9px;
   font-weight: 600;
   cursor: pointer;
 }
 
 .tutor-stop-button:hover {
-  border-color: #c26b7b;
-  background: #5c3440;
+  border-color: #C45A6A;
+  background: #3D1A2A;
 }
 
 .tutor-interrupted-note,
 .tutor-stopped-notice {
-  color: #c8b992 !important;
+  color: #FFE1C4 !important;
   font-size: 8px !important;
 }
 

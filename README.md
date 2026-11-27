@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="./public/calculust-logo.svg" alt="Calculus(t) logo" width="520" />
+  <img src="./public/electralab-logo.svg" alt="ElectraLab logo" width="520" />
 </p>
 
-<h1 align="center">Mathematics you can make sense of.</h1>
+<h1 align="center">Physics you can make sense of.</h1>
 
 <p align="center">
-  <strong>CalcuLust</strong> is an offline-first mathematics learning workspace for reading, reasoning, calculating, and practicing—from foundational algebra to applied calculus.
+  <strong>ElectraLab</strong> is an offline-first physics learning workspace for NCERT Class 12 — Unit 3 (Current Electricity) and Unit 14 (Semiconductor Electronics) — built for reading, reasoning, calculating, and practicing.
 </p>
 
 <p align="center">
@@ -16,34 +16,42 @@
 
 ---
 
-CalcuLust brings the parts of learning mathematics together in one place: textbook-style explanations, worked examples, deterministic tools, practice, a flexible calculator, and an optional private tutor that runs through Ollama on your own machine.
+ElectraLab brings the parts of learning physics together in one place: textbook-style explanations, worked examples, deterministic tools, practice, a flexible calculator, and an optional private tutor that runs through Ollama on your own machine.
 
-The interface is branded **calculus(t)**. Its name is a reminder that mathematics is not only about answers—it is also about relationships, change, and the steps that get us there.
+The interface carries an Nvidia-inspired neon-green-on-black theme — dark surfaces with a `#76B900` accent and matching glow states.
 
 ## At a glance
 
 | Learn | Work | Review |
 | --- | --- | --- |
-| Read the Coursebook and explore mathematical vocabulary. | Use the solver, three calculator layouts, and a persistent Scratch Pad. | Practice, take quizzes, and review locally stored progress. |
+| Read the Coursebook and explore physics vocabulary. | Use the physics solver, three calculator layouts, and a persistent Scratch Pad. | Practice, take quizzes, and review locally stored progress. |
 | Move from intuition to notation with worked examples and recall checks. | Ask the local Ollama tutor for a hint or another explanation. | Inspect local AI inference metrics in the AI Performance workspace. |
 
 ## Explore the workspace
 
 ### Learn the ideas
 
-- **Coursebook** — a reading-first path with chapters, objectives, worked examples, recall checks, and saved reading progress.
-- **Vocabulary** — review built-in mathematical and calculus cards, or submit an unfamiliar scientific, mathematical, or engineering term for an on-demand glossary lookup from your selected local Ollama model.
-- **Practice and quizzes** — work through generated algebra, derivatives, integrals, statistics, and applied-calculus questions with immediate feedback.
-- **Applied calculus** — connect derivatives and models to engineering optimization, RC circuits, and gradient descent.
+- **Coursebook** — a reading-first path through NCERT Unit 3 (Ohm's Law, resistivity, drift velocity, Kirchhoff's laws, meter construction) and Unit 14 (energy bands, semiconductor types, the p-n junction, diode characteristics, BJT and FET operation), with objectives, worked examples, recall checks, and saved reading progress.
+- **Vocabulary** — review built-in physics cards (depletion region, Hall effect, forward bias, carrier concentration, and more), or submit an unfamiliar term for an on-demand glossary lookup from your selected local Ollama model.
+- **Practice and quizzes** — work through generated questions on Ohm's law, power, series/parallel networks, drift velocity, carrier concentration, the diode equation, transistor gains, and FET biasing, with immediate feedback.
 
 ### Calculate and reason
 
-- **Problem solver** — use a deterministic local math engine for supported algebra, calculus, statistics, and matrix operations, with worked steps.
+- **The Solver** — a deterministic local physics engine with worked steps for:
+  - Ohm's Law (`V = IR`)
+  - Power (`P = VI`, `I²R`, `V²/R`)
+  - Series/parallel equivalent resistance
+  - Drift velocity (`I = nAev_d`)
+  - Carrier concentration (`np = n_i²`)
+  - Shockley diode equation
+  - BJT gains (`I_C = βI_B`, `α ↔ β`)
+  - JFET/MOSFET transfer characteristics
+- **The Lab** — applied scenario problems for Circuit Analysis, Semiconductor Devices, and Electronic Design.
 - **Calculator** — switch between three purpose-built layouts:
   - **Basic** for arithmetic and order of operations.
   - **Scientific** for trigonometric functions, logarithms, roots, powers, factorials, and degree/radian angle modes.
   - **Graphing** to plot a function of `x` over an adjustable horizontal range.
-- **Formula builder** — insert symbols and editable formula templates into the Ollama Tutor prompt, including fractions, powers, roots, repeating decimals, and number-set notation.
+- **Formula builder** — insert symbols and editable formula templates into the Physics Tutor prompt, including fractions, powers, roots, repeating decimals, and number-set notation.
 
 ### Keep your work close
 
@@ -54,7 +62,7 @@ The interface is branded **calculus(t)**. Its name is a reminder that mathematic
 
 ### Learn with local AI
 
-- **Ollama Tutor** — ask for a hint, a clearer explanation, or another way to understand a step.
+- **Physics Tutor** — ask for a hint, a clearer explanation, or another way to understand a step, tuned to NCERT Units 3 and 14.
 - **AI Performance** — explore a local Ollama model and inspect runtime and inference metrics, including token counts and generation speed.
 - **Math rendering** — equations are rendered with locally bundled KaTeX assets, so mathematical notation does not depend on a hosted rendering service.
 
@@ -62,7 +70,7 @@ AI can make mistakes. Check its arithmetic, assumptions, units, signs, and reaso
 
 ## A local-first design
 
-CalcuLust is designed to keep everyday learning on your device:
+ElectraLab is designed to keep everyday learning on your device:
 
 - Lessons, generated exercises, the deterministic solver, calculator, and graphing tools run locally in the browser.
 - Scratch Pad drawings and notes are stored in browser `localStorage`; they are **not** sent to Ollama.
@@ -76,16 +84,14 @@ Ollama is optional. Without it, the reading, calculator, Scratch Pad, determinis
 
 ## Brand system
 
-The README logo follows the in-app `c.` mark and `calculus(t)` wordmark. The interface uses **Atkinson Hyperlegible Next** for accessible reading and locally bundled KaTeX fonts for mathematics.
+The interface uses **Atkinson Hyperlegible Next** for accessible reading, locally bundled KaTeX fonts for physics notation, and an Nvidia-inspired neon-green accent over black surfaces.
 
 | Color | Hex | Role |
 | --- | --- | --- |
-| Charcoal | `#1C1D21` | App background |
-| Graphite | `#24252A` | Main surfaces |
-| Burgundy | `#7C2852` | Brand mark and selected states |
-| Cyan | `#0FB7E0` | Primary action, focus, and notation accent |
-| Green | `#09E82E` | Positive and progress accents |
-| Purple | `#3912A3` | Secondary highlight |
+| Black | `#0A0A0A` | App background |
+| Charcoal | `#121412` | Main surfaces |
+| Nvidia green | `#76B900` | Brand mark, primary action, focus, and glow |
+| Light green | `#8AE600` | Hover and highlight accent |
 | Soft white | `#F0F0F2` | Primary text |
 | Cool gray | `#C0C1C7` | Supporting text |
 
@@ -100,8 +106,8 @@ The README logo follows the in-app `c.` mark and `calculus(t)` wordmark. The int
 ### Install and run
 
 ```bash
-git clone https://github.com/Violet-Night-LLC/CalcuLust.git
-cd CalcuLust
+git clone https://github.com/VioletKnightLLC/ElectraLab.git
+cd ElectraLab
 npm install
 npm run dev
 ```
@@ -121,7 +127,7 @@ Ollama normally listens on `http://127.0.0.1:11434`. If you use another **local*
 | Command | Purpose |
 | --- | --- |
 | `npm run dev` | Start the Vite client and watched local API together. |
-| `npm test` | Run the unit and API tests with Node’s built-in test runner. |
+| `npm test` | Run the unit and API tests with Node's built-in test runner. |
 | `npm run build` | Create the production client in `dist/`. |
 | `npm start` | Build the client and start the production Express server. |
 | `npm run start:server` | Start the Express server without opening a browser. |
@@ -146,15 +152,14 @@ src/
   App.jsx                 Application shell, navigation, and learning flows
   CalculatorPage.jsx      Basic, scientific, and graphing calculator layouts
   calculator.js           Safe local expression parser and evaluator
-  courseContent.js        Offline Coursebook chapters and content
-  math.js                 Problem generation and deterministic solver
+  data/electra_data.json  Offline coursebook, vocabulary, quiz, and applied content
+  math.js                 Physics problem generation and deterministic solver
   matrix.js               Pure matrix-operation helpers
   ScratchPad.jsx          Canvas, typed work, and local notes
-  vocabulary.js           Symbol and mathematics vocabulary
 server/
   index.js                Local Tutor, Agent, and Ollama API
 public/
-  calculust-logo.svg      README brand mark
+  electralab-logo.svg     README brand mark
   service-worker.js       Offline app-shell caching
 test/                     Unit and API tests
 ```
@@ -169,3 +174,5 @@ npm run build
 ```
 
 Keep the offline-first behavior intact: math content should remain locally renderable, deterministic helpers should remain independently testable, and Scratch Pad drawings should not be transmitted to the tutor.
+
+ElectraLab is adapted from the [CalcuLust](https://github.com/Violet-Night-LLC/CalcuLust) architecture — the same offline-first learning patterns, re-skinned and re-focused on NCERT physics.

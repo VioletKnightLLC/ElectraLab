@@ -64,7 +64,7 @@ const SCIENTIFIC_KEYS = [
 
 function safeSavedMode() {
   try {
-    const saved = localStorage.getItem('calculust-calculator-mode')
+    const saved = localStorage.getItem('electralab-calculator-mode')
     return MODES.some((mode) => mode.id === saved) ? saved : 'basic'
   } catch {
     return 'basic'
@@ -81,7 +81,7 @@ function safeSavedValue(key, fallback) {
 
 function safeSavedHistory() {
   try {
-    const saved = localStorage.getItem('calculust-calculator-history')
+    const saved = localStorage.getItem('electralab-calculator-history')
     return normalizeCalculatorHistory(saved ? JSON.parse(saved) : [])
   } catch {
     return []
@@ -95,19 +95,19 @@ function formatNumber(value) {
 
 export default function CalculatorPage({ onAskTutor }) {
   const [mode, setMode] = useState(safeSavedMode)
-  const [expression, setExpression] = useState(() => safeSavedValue('calculust-calculator-expression', ''))
-  const [answer, setAnswer] = useState(() => safeSavedValue('calculust-calculator-answer', '') || null)
+  const [expression, setExpression] = useState(() => safeSavedValue('electralab-calculator-expression', ''))
+  const [answer, setAnswer] = useState(() => safeSavedValue('electralab-calculator-answer', '') || null)
   const [error, setError] = useState('')
-  const [angleMode, setAngleMode] = useState(() => safeSavedValue('calculust-calculator-angle', 'DEG'))
-  const [graphAngleMode, setGraphAngleMode] = useState(() => safeSavedValue('calculust-calculator-graph-angle', 'RAD'))
-  const [graphExpression, setGraphExpression] = useState(() => safeSavedValue('calculust-calculator-graph', 'sin(x)'))
-  const [xMin, setXMin] = useState(() => safeSavedValue('calculust-calculator-x-min', '-10'))
-  const [xMax, setXMax] = useState(() => safeSavedValue('calculust-calculator-x-max', '10'))
+  const [angleMode, setAngleMode] = useState(() => safeSavedValue('electralab-calculator-angle', 'DEG'))
+  const [graphAngleMode, setGraphAngleMode] = useState(() => safeSavedValue('electralab-calculator-graph-angle', 'RAD'))
+  const [graphExpression, setGraphExpression] = useState(() => safeSavedValue('electralab-calculator-graph', 'sin(x)'))
+  const [xMin, setXMin] = useState(() => safeSavedValue('electralab-calculator-x-min', '-10'))
+  const [xMax, setXMax] = useState(() => safeSavedValue('electralab-calculator-x-max', '10'))
   const [history, setHistory] = useState(safeSavedHistory)
 
   useEffect(() => {
     try {
-      localStorage.setItem('calculust-calculator-mode', mode)
+      localStorage.setItem('electralab-calculator-mode', mode)
     } catch {
       // The calculator remains usable when browser storage is unavailable.
     }
@@ -115,13 +115,13 @@ export default function CalculatorPage({ onAskTutor }) {
 
   useEffect(() => {
     for (const [key, value] of [
-      ['calculust-calculator-expression', expression],
-      ['calculust-calculator-answer', answer ?? ''],
-      ['calculust-calculator-angle', angleMode],
-      ['calculust-calculator-graph-angle', graphAngleMode],
-      ['calculust-calculator-graph', graphExpression],
-      ['calculust-calculator-x-min', xMin],
-      ['calculust-calculator-x-max', xMax],
+      ['electralab-calculator-expression', expression],
+      ['electralab-calculator-answer', answer ?? ''],
+      ['electralab-calculator-angle', angleMode],
+      ['electralab-calculator-graph-angle', graphAngleMode],
+      ['electralab-calculator-graph', graphExpression],
+      ['electralab-calculator-x-min', xMin],
+      ['electralab-calculator-x-max', xMax],
     ]) {
       try {
         localStorage.setItem(key, value)
@@ -133,7 +133,7 @@ export default function CalculatorPage({ onAskTutor }) {
 
   useEffect(() => {
     try {
-      localStorage.setItem('calculust-calculator-history', JSON.stringify(history))
+      localStorage.setItem('electralab-calculator-history', JSON.stringify(history))
     } catch {
       // History remains available in memory for the current session.
     }

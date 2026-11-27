@@ -67,7 +67,7 @@ function WalkthroughProgress({ answer, running, workStatus }) {
 export default function AgentPage({ inferenceHistory, onInference, onOpenScratch }) {
   const [runtime, setRuntime] = useState(null)
   const [checking, setChecking] = useState(true)
-  const [model, setModel] = useState(() => localStorage.getItem('calculust-ollama-model') || '')
+  const [model, setModel] = useState(() => localStorage.getItem('electralab-ollama-model') || '')
   const [prompt, setPrompt] = useState(EXAMPLES[0].prompt)
   const [answer, setAnswer] = useState('')
   const [error, setError] = useState('')
@@ -102,7 +102,7 @@ export default function AgentPage({ inferenceHistory, onInference, onOpenScratch
   }, [])
 
   useEffect(() => {
-    if (model) localStorage.setItem('calculust-ollama-model', model)
+    if (model) localStorage.setItem('electralab-ollama-model', model)
   }, [model])
 
   async function runExample(event) {

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 112" role="img" aria-labelledby="title description">
+  <title id="title">ElectraLab</title>
+  <desc id="description">The ElectraLab wordmark in Nvidia green and black.</desc>
+  <rect width="600" height="112" rx="22" fill="#000000"/>
+  <rect x="16" y="16" width="80" height="80" rx="24" fill="#0d0d0d" stroke="#76B900" stroke-width="2"/>
+  <text x="36" y="78" fill="#76B900" font-family="Atkinson Hyperlegible Next, Arial, sans-serif" font-size="67" font-weight="700" letter-spacing="-6">e</text>
+  <circle cx="79" cy="78" r="4.5" fill="#76B900"/>
+  <text x="119" y="73" fill="#f0f0f2" font-family="Atkinson Hyperlegible Next, Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="-1.6">
+    electra<tspan dx="2" fill="#76B900" font-weight="600">lab</tspan>
+  </text>
+  <path d="M122 87h42" stroke="#76B900" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+</svg>

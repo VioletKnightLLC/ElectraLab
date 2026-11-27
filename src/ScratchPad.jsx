@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import MathNotationPicker from './MathNotationPicker.jsx'
 
-const STORAGE_KEY = 'calculust-scratchpad'
-const COLORS = ['#f0f0f2', '#0fb7e0', '#ef82ae', '#a58cf0', '#09e82e']
+const STORAGE_KEY = 'electralab-scratchpad'
+const COLORS = ['#f0f0f2', '#76B900', '#A6FF00', '#4C8C00', '#9E9E9E']
 
 function loadScratchPad() {
   try {
@@ -67,8 +67,8 @@ function drawTypedText(context, item, width, height) {
   const { fontSize, lineHeight, padding, x, y, boxWidth, boxHeight, visibleLines } = layout
   context.save()
   context.font = `${fontSize}px "Atkinson Hyperlegible Next", sans-serif`
-  context.fillStyle = '#1c1d21ed'
-  context.strokeStyle = '#0fb7e0a8'
+  context.fillStyle = '#0d0d0ded'
+  context.strokeStyle = '#76B900a8'
   context.lineWidth = 1
   context.fillRect(x, y, boxWidth, boxHeight)
   context.strokeRect(x, y, boxWidth, boxHeight)
@@ -375,7 +375,7 @@ export default function ScratchPad({ context = '', returnPage, onBack, onAskTuto
     const canvas = canvasRef.current
     if (!canvas) return
     const link = document.createElement('a')
-    link.download = 'calculust-scratch-pad.png'
+    link.download = 'electralab-scratch-pad.png'
     link.href = canvas.toDataURL('image/png')
     link.click()
   }
@@ -384,7 +384,7 @@ export default function ScratchPad({ context = '', returnPage, onBack, onAskTuto
     const file = new Blob([notes], { type: 'text/plain;charset=utf-8' })
     const url = URL.createObjectURL(file)
     const link = document.createElement('a')
-    link.download = 'calculust-scratch-notes.txt'
+    link.download = 'electralab-scratch-notes.txt'
     link.href = url
     link.click()
     window.setTimeout(() => URL.revokeObjectURL(url), 1000)

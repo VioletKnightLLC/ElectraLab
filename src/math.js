@@ -845,7 +845,7 @@ export function solveMathInput(mode, input) {
   }
 
   if (mode === 'BJT Gains') {
-    const match = expression.match(/β\s*=\s*([\d.]+(?:e[+-]?\d+)?)\s*,\s*I[Bb]\s*=\s*([\d.]+(?:e[+-]?\d+)?)/i)
+    const match = expression.match(/(?:β|beta)\s*=\s*([\d.]+(?:e[+-]?\d+)?)\s*,\s*I[Bb]\s*=\s*([\d.]+(?:e[+-]?\d+)?)/i)
     if (match) {
       const beta = parseFloat(match[1])
       const IB = parseFloat(match[2])
@@ -877,7 +877,7 @@ export function solveMathInput(mode, input) {
         ],
       }
     }
-    const match3 = expression.match(/α\s*=\s*([\d.]+(?:e[+-]?\d+)?)/i)
+    const match3 = expression.match(/(?:α|alpha)\s*=\s*([\d.]+(?:e[+-]?\d+)?)/i)
     if (match3) {
       const alpha = parseFloat(match3[1])
       const beta = alpha / (1 - alpha)
@@ -892,7 +892,7 @@ export function solveMathInput(mode, input) {
         ],
       }
     }
-    throw new Error('Try a format like "β = 100, IB = 20" or "IC = 2000, IB = 20" or "α = 0.99"')
+    throw new Error('Try a format like "β = 100, IB = 20" or "IC = 2000, IB = 20" or "alpha = 0.99"')
   }
 
   if (mode === 'JFET/MOSFET') {
@@ -937,6 +937,7 @@ export function solveMathInput(mode, input) {
 }
 
 function formatNumber(value) {
+  if (value !== 0 && Math.abs(value) < 0.001) return value.toExponential(2)
   const rounded = Math.round(value * 10000) / 10000
   return Number.isInteger(rounded) ? String(rounded) : String(rounded)
 }

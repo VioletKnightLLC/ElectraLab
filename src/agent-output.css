@@ -1,49 +1,49 @@
 .agent-playground .agent-answer{position:static;z-index:auto;transform:none!important;overflow:visible}
-.agent-answer{margin-top:12px;padding:13px;border-radius:9px;background:#202126;border:1px solid #44454e;color:#f0f0f2}
+.agent-answer{margin-top:12px;padding:13px;border-radius:9px;background:#1A1A1A;border:1px solid #333;color:#FFF}
 .agent-answer-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:11px}
 .agent-answer-heading>div:first-child{display:grid;gap:3px;min-width:0}
-.agent-answer-heading strong{color:#f2f2f4;font-size:13px}
-.agent-answer-model{color:#0fb7e0;font-size:10px}
+.agent-answer-heading strong{color:#FFF;font-size:13px}
+.agent-answer-model{color:#76B900;font-size:10px}
 .agent-answer-tools{min-width:0;display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}
-.agent-copy-output{min-height:34px;padding:0 10px;display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid #50515a;border-radius:6px;background:#2b2c32;color:#f0f0f2;font:600 11px 'Atkinson Hyperlegible Next',sans-serif;cursor:pointer}
-.agent-copy-output:hover:not(:disabled){border-color:#0fb7e0;background:#30343a}
+.agent-copy-output{min-height:34px;padding:0 10px;display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid #444;border-radius:6px;background:#2D2D2D;color:#FFF;font:600 11px 'Atkinson Hyperlegible Next',sans-serif;cursor:pointer}
+.agent-copy-output:hover:not(:disabled){border-color:#76B900;background:#0D2B1A}
 .agent-copy-output:disabled{opacity:.55;cursor:not-allowed}
-.agent-copy-status{margin:8px 0 0;color:#75dff3;font-size:11px}
-.agent-stream-status{padding:10px 12px;border:1px solid #414249;border-radius:7px;background:#24252a;color:#d0d1d6;font-size:12px}
-.agent-walkthrough{margin:0 0 12px;padding:10px 11px;border:1px solid #41434a;border-radius:7px;background:#1b1c21}
+.agent-copy-status{margin:8px 0 0;color:#76B900;font-size:11px}
+.agent-stream-status{padding:10px 12px;border:1px solid #333;border-radius:7px;background:#1A1A1A;color:#CCC;font-size:12px}
+.agent-walkthrough{margin:0 0 12px;padding:10px 11px;border:1px solid #333;border-radius:7px;background:#1A1A1A}
 .agent-walkthrough-header{display:flex;align-items:center;gap:9px}
 .agent-walkthrough-header>div{min-width:0;display:grid;gap:3px}
-.agent-walkthrough-header strong{color:#ebebef;font-size:11px}
-.agent-walkthrough-header span:last-child{color:#bfc0c7;font-size:10px}
-.agent-stream-indicator{width:9px;height:9px;flex:none;border-radius:50%;background:#0fb7e0;box-shadow:0 0 0 3px #0fb7e01f}
+.agent-walkthrough-header strong{color:#FFF;font-size:11px}
+.agent-walkthrough-header span:last-child{color:#888;font-size:10px}
+.agent-stream-indicator{width:9px;height:9px;flex:none;border-radius:50%;background:#76B900;box-shadow:0 0 0 3px #76B90033}
 .agent-stream-indicator.active{animation:agent-stream-pulse 1.1s ease-in-out infinite}
-.agent-stream-indicator.complete{background:#09e82e;box-shadow:0 0 0 3px #09e82e20}
+.agent-stream-indicator.complete{background:#76B900;box-shadow:0 0 0 3px #76B90033}
 .agent-walkthrough ol{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0;padding:0;list-style:none}
-.agent-walkthrough li{min-height:26px;padding:4px 7px;display:inline-flex;align-items:center;gap:5px;border:1px solid #3d3e45;border-radius:5px;color:#babcc4;font-size:9px}
-.agent-walkthrough li>span{width:14px;height:14px;display:grid;place-items:center;border-radius:50%;background:#34353c;color:#d1d2d8;font-size:8px}
-.agent-walkthrough li.active{border-color:#0fb7e0;color:#e9faff;background:#152d33}
-.agent-walkthrough li.active>span{background:#0fb7e0;color:#0b1b1f}
-.agent-walkthrough li.complete{border-color:#514054;color:#eadfec}
-.agent-walkthrough li.complete>span{background:#3c2430;color:#f1cada}
-.agent-answer-content{color:#e2e2e7;font-size:13px;line-height:1.75;overflow-wrap:anywhere}
-.agent-answer-content h3{margin:16px 0 7px;padding-bottom:5px;border-bottom:1px solid #3c3d44;color:#77dff4;font-size:14px;line-height:1.4}
+.agent-walkthrough li{min-height:26px;padding:4px 7px;display:inline-flex;align-items:center;gap:5px;border:1px solid #333;border-radius:5px;color:#CCC;font-size:9px}
+.agent-walkthrough li>span{width:14px;height:14px;display:grid;place-items:center;border-radius:50%;background:#2D2D2D;color:#FFF;font-size:8px}
+.agent-walkthrough li.active{border-color:#76B900;color:#76B900;background:#0D2B1A}
+.agent-walkthrough li.active>span{background:#76B900;color:#000}
+.agent-walkthrough li.complete{border-color:#76B900;color:#76B900}
+.agent-walkthrough li.complete>span{background:#76B900;color:#000}
+.agent-answer-content{color:#EEE;font-size:13px;line-height:1.75;overflow-wrap:anywhere}
+.agent-answer-content h3{margin:16px 0 7px;padding-bottom:5px;border-bottom:1px solid #333;color:#76B900;font-size:14px;line-height:1.4}
 .agent-answer-content h3:first-child{margin-top:2px}
-.agent-answer-content p{margin:7px 0;color:#e0e0e5}
-.agent-answer-content ul,.agent-answer-content ol{margin:8px 0;padding-left:23px;color:#e0e0e5}
+.agent-answer-content p{margin:7px 0;color:#DDD}
+.agent-answer-content ul,.agent-answer-content ol{margin:8px 0;padding-left:23px;color:#DDD}
 .agent-answer-content li{padding:2px 0 2px 3px}
-.agent-answer-content strong{color:#fff}
-.agent-answer-content :not(pre)>code{padding:2px 5px;border:1px solid #41434a;border-radius:4px;background:#17181d;color:#d9caff;font:500 .9em 'SFMono-Regular',Consolas,monospace}
-.math-table-scroll{max-width:100%;margin:11px 0;overflow:auto;border:1px solid #45464e;border-radius:7px;background:#1c1d21;overscroll-behavior-inline:contain}
-.math-output-table{width:100%;border-collapse:collapse;color:#e8e8ec;font-size:12px;line-height:1.5}
-.math-output-table th,.math-output-table td{min-width:90px;padding:8px 10px;border-bottom:1px solid #3b3c43;border-right:1px solid #35363d;vertical-align:top}
-.math-output-table th{background:#3c2430;color:#fff;font-weight:700}
-.math-output-table tbody tr:nth-child(even){background:#25262c}
+.agent-answer-content strong{color:#FFF}
+.agent-answer-content :not(pre)>code{padding:2px 5px;border:1px solid #333;border-radius:4px;background:#0D0D0D;color:#76B900;font:500 .9em 'SFMono-Regular',Consolas,monospace}
+.math-table-scroll{max-width:100%;margin:11px 0;overflow:auto;border:1px solid #333;border-radius:7px;background:#1A1A1A;overscroll-behavior-inline:contain}
+.math-output-table{width:100%;border-collapse:collapse;color:#EEE;font-size:12px;line-height:1.5}
+.math-output-table th,.math-output-table td{min-width:90px;padding:8px 10px;border-bottom:1px solid #333;border-right:1px solid #333;vertical-align:top}
+.math-output-table th{background:#0D1A0D;color:#76B900;font-weight:700}
+.math-output-table tbody tr:nth-child(even){background:#1A1A1A}
 .math-output-table tbody tr:last-child td{border-bottom:0}
 .math-output-table th:last-child,.math-output-table td:last-child{border-right:0}
 .math-output-table .katex{font-size:1em}
-.math-code-block{margin:11px 0;overflow:hidden;border:1px solid #414249;border-radius:7px;background:#17181d}
-.math-code-language{display:block;padding:5px 9px;border-bottom:1px solid #414249;background:#24252a;color:#73d9f0;font:600 9px 'SFMono-Regular',Consolas,monospace;text-transform:uppercase;letter-spacing:.5px}
-.math-code-block pre{max-width:100%;margin:0;padding:11px;overflow:auto;color:#e8e8ec;font:12px/1.6 'SFMono-Regular',Consolas,monospace;tab-size:2}
+.math-code-block{margin:11px 0;overflow:hidden;border:1px solid #333;border-radius:7px;background:#0D0D0D}
+.math-code-language{display:block;padding:5px 9px;border-bottom:1px solid #333;background:#1A1A1A;color:#76B900;font:600 9px 'SFMono-Regular',Consolas,monospace;text-transform:uppercase;letter-spacing:.5px}
+.math-code-block pre{max-width:100%;margin:0;padding:11px;overflow:auto;color:#DDD;font:12px/1.6 'SFMono-Regular',Consolas,monospace;tab-size:2}
 .math-code-block code{font:inherit;white-space:pre}
 .agent-answer-content .tutor-block-math{max-width:100%;overflow-x:auto}
 @keyframes agent-stream-pulse{50%{opacity:.45;transform:scale(.84)}}

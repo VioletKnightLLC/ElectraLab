@@ -3,77 +3,77 @@
 .coursebook-page .course-reader,
 .vocabulary-page .vocabulary-progress,
 .vocabulary-page .vocabulary-controls,
-.vocabulary-page .vocabulary-card{background:#1a221c;border-color:#354037;box-shadow:none}
-.coursebook-page .coursebook-heading h1,.vocabulary-page .vocabulary-heading h1{color:#edf2e9}
-.coursebook-page .coursebook-heading h1 em,.vocabulary-page .vocabulary-heading h1 em{color:#c6df82}
-.coursebook-page .coursebook-progress-card>span,.vocabulary-page .vocabulary-progress>span{color:#edf2e9}
-.coursebook-page .coursebook-progress-card>span small,.coursebook-page .coursebook-progress-card>small,.vocabulary-page .vocabulary-progress>span small,.vocabulary-page .vocabulary-progress>small{color:#bbc5b8}
-.coursebook-page .coursebook-progress-track,.vocabulary-page .vocabulary-progress>div{background:#303a31}
-.coursebook-page .coursebook-progress-track i,.vocabulary-page .vocabulary-progress i{background:#c5e17b}
-.coursebook-page .coursebook-toc-heading,.coursebook-page .chapter-header,.coursebook-page .chapter-pagination{border-color:#354037}
-.coursebook-page .coursebook-toc-heading strong,.coursebook-page .chapter-header h2,.coursebook-page .reading-section h3,.coursebook-page .worked-example h3,.coursebook-page .recall-check h3,.coursebook-page .course-next-steps h3{color:#edf2e9}
-.coursebook-page .coursebook-toc-heading .eyebrow,.coursebook-page .coursebook-unit>p,.coursebook-page .chapter-meta,.coursebook-page .chapter-read-status,.coursebook-page .chapter-pagination>span{color:#bac4b7}
-.coursebook-page .coursebook-toc-link{color:#cbd4c6}
-.coursebook-page .coursebook-toc-link:hover{background:#283328;color:#f0f4eb}
-.coursebook-page .coursebook-toc-link.active{background:#2d3929;color:#e6f0d0}
-.coursebook-page .coursebook-toc-link small{color:#b8c2b4}
-.coursebook-page .chapter-status{border-color:#566252;color:#d0e690}
-.coursebook-page .chapter-status.read{background:#2c3926;border-color:#617748}
-.coursebook-page .coursebook-toc-footer{border-color:#354037;color:#bbc5b8}
-.coursebook-page .chapter-header>p,.coursebook-page .reading-prose,.coursebook-page .worked-example-setup,.coursebook-page .worked-example li{color:#d0d8cb}
-.coursebook-page .chapter-objectives{background:#222d23;border-left-color:#c1dc7d}
-.coursebook-page .chapter-objectives ul{color:#d4ddcf}
-.coursebook-page .reading-equation{background:#141b16;border-color:#354037}
-.coursebook-page .reading-note{background:#252e24;color:#d0d8c6}
-.coursebook-page .reading-note>span{color:#d0e396}
-.coursebook-page .worked-example{background:linear-gradient(115deg,#222d23,#19211b);border-color:#3b483a}
-.coursebook-page .worked-example-kicker>span{color:#c9e28c}
-.coursebook-page .worked-example li>span{background:#35442b;color:#e0efba}
-.coursebook-page .recall-check{background:#171f19;border-color:#3a453c}
-.coursebook-page .recall-option{background:#19211b;border-color:#3a453b;color:#d3dccf}
-.coursebook-page .recall-option:hover{background:#273228;border-color:#687b51}
-.coursebook-page .recall-option.selected{background:#2a3827;border-color:#91a86a;color:#eff5e4}
-.coursebook-page .recall-option input{accent-color:#c5df80}
-.coursebook-page .recall-feedback.correct{background:#203327;color:#d7e9b8}
-.coursebook-page .recall-feedback.try-again{background:#3a2e22;color:#efd6af}
-.coursebook-page .course-next-steps{background:#252f24}
-.coursebook-page .course-next-steps p{color:#c8d1c1}
+.vocabulary-page .vocabulary-card{background:#1A1A1A;border-color:#333;box-shadow:none}
+.coursebook-page .coursebook-heading h1,.vocabulary-page .vocabulary-heading h1{color:#FFF}
+.coursebook-page .coursebook-heading h1 em,.vocabulary-page .vocabulary-heading h1 em{color:#76B900}
+.coursebook-page .coursebook-progress-card>span,.vocabulary-page .vocabulary-progress>span{color:#FFF}
+.coursebook-page .coursebook-progress-card>span small,.coursebook-page .coursebook-progress-card>small,.vocabulary-page .vocabulary-progress>span small,.vocabulary-page .vocabulary-progress>small{color:#888}
+.coursebook-page .coursebook-progress-track,.vocabulary-page .vocabulary-progress>div{background:#2D2D2D}
+.coursebook-page .coursebook-progress-track i,.vocabulary-page .vocabulary-progress i{background:#76B900}
+.coursebook-page .coursebook-toc-heading,.coursebook-page .chapter-header,.coursebook-page .chapter-pagination{border-color:#333}
+.coursebook-page .coursebook-toc-heading strong,.coursebook-page .chapter-header h2,.coursebook-page .reading-section h3,.coursebook-page .worked-example h3,.coursebook-page .recall-check h3,.coursebook-page .course-next-steps h3{color:#FFF}
+.coursebook-page .coursebook-toc-heading .eyebrow,.coursebook-page .coursebook-unit>p,.coursebook-page .chapter-meta,.coursebook-page .chapter-read-status,.coursebook-page .chapter-pagination>span{color:#888}
+.coursebook-page .coursebook-toc-link{color:#CCC}
+.coursebook-page .coursebook-toc-link:hover{background:#2D2D2D;color:#76B900}
+.coursebook-page .coursebook-toc-link.active{background:#1A1A1A;color:#76B900}
+.coursebook-page .coursebook-toc-link small{color:#888}
+.coursebook-page .chapter-status{border-color:#444;color:#76B900}
+.coursebook-page .chapter-status.read{background:#0D2B1A;border-color:#76B900}
+.coursebook-page .coursebook-toc-footer{border-color:#333;color:#888}
+.coursebook-page .chapter-header>p,.coursebook-page .reading-prose,.coursebook-page .worked-example-setup,.coursebook-page .worked-example li{color:#CCC}
+.coursebook-page .chapter-objectives{background:#1A1A1A;border-left-color:#76B900}
+.coursebook-page .chapter-objectives ul{color:#CCC}
+.coursebook-page .reading-equation{background:#0D0D0D;border-color:#333}
+.coursebook-page .reading-note{background:#1A1A1A;color:#CCC}
+.coursebook-page .reading-note>span{color:#76B900}
+.coursebook-page .worked-example{background:linear-gradient(115deg,#0D1A0D,#1A1A1A);border-color:#2D5A2D}
+.coursebook-page .worked-example-kicker>span{color:#76B900}
+.coursebook-page .worked-example li>span{background:#0D2D1A;color:#76B900}
+.coursebook-page .recall-check{background:#1A1A1A;border-color:#333}
+.coursebook-page .recall-option{background:#1A1A1A;border-color:#333;color:#CCC}
+.coursebook-page .recall-option:hover{background:#2D2D2D;border-color:#76B900}
+.coursebook-page .recall-option.selected{background:#0D2B1A;border-color:#76B900;color:#76B900}
+.coursebook-page .recall-option input{accent-color:#76B900}
+.coursebook-page .recall-feedback.correct{background:#0D2B1A;color:#76B900}
+.coursebook-page .recall-feedback.try-again{background:#2D1A1A;color:#FFB86B}
+.coursebook-page .course-next-steps{background:#1A1A1A}
+.coursebook-page .course-next-steps p{color:#CCC}
 .coursebook-page .reading-prose{font-size:15px;line-height:1.85}
 .coursebook-page .worked-example-setup,.coursebook-page .worked-example li{font-size:13px;line-height:1.75}
 .coursebook-page .chapter-objectives ul,.coursebook-page .recall-option,.coursebook-page .course-next-steps p{font-size:12px}
 .coursebook-page .coursebook-toc-link{min-height:42px;font-size:11px}
 .coursebook-page .coursebook-toc-link small{font-size:9px}
-.vocabulary-page .vocabulary-card.mastered{background:#1c281e;border-color:#4c6040}
-.vocabulary-page .vocabulary-category,.vocabulary-page .vocabulary-result-count{color:#bbc5b7}
-.vocabulary-page .known-toggle{background:#151c17;border-color:#435044;color:#d0d8ca}
-.vocabulary-page .known-toggle.on{background:#2e3b29;border-color:#6c8352;color:#e0efb8}
-.vocabulary-page .vocabulary-symbol-wrap{background:#121915;color:#f2f5ef}
-.vocabulary-page .vocabulary-card h2{color:#edf2e9}
-.vocabulary-page .vocabulary-say{color:#d1e99b}
-.vocabulary-page .vocabulary-say>span,.vocabulary-page .vocabulary-problem strong{color:#bbc5b7}
-.vocabulary-page .vocabulary-meaning{color:#d0d9cc;font-size:12px;line-height:1.65}
-.vocabulary-page .vocabulary-search,.vocabulary-page .vocabulary-select-label select{background:#121915;border-color:#3c483e;color:#e6ece2}
-.vocabulary-page .vocabulary-search input{color:#e6ece2}
-.vocabulary-page .vocabulary-search input::placeholder{color:#aeb8aa}
-.vocabulary-page .vocabulary-filters button{color:#c5cebf}
-.vocabulary-page .vocabulary-filters button:hover{background:#252f25}
-.vocabulary-page .vocabulary-filters button.active{background:#2d3a28;border-color:#687d4c;color:#e6f1cf}
-.vocabulary-page .vocabulary-progress>div{background:#303a31}
-.vocabulary-page .vocabulary-progress i{background:#c5e17b}
-.vocabulary-page .vocabulary-speak{min-height:34px;background:#273328;color:#d7e8b0;font-size:10px}
-.vocabulary-page .vocabulary-example{border-color:#354037}
-.vocabulary-page .vocabulary-example summary{min-height:36px;color:#d0e497;font-size:10px}
-.vocabulary-page .vocabulary-problem{color:#d0d9cc;font-size:11px;line-height:1.65}
-.vocabulary-page .vocabulary-equation{background:#141b16;border-color:#354037}
-.vocabulary-page .vocabulary-example-body ol{color:#d0d9cc;font-size:11px;line-height:1.65}
-.vocabulary-page .vocabulary-answer{background:#2a3926;color:#deedb9}
-.vocabulary-page .vocabulary-card-actions{border-color:#354037}
+.vocabulary-page .vocabulary-card.mastered{background:#1A1A1A;border-color:#333}
+.vocabulary-page .vocabulary-category,.vocabulary-page .vocabulary-result-count{color:#888}
+.vocabulary-page .known-toggle{background:#2D2D2D;border-color:#444;color:#CCC}
+.vocabulary-page .known-toggle.on{background:#0D2B1A;border-color:#76B900;color:#76B900}
+.vocabulary-page .vocabulary-symbol-wrap{background:#0D0D0D;color:#FFF}
+.vocabulary-page .vocabulary-card h2{color:#FFF}
+.vocabulary-page .vocabulary-say{color:#8AE600}
+.vocabulary-page .vocabulary-say>span,.vocabulary-page .vocabulary-problem strong{color:#666}
+.vocabulary-page .vocabulary-meaning{color:#CCC;font-size:12px;line-height:1.65}
+.vocabulary-page .vocabulary-search,.vocabulary-page .vocabulary-select-label select{background:#0D0D0D;border-color:#444;color:#FFF}
+.vocabulary-page .vocabulary-search input{color:#FFF}
+.vocabulary-page .vocabulary-search input::placeholder{color:#666}
+.vocabulary-page .vocabulary-filters button{color:#CCC}
+.vocabulary-page .vocabulary-filters button:hover{background:#2D2D2D}
+.vocabulary-page .vocabulary-filters button.active{background:#0D2B1A;border-color:#76B900;color:#76B900}
+.vocabulary-page .vocabulary-progress>div{background:#2D2D2D}
+.vocabulary-page .vocabulary-progress i{background:#76B900}
+.vocabulary-page .vocabulary-speak{min-height:34px;background:#0D2B1A;color:#76B900;font-size:10px}
+.vocabulary-page .vocabulary-example{border-color:#333}
+.vocabulary-page .vocabulary-example summary{min-height:36px;color:#76B900;font-size:10px}
+.vocabulary-page .vocabulary-problem{color:#CCC;font-size:11px;line-height:1.65}
+.vocabulary-page .vocabulary-equation{background:#0D0D0D;border-color:#333}
+.vocabulary-page .vocabulary-example-body ol{color:#CCC;font-size:11px;line-height:1.65}
+.vocabulary-page .vocabulary-answer{background:#0D1A2D;color:#8AE600}
+.vocabulary-page .vocabulary-card-actions{border-color:#333}
 .vocabulary-page .vocabulary-card-actions .text-link,.vocabulary-page .vocabulary-ask{font-size:10px}
-.vocabulary-page .vocabulary-ask{min-height:32px;background:#202a22;border-color:#3c493d;color:#d1dbca}
-.vocabulary-page .vocabulary-ask:hover{background:#2a382b}
-.vocabulary-page .vocabulary-study-note{background:#25261e;border-color:#494633}
-.vocabulary-page .vocabulary-study-note p{color:#d0ccb5;font-size:11px}
-.vocabulary-page .vocabulary-empty{border-color:#455247;color:#ced7ca}
-.vocabulary-page .vocabulary-lookup-status{border-color:#425443;background:#202a22;color:#d1e99b}
-.vocabulary-page .vocabulary-lookup-error{border-color:#654350;background:#302128;color:#f0bfd0}
+.vocabulary-page .vocabulary-ask{min-height:32px;background:#0D1A2D;border-color:#2D3D4D;color:#8AE600}
+.vocabulary-page .vocabulary-ask:hover{background:#0D2D2D}
+.vocabulary-page .vocabulary-study-note{background:#1A1A1A;border-color:#333}
+.vocabulary-page .vocabulary-study-note p{color:#CCC;font-size:11px}
+.vocabulary-page .vocabulary-empty{border-color:#444;color:#888}
+.vocabulary-page .vocabulary-lookup-status{border-color:#333;background:#1A1A1A;color:#76B900}
+.vocabulary-page .vocabulary-lookup-error{border-color:#8E2A2A;background:#2D1A1A;color:#FFB86B}
 @media(max-width:640px){.coursebook-page .reading-prose{font-size:14px}.vocabulary-page .vocabulary-card{padding:16px}.vocabulary-page .vocabulary-meaning{font-size:13px}}

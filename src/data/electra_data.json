@@ -52,11 +52,20 @@
       },
       "check": {
         "question": "If the voltage across a resistor is doubled while its resistance stays constant, what happens to the current?",
-        "options": ["It halves", "It stays the same", "It doubles", "It quadruples"],
+        "options": [
+          "It halves",
+          "It stays the same",
+          "It doubles",
+          "It quadruples"
+        ],
         "answer": "It doubles",
         "explanation": "From V = IR, if V doubles and R is constant, I must also double."
       },
-      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice Ohm's Law problems" }
+      "practice": {
+        "kind": "skill",
+        "value": "Ohm's Law",
+        "label": "Practice Ohm's Law problems"
+      }
     },
     {
       "id": "drift-velocity",
@@ -101,11 +110,20 @@
       },
       "check": {
         "question": "What happens to drift velocity if the cross-sectional area of a wire is doubled while current stays the same?",
-        "options": ["It doubles", "It halves", "It stays the same", "It quadruples"],
+        "options": [
+          "It doubles",
+          "It halves",
+          "It stays the same",
+          "It quadruples"
+        ],
         "answer": "It halves",
         "explanation": "From I = n A e v_d, if A doubles and I is constant, v_d must halve."
       },
-      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice drift velocity problems" }
+      "practice": {
+        "kind": "skill",
+        "value": "Drift Velocity",
+        "label": "Practice drift velocity problems"
+      }
     },
     {
       "id": "kirchhoff-laws",
@@ -158,11 +176,20 @@
       },
       "check": {
         "question": "Three identical resistors are connected in parallel. How does the equivalent resistance compare to one resistor?",
-        "options": ["It is 3 times larger", "It is the same", "It is 1/3 of one resistor", "It is 1/9 of one resistor"],
+        "options": [
+          "It is 3 times larger",
+          "It is the same",
+          "It is 1/3 of one resistor",
+          "It is 1/9 of one resistor"
+        ],
         "answer": "It is 1/3 of one resistor",
         "explanation": "For n identical resistors R in parallel: R_eq = R/n. Here n = 3, so R_eq = R/3."
       },
-      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice Kirchhoff's Laws" }
+      "practice": {
+        "kind": "skill",
+        "value": "Series/Parallel",
+        "label": "Practice Kirchhoff's Laws"
+      }
     },
     {
       "id": "meter-construction",
@@ -207,11 +234,20 @@
       },
       "check": {
         "question": "To convert a galvanometer into a voltmeter, you connect a resistor in...",
-        "options": ["Parallel (shunt)", "Series", "Series-parallel combination", "Not needed"],
+        "options": [
+          "Parallel (shunt)",
+          "Series",
+          "Series-parallel combination",
+          "Not needed"
+        ],
         "answer": "Series",
         "explanation": "A series resistor limits current through the galvanometer, allowing it to measure higher voltages."
       },
-      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice meter construction" }
+      "practice": {
+        "kind": "skill",
+        "value": "Series/Parallel",
+        "label": "Practice meter construction"
+      }
     },
     {
       "id": "semiconductor-types",
@@ -265,11 +301,20 @@
       },
       "check": {
         "question": "In an n-type semiconductor, which are the majority charge carriers?",
-        "options": ["Electrons", "Holes", "Both equal", "Neither"],
+        "options": [
+          "Electrons",
+          "Holes",
+          "Both equal",
+          "Neither"
+        ],
         "answer": "Electrons",
         "explanation": "Donor impurities add extra electrons, making them the majority carriers in n-type material."
       },
-      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice semiconductor doping" }
+      "practice": {
+        "kind": "skill",
+        "value": "Carrier Concentration",
+        "label": "Practice semiconductor doping"
+      }
     },
     {
       "id": "pn-junction",
@@ -314,11 +359,20 @@
       },
       "check": {
         "question": "What happens to the depletion region width when a p-n junction is forward biased?",
-        "options": ["It increases", "It decreases", "It stays the same", "It disappears completely"],
+        "options": [
+          "It increases",
+          "It decreases",
+          "It stays the same",
+          "It disappears completely"
+        ],
         "answer": "It decreases",
         "explanation": "Forward bias reduces the potential barrier, narrowing the depletion region and allowing majority carriers to flow across the junction."
       },
-      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice p-n junction" }
+      "practice": {
+        "kind": "skill",
+        "value": "Diode Equation",
+        "label": "Practice p-n junction"
+      }
     },
     {
       "id": "diode-characteristics",
@@ -372,11 +426,20 @@
       },
       "check": {
         "question": "What is the typical knee voltage (cut-in voltage) for a silicon p-n junction diode?",
-        "options": ["0.2 V", "0.7 V", "1.2 V", "2.0 V"],
+        "options": [
+          "0.2 V",
+          "0.7 V",
+          "1.2 V",
+          "2.0 V"
+        ],
         "answer": "0.7 V",
         "explanation": "Silicon diodes typically start conducting significantly around 0.6–0.7 V forward bias."
       },
-      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice diode characteristics" }
+      "practice": {
+        "kind": "skill",
+        "value": "Diode Equation",
+        "label": "Practice diode characteristics"
+      }
     },
     {
       "id": "bjt-operation",
@@ -422,11 +485,20 @@
       },
       "check": {
         "question": "In a BJT, the relationship between α (common-base current gain) and β (common-emitter current gain) is:",
-        "options": ["β = α / (1 - α)", "β = α × (1 - α)", "β = 1 / (1 - α)", "β = α - 1"],
+        "options": [
+          "β = α / (1 - α)",
+          "β = α × (1 - α)",
+          "β = 1 / (1 - α)",
+          "β = α - 1"
+        ],
         "answer": "β = α / (1 - α)",
         "explanation": "From I_C = α I_E and I_E = I_B + I_C, we get β = I_C/I_B = α/(1-α)."
       },
-      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice BJT operation" }
+      "practice": {
+        "kind": "skill",
+        "value": "BJT Gains",
+        "label": "Practice BJT operation"
+      }
     },
     {
       "id": "fet-operation",
@@ -470,11 +542,20 @@
       },
       "check": {
         "question": "What is the key difference between a JFET and a MOSFET gate?",
-        "options": ["MOSFET gate draws more current", "JFET gate is insulated", "MOSFET gate is insulated (oxide layer)", "No difference"],
+        "options": [
+          "MOSFET gate draws more current",
+          "JFET gate is insulated",
+          "MOSFET gate is insulated (oxide layer)",
+          "No difference"
+        ],
         "answer": "MOSFET gate is insulated (oxide layer)",
         "explanation": "MOSFET gate is separated from the channel by a thin oxide layer, giving essentially zero gate current. JFET gate forms a p-n junction with the channel."
       },
-      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice FET operation" }
+      "practice": {
+        "kind": "skill",
+        "value": "JFET/MOSFET",
+        "label": "Practice FET operation"
+      }
     }
   ],
   "vocabulary": [
@@ -488,11 +569,19 @@
       "example": {
         "prompt": "A 12 V battery is connected across a 4 Ω resistor. Find the current.",
         "latex": "I = \\frac{V}{R} = \\frac{12}{4} = 3\\,\\mathrm{A}",
-        "steps": ["Identify V = 12 V and R = 4 Ω.", "Use I = V/R.", "Calculate: 12/4 = 3 A."],
+        "steps": [
+          "Identify V = 12 V and R = 4 Ω.",
+          "Use I = V/R.",
+          "Calculate: 12/4 = 3 A."
+        ],
         "answer": "3 A",
         "spoken": "Twelve volts divided by four ohms equals three amperes."
       },
-      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice Ohm's Law" }
+      "practice": {
+        "kind": "skill",
+        "value": "Ohm's Law",
+        "label": "Practice Ohm's Law"
+      }
     },
     {
       "id": "resistivity",
@@ -504,11 +593,19 @@
       "example": {
         "prompt": "A copper wire of length 10 m and cross-section 1 mm² has resistance 0.17 Ω. Find the resistivity of copper.",
         "latex": "\\rho = R \\frac{A}{L} = 0.17 \\times \\frac{1 \\times 10^{-6}}{10} = 1.7 \\times 10^{-8}\\,\\Omega\\cdot\\mathrm{m}",
-        "steps": ["Use ρ = R × A/L.", "Convert area to m²: 1 mm² = 1×10⁻⁶ m².", "Calculate ρ."],
+        "steps": [
+          "Use ρ = R × A/L.",
+          "Convert area to m²: 1 mm² = 1×10⁻⁶ m².",
+          "Calculate ρ."
+        ],
         "answer": "1.7 × 10⁻⁸ Ω·m",
         "spoken": "One point seven times ten to the minus eight ohm metres."
       },
-      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice resistivity" }
+      "practice": {
+        "kind": "skill",
+        "value": "Ohm's Law",
+        "label": "Practice resistivity"
+      }
     },
     {
       "id": "drift-velocity",
@@ -520,11 +617,19 @@
       "example": {
         "prompt": "A copper wire (n = 8.5×10²⁸ m⁻³) of area 2 mm² carries 4 A. Find v_d.",
         "latex": "v_d = \\frac{I}{nAe} = \\frac{4}{8.5\\times10^{28} \\times 2\\times10^{-6} \\times 1.6\\times10^{-19}} \\approx 1.5\\times10^{-4}\\,\\mathrm{m/s}",
-        "steps": ["Use v_d = I/(nAe).", "Convert area to m².", "Substitute and calculate."],
+        "steps": [
+          "Use v_d = I/(nAe).",
+          "Convert area to m².",
+          "Substitute and calculate."
+        ],
         "answer": "1.5 × 10⁻⁴ m/s",
         "spoken": "One point five times ten to the minus four metres per second."
       },
-      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice drift velocity" }
+      "practice": {
+        "kind": "skill",
+        "value": "Drift Velocity",
+        "label": "Practice drift velocity"
+      }
     },
     {
       "id": "kcl",
@@ -536,11 +641,19 @@
       "example": {
         "prompt": "At a junction, three currents enter: 2 A, 3 A, and 1 A. One current of 4 A leaves. Find the other leaving current.",
         "latex": "2 + 3 + 1 = 4 + I_2 \\Rightarrow I_2 = 2\\,\\mathrm{A}",
-        "steps": ["Sum entering currents: 2 + 3 + 1 = 6 A.", "Sum leaving currents must equal 6 A.", "6 = 4 + I₂, so I₂ = 2 A."],
+        "steps": [
+          "Sum entering currents: 2 + 3 + 1 = 6 A.",
+          "Sum leaving currents must equal 6 A.",
+          "6 = 4 + I₂, so I₂ = 2 A."
+        ],
         "answer": "2 A",
         "spoken": "Two amperes."
       },
-      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice KCL" }
+      "practice": {
+        "kind": "skill",
+        "value": "Series/Parallel",
+        "label": "Practice KCL"
+      }
     },
     {
       "id": "kvl",
@@ -552,11 +665,19 @@
       "example": {
         "prompt": "A loop has a 12 V battery, a 4 Ω resistor with 2 A current, and an unknown voltage V_x. Find V_x.",
         "latex": "12 - (2 \\times 4) - V_x = 0 \\Rightarrow V_x = 4\\,\\mathrm{V}",
-        "steps": ["Battery is a rise: +12 V.", "Resistor drop: -IR = -8 V.", "Sum = 0: 12 - 8 - V_x = 0 → V_x = 4 V."],
+        "steps": [
+          "Battery is a rise: +12 V.",
+          "Resistor drop: -IR = -8 V.",
+          "Sum = 0: 12 - 8 - V_x = 0 → V_x = 4 V."
+        ],
         "answer": "4 V",
         "spoken": "Four volts."
       },
-      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice KVL" }
+      "practice": {
+        "kind": "skill",
+        "value": "Series/Parallel",
+        "label": "Practice KVL"
+      }
     },
     {
       "id": "depletion-region",
@@ -568,11 +689,20 @@
       "example": {
         "prompt": "Explain why the depletion region forms at a p-n junction.",
         "latex": "",
-        "steps": ["Electrons diffuse from n to p and recombine.", "Holes diffuse from p to n and recombine.", "Fixed positive ions remain on n-side; fixed negative ions on p-side.", "This charge-free region is the depletion region."],
+        "steps": [
+          "Electrons diffuse from n to p and recombine.",
+          "Holes diffuse from p to n and recombine.",
+          "Fixed positive ions remain on n-side; fixed negative ions on p-side.",
+          "This charge-free region is the depletion region."
+        ],
         "answer": "Diffusion leaves behind fixed ionized dopants, creating a region with no mobile carriers.",
         "spoken": "Diffusion leaves behind fixed ionized dopants, creating a region with no mobile carriers."
       },
-      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice p-n junction" }
+      "practice": {
+        "kind": "skill",
+        "value": "Diode Equation",
+        "label": "Practice p-n junction"
+      }
     },
     {
       "id": "forward-bias",
@@ -584,11 +714,20 @@
       "example": {
         "prompt": "A silicon diode is forward biased at 0.7 V. What happens to the depletion region?",
         "latex": "",
-        "steps": ["Forward bias reduces the built-in potential barrier.", "The depletion region width decreases.", "Majority carriers are injected across the junction.", "Exponential current flows."],
+        "steps": [
+          "Forward bias reduces the built-in potential barrier.",
+          "The depletion region width decreases.",
+          "Majority carriers are injected across the junction.",
+          "Exponential current flows."
+        ],
         "answer": "The depletion region narrows and current flows exponentially.",
         "spoken": "The depletion region narrows and current flows exponentially."
       },
-      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice diode biasing" }
+      "practice": {
+        "kind": "skill",
+        "value": "Diode Equation",
+        "label": "Practice diode biasing"
+      }
     },
     {
       "id": "reverse-bias",
@@ -600,11 +739,19 @@
       "example": {
         "prompt": "What is the current through a silicon diode reverse biased at -10 V, if I₀ = 1 nA?",
         "latex": "I \\approx -I_0 = -1\\,\\mathrm{nA}",
-        "steps": ["In reverse bias, V is negative and large in magnitude.", "The exponential term exp(qV/kT) ≈ 0.", "I = I₀[exp(qV/kT) - 1] ≈ -I₀."],
+        "steps": [
+          "In reverse bias, V is negative and large in magnitude.",
+          "The exponential term exp(qV/kT) ≈ 0.",
+          "I = I₀[exp(qV/kT) - 1] ≈ -I₀."
+        ],
         "answer": "-1 nA (reverse saturation current)",
         "spoken": "Negative one nanoampere."
       },
-      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice reverse bias" }
+      "practice": {
+        "kind": "skill",
+        "value": "Diode Equation",
+        "label": "Practice reverse bias"
+      }
     },
     {
       "id": "hall-effect",
@@ -616,11 +763,19 @@
       "example": {
         "prompt": "A Hall probe with thickness 1 mm carries 5 A in a 0.5 T field. The Hall voltage is 2 mV. Find the carrier concentration n.",
         "latex": "n = \\frac{IB}{V_H t e} = \\frac{5 \\times 0.5}{2\\times10^{-3} \\times 1\\times10^{-3} \\times 1.6\\times10^{-19}} \\approx 7.8\\times10^{28}\\,\\mathrm{m}^{-3}",
-        "steps": ["Use n = IB/(V_H t e).", "Substitute I = 5 A, B = 0.5 T, V_H = 2×10⁻³ V, t = 1×10⁻³ m, e = 1.6×10⁻¹⁹ C.", "Calculate n."],
+        "steps": [
+          "Use n = IB/(V_H t e).",
+          "Substitute I = 5 A, B = 0.5 T, V_H = 2×10⁻³ V, t = 1×10⁻³ m, e = 1.6×10⁻¹⁹ C.",
+          "Calculate n."
+        ],
         "answer": "7.8 × 10²⁸ m⁻³",
         "spoken": "Seven point eight times ten to the twenty-eight per cubic metre."
       },
-      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice Hall effect" }
+      "practice": {
+        "kind": "skill",
+        "value": "Drift Velocity",
+        "label": "Practice Hall effect"
+      }
     },
     {
       "id": "carrier-concentration",
@@ -632,11 +787,19 @@
       "example": {
         "prompt": "In p-type silicon, p = 10¹⁷ cm⁻³. At 300 K, n_i = 1.5×10¹⁰ cm⁻³. Find n.",
         "latex": "n = \\frac{n_i^2}{p} = \\frac{(1.5\\times10^{10})^2}{10^{17}} = 2.25\\times10^3\\,\\mathrm{cm}^{-3}",
-        "steps": ["Use mass action law: n p = n_i².", "Solve for n: n = n_i²/p.", "Substitute and calculate."],
+        "steps": [
+          "Use mass action law: n p = n_i².",
+          "Solve for n: n = n_i²/p.",
+          "Substitute and calculate."
+        ],
         "answer": "2.25 × 10³ cm⁻³",
         "spoken": "Two point two five times ten to the three per cubic centimetre."
       },
-      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice carrier concentration" }
+      "practice": {
+        "kind": "skill",
+        "value": "Carrier Concentration",
+        "label": "Practice carrier concentration"
+      }
     },
     {
       "id": "beta-alpha",
@@ -648,11 +811,19 @@
       "example": {
         "prompt": "A BJT has α = 0.99. Find β.",
         "latex": "\\beta = \\frac{\\alpha}{1-\\alpha} = \\frac{0.99}{0.01} = 99",
-        "steps": ["Use β = α/(1-α).", "Substitute α = 0.99.", "Calculate: 0.99/0.01 = 99."],
+        "steps": [
+          "Use β = α/(1-α).",
+          "Substitute α = 0.99.",
+          "Calculate: 0.99/0.01 = 99."
+        ],
         "answer": "99",
         "spoken": "Ninety-nine."
       },
-      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice current gain" }
+      "practice": {
+        "kind": "skill",
+        "value": "BJT Gains",
+        "label": "Practice current gain"
+      }
     },
     {
       "id": "equivalent-resistance",
@@ -664,11 +835,19 @@
       "example": {
         "prompt": "Find the equivalent resistance of 6 Ω and 3 Ω in parallel.",
         "latex": "\\frac{1}{R_{\\text{eq}}} = \\frac{1}{6} + \\frac{1}{3} = \\frac{1}{2} \\Rightarrow R_{\\text{eq}} = 2\\,\\Omega",
-        "steps": ["Use 1/R_eq = 1/R₁ + 1/R₂.", "Calculate: 1/6 + 1/3 = 1/2.", "Take reciprocal: R_eq = 2 Ω."],
+        "steps": [
+          "Use 1/R_eq = 1/R₁ + 1/R₂.",
+          "Calculate: 1/6 + 1/3 = 1/2.",
+          "Take reciprocal: R_eq = 2 Ω."
+        ],
         "answer": "2 Ω",
         "spoken": "Two ohms."
       },
-      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice equivalent resistance" }
+      "practice": {
+        "kind": "skill",
+        "value": "Series/Parallel",
+        "label": "Practice equivalent resistance"
+      }
     },
     {
       "id": "power-formula",
@@ -680,34 +859,150 @@
       "example": {
         "prompt": "A 12 V, 60 W bulb. Find its resistance and operating current.",
         "latex": "I = P/V = 60/12 = 5\\,\\mathrm{A}, \\quad R = V^2/P = 144/60 = 2.4\\,\\Omega",
-        "steps": ["Use P = VI to find I.", "Use P = V²/R to find R.", "Alternatively: R = V/I = 12/5 = 2.4 Ω."],
+        "steps": [
+          "Use P = VI to find I.",
+          "Use P = V²/R to find R.",
+          "Alternatively: R = V/I = 12/5 = 2.4 Ω."
+        ],
         "answer": "I = 5 A, R = 2.4 Ω",
         "spoken": "Five amperes, two point four ohms."
       },
-      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice electric power" }
+      "practice": {
+        "kind": "skill",
+        "value": "Power",
+        "label": "Practice electric power"
+      }
     }
   ],
   "solverSkills": [
-    { "name": "Ohm's Law", "detail": "V = I R", "icon": "Ω", "tone": "blue", "progress": 0 },
-    { "name": "Power", "detail": "P = V I = I²R = V²/R", "icon": "P", "tone": "mint", "progress": 0 },
-    { "name": "Series/Parallel", "detail": "Equivalent resistance", "icon": "∥", "tone": "peach", "progress": 0 },
-    { "name": "Drift Velocity", "detail": "I = n A e v_d", "icon": "v_d", "tone": "lavender", "progress": 0 },
-    { "name": "Carrier Concentration", "detail": "n p = n_i²", "icon": "n,p", "tone": "orange", "progress": 0 },
-    { "name": "Diode Equation", "detail": "I = I₀[e^(qV/nkT) - 1]", "icon": "I₀", "tone": "red", "progress": 0 },
-    { "name": "BJT Gains", "detail": "β = I_C/I_B, α = I_C/I_E", "icon": "β", "tone": "purple", "progress": 0 },
-    { "name": "JFET/MOSFET", "detail": "I_D = I_DSS(1 - V_GS/V_P)²", "icon": "I_D", "tone": "green", "progress": 0 }
+    {
+      "name": "Ohm's Law",
+      "detail": "V = I R",
+      "icon": "Ω",
+      "tone": "blue",
+      "progress": 0
+    },
+    {
+      "name": "Power",
+      "detail": "P = V I = I²R = V²/R",
+      "icon": "P",
+      "tone": "mint",
+      "progress": 0
+    },
+    {
+      "name": "Series/Parallel",
+      "detail": "Equivalent resistance",
+      "icon": "∥",
+      "tone": "peach",
+      "progress": 0
+    },
+    {
+      "name": "Drift Velocity",
+      "detail": "I = n A e v_d",
+      "icon": "v_d",
+      "tone": "lavender",
+      "progress": 0
+    },
+    {
+      "name": "Carrier Concentration",
+      "detail": "n p = n_i²",
+      "icon": "n,p",
+      "tone": "orange",
+      "progress": 0
+    },
+    {
+      "name": "Diode Equation",
+      "detail": "I = I₀[e^(qV/nkT) - 1]",
+      "icon": "I₀",
+      "tone": "red",
+      "progress": 0
+    },
+    {
+      "name": "BJT Gains",
+      "detail": "β = I_C/I_B, α = I_C/I_E",
+      "icon": "β",
+      "tone": "purple",
+      "progress": 0
+    },
+    {
+      "name": "JFET/MOSFET",
+      "detail": "I_D = I_DSS(1 - V_GS/V_P)²",
+      "icon": "I_D",
+      "tone": "green",
+      "progress": 0
+    }
   ],
   "quizTopics": [
-    { "name": "Ohm's Law & Resistance", "skill": "Ohm's Law", "questions": 5, "time": "5 min", "icon": "Ω", "tone": "blue" },
-    { "name": "Drift Velocity & Current Density", "skill": "Drift Velocity", "questions": 5, "time": "5 min", "icon": "v_d", "tone": "mint" },
-    { "name": "Kirchhoff's Laws", "skill": "Series/Parallel", "questions": 5, "time": "5 min", "icon": "∑", "tone": "peach" },
-    { "name": "Semiconductor Doping", "skill": "Carrier Concentration", "questions": 5, "time": "5 min", "icon": "n,p", "tone": "lavender" },
-    { "name": "PN Junction & Diodes", "skill": "Diode Equation", "questions": 5, "time": "5 min", "icon": "I₀", "tone": "red" },
-    { "name": "BJT & FET Operation", "skill": "BJT Gains", "questions": 5, "time": "5 min", "icon": "β", "tone": "purple" }
+    {
+      "name": "Ohm's Law & Resistance",
+      "skill": "Ohm's Law",
+      "questions": 5,
+      "time": "5 min",
+      "icon": "Ω",
+      "tone": "blue"
+    },
+    {
+      "name": "Drift Velocity & Current Density",
+      "skill": "Drift Velocity",
+      "questions": 5,
+      "time": "5 min",
+      "icon": "v_d",
+      "tone": "mint"
+    },
+    {
+      "name": "Kirchhoff's Laws",
+      "skill": "Series/Parallel",
+      "questions": 5,
+      "time": "5 min",
+      "icon": "∑",
+      "tone": "peach"
+    },
+    {
+      "name": "Semiconductor Doping",
+      "skill": "Carrier Concentration",
+      "questions": 5,
+      "time": "5 min",
+      "icon": "n,p",
+      "tone": "lavender"
+    },
+    {
+      "name": "PN Junction & Diodes",
+      "skill": "Diode Equation",
+      "questions": 5,
+      "time": "5 min",
+      "icon": "I₀",
+      "tone": "red"
+    },
+    {
+      "name": "BJT & FET Operation",
+      "skill": "BJT Gains",
+      "questions": 5,
+      "time": "5 min",
+      "icon": "β",
+      "tone": "purple"
+    }
   ],
   "appliedFields": [
-    { "name": "Circuit Analysis", "icon": "⚡", "detail": "Analyze DC circuits using Ohm's Law, Kirchhoff's Laws, and equivalent resistance.", "example": "Multi-loop circuit", "tone": "blue" },
-    { "name": "Semiconductor Devices", "icon": "🔬", "detail": "Calculate carrier concentrations, diode currents, and transistor biasing.", "example": "Diode/transistor design", "tone": "mint" },
-    { "name": "Electronic Design", "icon": "📐", "detail": "Design simple amplifiers, switches, and voltage regulators.", "example": "Amplifier biasing", "tone": "lavender" }
+    {
+      "name": "Circuit Analysis",
+      "icon": "⚡",
+      "detail": "Analyze DC circuits using Ohm's Law, Kirchhoff's Laws, and equivalent resistance.",
+      "example": "Multi-loop circuit",
+      "tone": "blue"
+    },
+    {
+      "name": "Semiconductor Devices",
+      "icon": "🔬",
+      "detail": "Calculate carrier concentrations, diode currents, and transistor biasing.",
+      "example": "Diode/transistor design",
+      "tone": "mint"
+    },
+    {
+      "name": "Electronic Design",
+      "icon": "📐",
+      "detail": "Design simple amplifiers, switches, and voltage regulators.",
+      "example": "Amplifier biasing",
+      "tone": "lavender"
+    }
   ]
 }

@@ -166,7 +166,7 @@ test('inference metrics fall back to a labeled client estimate when the API is s
   assert.equal(measured.tokensPerSecond, 42)
 })
 
-test('applied RC notation typesets the exponential power and fractional exponent', () => {
+test('applied physics notation typesets exponents and units', () => {
   const latex = toMathLatex('V(t) = 10(1 − e^(−t/7)) V,  t in ms')
   assert.equal(latex, String.raw`V(t) = 10(1 - e^{-\frac{t}{7}}) V,\quad t\text{ in ms}`)
 
@@ -175,7 +175,7 @@ test('applied RC notation typesets the exponential power and fractional exponent
   assert.match(html, /<msup>/)
   assert.doesNotMatch(html, /e\^\(/)
 
-  const electronicsProblem = createAppliedProblem('Electronics', 2)
-  assert.match(electronicsProblem.mathLatex, /e\^\{-\\frac\{t\}\{\d+\}\}/)
-  assert.match(katex.renderToString(electronicsProblem.mathLatex), /<msup>/)
+  const problem = createAppliedProblem('Circuit Analysis', 2)
+  assert.doesNotThrow(() => katex.renderToString(problem.mathLatex, { throwOnError: true, trust: false }))
+  assert.match(problem.mathLatex, /\\Omega/)
 })
