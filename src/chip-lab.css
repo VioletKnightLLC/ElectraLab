@@ -1,0 +1,305 @@
+/* Chip Design Lab — neon green silicon-on-black visuals */
+
+.chip-lab-page .chip-intro .applied-intro-symbol {
+  font-size: 30px;
+  color: #76B900;
+}
+
+/* ---------- tabs ---------- */
+.chip-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.chip-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  padding: 13px 15px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background: #141414;
+  color: #CCC;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .16s, background .16s, box-shadow .16s;
+}
+.chip-tab strong { font-size: 14px; color: #F0F0F2; }
+.chip-tab small { font-size: 10px; color: #888; }
+.chip-tab:hover { border-color: #4a5f22; background: #17200f; }
+.chip-tab.active {
+  border-color: #76B900;
+  background: linear-gradient(150deg, #12240a, #141414 70%);
+  box-shadow: 0 0 18px rgba(118, 185, 0, .18);
+}
+.chip-tab.active strong { color: #8AE600; }
+
+/* ---------- shared panels ---------- */
+.chip-explore-grid,
+.chip-datapath-grid,
+.chip-sandbox-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+.chip-die-card,
+.chip-spec-card,
+.chip-zoom-card {
+  padding: 18px;
+  border: 1px solid #333;
+  border-radius: 12px;
+  background: #141414;
+}
+.chip-panel-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.chip-panel-heading h2 { margin: 0; font-size: 17px; color: #F0F0F2; }
+.chip-panel-heading .eyebrow { margin-bottom: 4px; }
+.chip-die-hint { font-size: 10px; color: #888; font-family: var(--mono); }
+.chip-spec-stack { display: grid; gap: 14px; }
+
+/* ---------- die svg ---------- */
+.chip-die-svg { display: block; width: 100%; height: auto; }
+.chip-package { fill: #101010; stroke: #2D2D2D; stroke-width: 1.5; }
+.chip-pin-ring { fill: none; stroke: #2D2D2D; stroke-width: 1; stroke-dasharray: 5 4; }
+.chip-die {
+  fill: #0C1408;
+  stroke: #3a5a12;
+  stroke-width: 1.2;
+}
+.chip-package-label {
+  fill: #5a6b47;
+  font: 500 9px var(--mono);
+  letter-spacing: 2px;
+}
+.chip-block { cursor: pointer; outline: none; }
+.chip-block-rect {
+  fill: #18230f;
+  stroke: #3f5c1c;
+  stroke-width: 1.2;
+  transition: fill .15s, stroke .15s;
+}
+.chip-block:hover .chip-block-rect,
+.chip-block:focus-visible .chip-block-rect {
+  fill: #1f3110;
+  stroke: #8AE600;
+}
+.chip-block.active .chip-block-rect {
+  fill: #1f3110;
+  stroke: #76B900;
+  stroke-width: 1.6;
+  filter: drop-shadow(0 0 7px rgba(118, 185, 0, .55));
+}
+.chip-block.pulse .chip-block-rect {
+  animation: chip-block-pulse 1.6s ease-in-out infinite;
+}
+.chip-block-name { fill: #C0C1C7; font-size: 11px; font-weight: 600; pointer-events: none; }
+.chip-block.active .chip-block-name { fill: #B4E85E; }
+.chip-block-size { fill: #66795a; font: 500 8px var(--mono); pointer-events: none; }
+
+@keyframes chip-block-pulse {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(118, 185, 0, .4)); }
+  50% { filter: drop-shadow(0 0 12px rgba(138, 230, 0, .85)); }
+}
+
+/* ---------- datapath ---------- */
+.chip-trace {
+  stroke: #2f4420;
+  stroke-width: 2;
+  stroke-dasharray: 6 5;
+}
+.chip-trace.lit { stroke: #76B900; }
+.chip-pulse-dot {
+  fill: #A3E635;
+  transition: cx .6s ease, cy .6s ease;
+  filter: drop-shadow(0 0 6px rgba(163, 230, 53, .9));
+}
+.chip-pulse-halo {
+  fill: none;
+  stroke: rgba(118, 185, 0, .5);
+  stroke-width: 1.4;
+  transition: cx .6s ease, cy .6s ease;
+  animation: chip-halo 1.6s ease-in-out infinite;
+}
+@keyframes chip-halo {
+  0%, 100% { opacity: .9; r: 12; }
+  50% { opacity: .2; r: 20; }
+}
+.chip-datapath-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.chip-stage-chip {
+  font: 500 10px var(--mono);
+  color: #888;
+  padding: 6px 10px;
+  border: 1px solid #333;
+  border-radius: 999px;
+  background: #101010;
+}
+.chip-stage-chip strong { color: #8AE600; }
+.chip-mode-toggle { display: flex; gap: 4px; }
+.chip-mode {
+  padding: 6px 14px;
+  border: 1px solid #333;
+  border-radius: 7px;
+  background: #101010;
+  color: #888;
+  font: 600 11px var(--mono);
+  cursor: pointer;
+}
+.chip-mode.active { border-color: #76B900; background: #0D2B1A; color: #8AE600; }
+.chip-stage-track { display: flex; gap: 6px; margin-top: 14px; }
+.chip-stage-pip { flex: 1; height: 3px; border-radius: 2px; background: #2D2D2D; }
+.chip-stage-pip.lit { background: #76B900; box-shadow: 0 0 6px rgba(118, 185, 0, .5); }
+
+/* ---------- GPU tiles ---------- */
+.gpu-tile {
+  fill: #18230f;
+  stroke: #33491c;
+  stroke-width: .8;
+}
+.gpu-tile.lit { fill: #1f3110; stroke: #4f7a20; }
+.gpu-tile.wave { animation: gpu-wave 3.4s ease-in-out both; }
+.gpu-scheduler { fill: #1f3110; stroke: #4f7a20; }
+@keyframes gpu-wave {
+  0% { fill: #18230f; stroke: #33491c; }
+  8% { fill: #76B900; stroke: #A3E635; filter: drop-shadow(0 0 6px rgba(163, 230, 53, .8)); }
+  40% { fill: #2a4512; stroke: #76B900; filter: none; }
+  100% { fill: #1f3110; stroke: #4f7a20; }
+}
+
+/* ---------- spec cards ---------- */
+.chip-spec-card h3 { margin: 0 0 6px; font-size: 17px; color: #B4E85E; }
+.chip-spec-short { margin: 0 0 12px; font-size: 12px; line-height: 1.6; color: #CCC; }
+.chip-spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px solid #262626;
+  font-size: 11px;
+  color: #888;
+}
+.chip-spec-row strong { color: #8AE600; font-family: var(--mono); }
+.chip-spec-physics {
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid #2f4420;
+  border-radius: 8px;
+  background: #0e1609;
+}
+.chip-spec-physics .eyebrow { color: #76B900; }
+.chip-spec-physics p:last-child { margin: 0; font-size: 11px; line-height: 1.65; color: #C0C1C7; }
+.chip-physics-note { margin: 0 0 14px; font-size: 11.5px; line-height: 1.7; color: #C0C1C7; }
+.chip-physics-note strong { color: #8AE600; }
+
+/* ---------- zoom ladder ---------- */
+.chip-zoom-steps { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+.chip-zoom-step {
+  padding: 5px 9px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #101010;
+  color: #888;
+  font: 500 10px var(--mono);
+  cursor: pointer;
+}
+.chip-zoom-step:hover { border-color: #4a5f22; color: #C0C1C7; }
+.chip-zoom-step.active { border-color: #76B900; background: #0D2B1A; color: #8AE600; }
+.chip-zoom-scene {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  background: #0b0b0b;
+}
+.chip-zoom-caption { margin: 10px 0 0; font-size: 11px; line-height: 1.65; color: #C0C1C7; }
+.zoom-package-body { fill: #161616; stroke: #3a3a3a; }
+.zoom-pin { fill: #445231; }
+.zoom-die { fill: #0e1609; stroke: #3f5c1c; }
+.zoom-block { fill: #1a2a0e; stroke: #4f7a20; stroke-width: .8; }
+.zoom-gate { fill: #1a2a0e; stroke: #4f7a20; stroke-width: .6; }
+.zoom-wire { stroke: #76B900; stroke-width: 1.6; fill: none; opacity: .85; }
+.zoom-fet { fill: none; stroke: #8AE600; stroke-width: 1.6; }
+.zoom-substrate { fill: #1a1a2b; stroke: #3a3a55; }
+.zoom-well { fill: #12240a; stroke: #4f7a20; }
+.zoom-oxide { fill: #2f4420; }
+.zoom-gate-electrode { fill: #76B900; }
+.zoom-ptype { fill: #14203a; }
+.zoom-ntype { fill: #0e1609; }
+.zoom-depletion { fill: rgba(118, 185, 0, .25); stroke: #76B900; stroke-dasharray: 3 3; }
+.zoom-hole { fill: #D4B8FF; }
+.zoom-electron { fill: #8AE600; }
+
+/* ---------- sandbox ---------- */
+.chip-slider-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 18px;
+  margin-bottom: 14px;
+}
+.chip-slider { display: grid; gap: 7px; }
+.chip-slider-top { display: flex; justify-content: space-between; font-size: 11px; color: #888; }
+.chip-slider-top strong { color: #8AE600; font-family: var(--mono); }
+.chip-slider input[type="range"] {
+  width: 100%;
+  accent-color: #76B900;
+  cursor: pointer;
+}
+.chip-slider select {
+  padding: 8px 10px;
+  border: 1px solid #333;
+  border-radius: 7px;
+  background: #101010;
+  color: #8AE600;
+  font: 500 11px var(--mono);
+}
+.chip-die-preview { margin-top: 4px; }
+.chip-sandbox-bar { margin-top: 10px; }
+.chip-sandbox-bar-top { display: flex; justify-content: space-between; font-size: 10.5px; color: #888; margin-bottom: 4px; }
+.chip-sandbox-bar-top strong { color: #C0C1C7; font-family: var(--mono); }
+.chip-sandbox-track { display: block; height: 6px; border-radius: 4px; background: #232323; overflow: hidden; }
+.chip-sandbox-track i { display: block; height: 100%; border-radius: 4px; transition: width .25s ease; }
+.chip-sandbox-track i.green { background: #76B900; box-shadow: 0 0 8px rgba(118, 185, 0, .45); }
+.chip-sandbox-track i.lime { background: #8AE600; box-shadow: 0 0 8px rgba(138, 230, 0, .45); }
+.chip-sandbox-track i.dim { background: #4f7a20; }
+
+.chip-area-track {
+  display: flex;
+  height: 14px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #232323;
+  margin-bottom: 8px;
+}
+.chip-area-track span { display: block; height: 100%; transition: width .25s ease; }
+.chip-area-cores { background: #76B900; }
+.chip-area-cache { background: #4f7a20; }
+.chip-area-uncore { background: #2b2b2b; }
+.chip-area-legend { display: flex; gap: 14px; font-size: 10px; color: #888; }
+.chip-area-legend i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 5px; }
+
+.chip-offline { margin-top: 20px; }
+
+@media (max-width: 980px) {
+  .chip-explore-grid,
+  .chip-datapath-grid,
+  .chip-sandbox-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .chip-tabs { grid-template-columns: 1fr; }
+  .chip-slider-grid { grid-template-columns: 1fr; }
+}

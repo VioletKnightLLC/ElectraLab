@@ -17,6 +17,7 @@ import './layout-fixes.css'
 import './scratch-pad-tools.css'
 import './calculator.css'
 import './tutor-formatting.css'
+import './chip-lab.css'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>

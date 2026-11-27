@@ -22,3 +22,4 @@
 - If an older local API responds without inference metrics, the UI shows an explicitly approximate client-side tokens-per-second estimate until the API is restarted.
 - Matrix operations live in the pure helpers in `src/matrix.js` and should remain independently testable.
 - Reading progress is stored locally under `electralab-course-progress`.
+- The Chip Lab top-level page (`src/ChipDesignLab.jsx`, lazy-loaded, styles in `src/chip-lab.css`) is a fully offline interactive: die explorer, CPU/GPU datapath animation, and a design sandbox. Its content and physics constants live in `src/data/chipDesign.js`; sandbox numbers are intentionally approximate and labelled as such.

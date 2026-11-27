@@ -27,6 +27,7 @@ const FALLBACK_NAV_ITEMS = [
   { id: 'agent', label: 'AI Performance', icon: 'agent' },
   { id: 'scratch', label: 'Scratch pad', icon: 'pencil' },
   { id: 'applied', label: 'The Lab', icon: 'bolt' },
+  { id: 'chiplab', label: 'Chip Lab', icon: 'chip' },
   { id: 'practice', label: 'Practice', icon: 'spark' },
   { id: 'quizzes', label: 'Quizzes', icon: 'clipboard' },
   { id: 'progress', label: 'My progress', icon: 'chart' },
@@ -72,6 +73,7 @@ const SOLVER_EXAMPLES = {
 const LazyMathDisplay = lazy(() => import('./MathDisplay.jsx').then((module) => ({ default: module.MathDisplay })))
 const LazyMathContent = lazy(() => import('./MathContent.jsx'))
 const LazyAgentPage = lazy(() => import('./AgentPage.jsx'))
+const LazyChipDesignLab = lazy(() => import('./ChipDesignLab.jsx'))
 const LazyCoursebookPage = lazy(() => import('./CoursebookPage.jsx'))
 const LazyVocabularyPage = lazy(() => import('./VocabularyPage.jsx'))
 
@@ -116,6 +118,7 @@ function Icon({ name, size = 18 }) {
     lock: <><rect x="5" y="10" width="14" height="11" rx="2" /><path d="M8 10V7a4 4 0 1 1 8 0v3" /></>,
     menu: <><path d="M4 7h16M4 12h16M4 17h16" /></>,
     volume: <><path d="M4 10v4h4l5 4V6l-5 4H4Z" /><path d="M17 9a5 5 0 0 1 0 6M19.5 6.5a9 9 0 0 1 0 11" /></>,
+    chip: <><rect x="7" y="7" width="10" height="10" rx="2" /><rect x="10.5" y="10.5" width="3" height="3" /><path d="M9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4" /></>,
   }
   return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">{paths[name] || paths.spark}</svg>
 }
@@ -456,6 +459,7 @@ function App() {
           {page === 'agent' && <Suspense fallback={<div className="agent-loading">Loading local agent tools…</div>}><LazyAgentPage inferenceHistory={inferenceHistory} onInference={recordInference} onOpenScratch={openScratchModal} /></Suspense>}
           {page === 'scratch' && <ScratchPad context={scratchContext} returnPage={scratchReturnPage} onBack={() => setPage(scratchReturnPage)} onAskTutor={openTutor} />}
           {page === 'applied' && <AppliedCalculusPage records={records} level={level} onRecord={saveAnswer} onAskTutor={openTutor} onOpenScratch={openScratchModal} field={appliedField} setField={setAppliedField} problem={appliedProblem} setProblem={setAppliedProblem} selected={appliedSelected} setSelected={setAppliedSelected} feedback={appliedFeedback} setFeedback={setAppliedFeedback} appliedFields={APPLIED_FIELDS} />}
+          {page === 'chiplab' && <Suspense fallback={<div className="course-loading">Opening the chip lab…</div>}><LazyChipDesignLab onAskTutor={openTutor} /></Suspense>}
           {page === 'practice' && <PracticePage skill={skill} records={records} setSkill={(next) => { setSkill(next); setProblem(createProblem(next, level)); setFeedback(null); setSelected('') }} problem={problem} selected={selected} setSelected={setSelected} feedback={feedback} onSubmit={submitAnswer} onNext={nextProblem} onVoice={startListening} voiceMessage={voiceMessage} level={level} onAskTutor={openTutor} skills={SKILLS} />}
           {page === 'quizzes' && <QuizPage quiz={quiz} quizIndex={quizIndex} quizAnswers={quizAnswers} skill={skill} problem={problem} selected={selected} setSelected={setSelected} onStart={startPractice} onNext={handleQuizAnswer} onAskTutor={openTutor} onOpenScratch={openScratchModal} quizTopics={QUIZ_TOPICS} />}
           {page === 'progress' && <ProgressPage progress={progress} accuracy={accuracy} level={level} onPractice={startPractice} onNavigate={navigate} skills={SKILLS} />}
