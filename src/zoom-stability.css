@@ -1,0 +1,26 @@
+.app-shell :is(
+  .side-panel,.history-panel,.coursebook-toc,.coursebook-toc-link,.course-reader,
+  .chapter-objectives,.reading-equation,.reading-note,.worked-example,.recall-check,
+  .course-next-steps,.coursebook-progress-card,.agent-model-panel,.agent-model-row,
+  .agent-history-panel,.agent-playground,.agent-answer,.tutor-chat-card,.tutor-message,
+  .tutor-context,.tutor-hints,.quiz-session,.question-card,.vocabulary-controls
+):hover,
+.app-shell :is(
+  .side-panel,.history-panel,.coursebook-toc,.coursebook-toc-link,.course-reader,
+  .chapter-objectives,.reading-equation,.reading-note,.worked-example,.recall-check,
+  .course-next-steps,.coursebook-progress-card,.agent-model-panel,.agent-model-row,
+  .agent-history-panel,.agent-playground,.agent-answer,.tutor-chat-card,.tutor-message,
+  .tutor-context,.tutor-hints,.quiz-session,.question-card,.vocabulary-controls
+):focus-within{
+  transform:none!important;
+  box-shadow:none!important;
+  z-index:auto!important;
+  transition:none!important;
+}
+.app-shell .vocabulary-card:has(.known-toggle:hover),.app-shell .vocabulary-card:has(.known-toggle:focus-within),
+.app-shell .solver-card:has(.solver-mode:hover),.app-shell .solver-card:has(.solver-mode:focus-within){
+  transform:none!important;
+  box-shadow:none!important;
+  z-index:auto!important;
+  transition:none!important;
+}

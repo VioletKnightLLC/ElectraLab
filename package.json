@@ -1,0 +1,30 @@
+{
+  "name": "electralab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n tutor,web \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "node --watch server/index.js",
+    "dev:web": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview --open",
+    "test": "node --test",
+    "start": "npm run build && node server/index.js --open",
+    "start:server": "node server/index.js"
+  },
+  "dependencies": {
+    "@fontsource/atkinson-hyperlegible-next": "^5.3.0",
+    "express": "^5.3.0",
+    "katex": "^0.19.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6",
+    "vite": "^8.3.5"
+  },
+  "overrides": {
+    "katex": "^0.19.1"
+  }
+}

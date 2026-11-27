@@ -1,0 +1,13 @@
+.app-shell .vocabulary-page .math-typeset .katex:hover,
+.app-shell .coursebook-page .math-typeset .katex:hover,
+.app-shell .agent-page .math-typeset .katex:hover,
+.app-shell .tutor-page .math-typeset .katex:hover{filter:drop-shadow(0 2px 7px #0fb7e080)}
+.notation-zoom-layer{position:fixed;inset:0;z-index:20000;pointer-events:none}
+.notation-zoom-panel{position:fixed;z-index:20000;box-sizing:border-box;display:grid;place-items:center;padding:14px;overflow:visible;border:1px solid #0fb7e0;border-radius:10px;background:#1c1d21f7;color:#f0f0f2;box-shadow:0 16px 48px #000c,0 0 24px #0fb7e04d;backdrop-filter:blur(8px)}
+.notation-zoom-content{display:block;width:max-content;max-width:none;max-height:none;overflow:visible}
+.notation-zoom-math{width:max-content;max-width:none!important;overflow:visible}
+.notation-zoom-math .katex-display,.notation-zoom-math .katex-display>.katex{width:max-content;max-width:none!important;margin:0;overflow:visible!important}
+@media(prefers-reduced-motion:reduce){
+  .app-shell .vocabulary-page .math-typeset .katex,
+  .app-shell .coursebook-page .math-typeset .katex{transition:none}
+}

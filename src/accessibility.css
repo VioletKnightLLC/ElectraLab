@@ -1,0 +1,41 @@
+:root{font-size:16px;text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{font-size:14px;line-height:1.55}
+.eyebrow{font-size:10px;letter-spacing:.8px}
+.page-description,.welcome-subtitle{font-size:13px;line-height:1.65}
+.sidebar-label{font-size:10px}
+.topic-link{font-size:13px}
+.offline-card strong{font-size:11px}
+.offline-card div span,.profile-copy small{font-size:10px}
+.profile-copy strong{font-size:12px}
+.breadcrumb{font-size:12px}
+.topbar-date,.streak-pill{font-size:11px}
+.stat-label{font-size:11px}
+.stat-note,.activity-time{font-size:10px}
+.section-heading h2,.panel-heading h2{font-size:16px}
+.skill-title{font-size:12px}
+.skill-detail{font-size:10px}
+.text-link{font-size:11px}
+.button{min-height:38px;font-size:11px}
+.question-prompt{font-size:13px}
+.answer-prompt{font-size:11px}
+.question-count,.question-footnote{font-size:9px}
+.answer-option{min-height:48px}
+.answer-letter{width:23px;height:23px}
+.answer-value{font-size:13px}
+.feedback-panel strong{font-size:12px}
+.feedback-panel p,.feedback-panel ol{font-size:11px}
+.solver-label,.solver-example{font-size:11px}
+.solver-input-row input{font-size:14px}
+.tutor-message-content{font-size:12px;line-height:1.75}
+.tutor-message-label{font-size:9px}
+.tutor-copy-button{min-height:30px;font-size:9px}
+.tutor-composer textarea{font-size:12px;line-height:1.6}
+.tutor-composer-bottom>span{font-size:9px}
+.agent-metric>span{font-size:10px}
+.agent-metric>small,.agent-model-name small,.agent-model-stat small{font-size:9px}
+.agent-model-stat strong,.agent-history-model,.agent-history-row time{font-size:10px}
+.agent-answer-content{font-size:11px;line-height:1.75}
+.matrix-input-field input{min-height:34px;font-size:12px}
+.footer{font-size:10px}
+@media(prefers-contrast:more){button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline-width:4px;outline-offset:3px}.answer-option,.button,.coursebook-toc-link,.vocabulary-card{border-width:2px}.text-link{ text-decoration:underline;text-underline-offset:3px}}
+@media(max-width:640px){body{font-size:13px}.page-description,.welcome-subtitle{font-size:12px}.topic-link{font-size:12px}.tutor-message-content{font-size:12px}.footer{font-size:9px}}

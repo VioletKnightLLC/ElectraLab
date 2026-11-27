@@ -1,0 +1,123 @@
+.tutor-draft-preview {
+  max-height: 150px;
+  margin-top: 7px;
+  padding: 8px 10px;
+  overflow: auto;
+  border: 1px solid #414249;
+  border-radius: 6px;
+  background: #1c1d21;
+}
+
+.tutor-draft-preview-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #0fb7e0;
+  font: 600 8px var(--mono);
+  letter-spacing: .55px;
+}
+
+.tutor-draft-preview-content {
+  color: #e2e2e7;
+  font-size: 10px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.tutor-draft-preview-content p {
+  margin: 4px 0;
+}
+
+.tutor-draft-preview-content h3 {
+  margin: 7px 0 4px;
+  color: #77dff4;
+  font-size: 10px;
+}
+
+.tutor-draft-preview-content ul,
+.tutor-draft-preview-content ol {
+  margin: 5px 0;
+  padding-left: 18px;
+}
+
+.tutor-draft-preview-content .katex-display {
+  max-width: 100%;
+  margin: .4em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+@media(max-width:640px) {
+  .tutor-draft-preview {
+    max-height: 120px;
+  }
+}
+
+.tutor-message-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tutor-message-action {
+  padding: 3px 6px;
+  border: 1px solid #50515a;
+  border-radius: 4px;
+  background: #2b2c32;
+  color: #e4e4e8;
+  font-size: 8px;
+  cursor: pointer;
+}
+
+.tutor-message-action:hover {
+  border-color: #0fb7e0;
+  color: #fff;
+}
+
+.tutor-stop-button {
+  min-height: 30px;
+  padding: 0 12px;
+  border: 1px solid #80505b;
+  border-radius: 5px;
+  background: #4a2d36;
+  color: #ffe9ed;
+  font-size: 9px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tutor-stop-button:hover {
+  border-color: #c26b7b;
+  background: #5c3440;
+}
+
+.tutor-interrupted-note,
+.tutor-stopped-notice {
+  color: #c8b992 !important;
+  font-size: 8px !important;
+}
+
+.tutor-stopped-notice {
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.tutor-message.interrupted {
+  border-style: dashed;
+}
+
+.tutor-model-picker select:disabled {
+  cursor: not-allowed;
+  opacity: .65;
+}
+
+@media(max-width:640px) {
+  .tutor-composer-bottom {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .tutor-composer-bottom > span {
+    max-width: 180px;
+    line-height: 1.4;
+  }
+}

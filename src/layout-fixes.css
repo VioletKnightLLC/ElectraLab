@@ -1,0 +1,27 @@
+.tutor-page{container-type:inline-size;container-name:tutor-page}
+.tutor-layout{width:100%;grid-template-columns:minmax(0,1fr) minmax(220px,260px);align-items:start}
+.tutor-layout>*{min-width:0;max-width:100%}
+.tutor-chat-card,.tutor-aside,.tutor-transcript{min-width:0;width:100%;max-width:100%}
+.tutor-chat-header,.tutor-message,.tutor-context,.tutor-error,.tutor-composer{min-width:0;max-width:100%}
+.tutor-model-picker{min-width:0;max-width:100%}
+.tutor-model-picker select{width:100%;max-width:170px}
+@media(max-width:1150px){
+  .tutor-layout{grid-template-columns:minmax(0,1fr)}
+  .tutor-aside{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@container tutor-page (max-width:1050px){
+  .tutor-layout{grid-template-columns:minmax(0,1fr)}
+  .tutor-aside{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+  .tutor-aside{grid-template-columns:minmax(0,1fr)}
+  .tutor-chat-header{flex-wrap:wrap}
+  .tutor-model-picker{margin-left:auto}
+}
+.app-shell .tutor-aside :is(.coach-card,.tutor-scratch-card,.tutor-hints,.tutor-refresh):hover,
+.app-shell .tutor-aside :is(.coach-card,.tutor-scratch-card,.tutor-hints,.tutor-refresh):focus-within{
+  transform:none!important;
+  box-shadow:none!important;
+  z-index:auto!important;
+  transition:none!important;
+}

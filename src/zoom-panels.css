@@ -1,0 +1,24 @@
+@media(hover:hover) and (pointer:fine){
+  .app-shell :is(.offline-card,.solver-support,.quiz-reassurance,.tutor-hints,.coursebook-progress-card,.vocabulary-progress,.vocabulary-controls,.vocabulary-study-note,.vocabulary-empty):hover{
+    position:relative;
+    z-index:120;
+    transform:scale(1.2);
+    transform-origin:center;
+    box-shadow:0 20px 60px #000b;
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+}
+.app-shell :is(.offline-card,.solver-support,.quiz-reassurance,.tutor-hints,.coursebook-progress-card,.vocabulary-progress,.vocabulary-controls,.vocabulary-study-note,.vocabulary-empty):focus-within{
+  position:relative;
+  z-index:120;
+  transform:scale(1.2);
+  transform-origin:center;
+  box-shadow:0 20px 60px #000b;
+}
+@media(max-width:700px){
+  .app-shell :is(.offline-card,.solver-support,.quiz-reassurance,.tutor-hints,.coursebook-progress-card,.vocabulary-progress,.vocabulary-controls,.vocabulary-study-note,.vocabulary-empty):focus-within{transform:scale(1.2)}
+}
+@media(prefers-reduced-motion:reduce){
+  .app-shell :is(.offline-card,.solver-support,.quiz-reassurance,.tutor-hints,.coursebook-progress-card,.vocabulary-progress,.vocabulary-controls,.vocabulary-study-note,.vocabulary-empty){transition:none!important}
+}
+.app-shell :is(.offline-card,.solver-support,.quiz-reassurance,.tutor-hints,.coursebook-progress-card,.vocabulary-progress,.vocabulary-controls,.vocabulary-study-note,.vocabulary-empty){transition:transform .16s ease,box-shadow .16s ease}

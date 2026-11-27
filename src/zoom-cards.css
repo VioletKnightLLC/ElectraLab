@@ -1,0 +1,110 @@
+@media(hover:hover) and (pointer:fine){
+  .app-shell :is(
+    .stat-card,.continue-card,.skill-card,.side-panel,.activity-row,.gentle-note,
+    .question-card,.coach-card,.practice-progress-card,.solver-card,.quiz-topic-card,
+    .quiz-session,.quiz-complete,.progress-panel,.history-panel,.applied-intro,
+    .applied-field-card,.help-tools,.coursebook-feature-card,.coursebook-toc,
+    .coursebook-toc-link,.course-reader,.chapter-objectives,.reading-equation,
+    .reading-note,.worked-example,.recall-check,.course-next-steps,
+    .vocabulary-card,.agent-metric,.agent-model-panel,.agent-model-row,
+    .agent-playground,.agent-history-panel,.math-lab-card,.scratch-board-card,
+    .scratch-notes-card,.tutor-chat-card,.tutor-message,.tutor-scratch-card
+  ):hover:not(:has(:is(
+    .stat-card,.continue-card,.skill-card,.side-panel,.activity-row,.gentle-note,
+    .question-card,.coach-card,.practice-progress-card,.solver-card,.quiz-topic-card,
+    .quiz-session,.quiz-complete,.progress-panel,.history-panel,.applied-intro,
+    .applied-field-card,.help-tools,.coursebook-feature-card,.coursebook-toc,
+    .coursebook-toc-link,.course-reader,.chapter-objectives,.reading-equation,
+    .reading-note,.worked-example,.recall-check,.course-next-steps,
+    .vocabulary-card,.agent-metric,.agent-model-panel,.agent-model-row,
+    .agent-playground,.agent-history-panel,.math-lab-card,.scratch-board-card,
+    .scratch-notes-card,.tutor-chat-card,.tutor-message,.tutor-scratch-card
+  ):hover)){
+    position:relative;
+    z-index:100;
+    transform:scale(1.2)!important;
+    transform-origin:center center;
+    box-shadow:0 20px 60px #000b!important;
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+}
+
+.app-shell :is(
+  .stat-card,.continue-card,.skill-card,.side-panel,.activity-row,.gentle-note,
+  .question-card,.coach-card,.practice-progress-card,.solver-card,.quiz-topic-card,
+  .quiz-session,.quiz-complete,.progress-panel,.history-panel,.applied-intro,
+  .applied-field-card,.help-tools,.coursebook-feature-card,.coursebook-toc,
+  .coursebook-toc-link,.course-reader,.chapter-objectives,.reading-equation,
+  .reading-note,.worked-example,.recall-check,.course-next-steps,
+  .vocabulary-card,.agent-metric,.agent-model-panel,.agent-model-row,
+  .agent-playground,.agent-history-panel,.math-lab-card,.scratch-board-card,
+  .scratch-notes-card,.tutor-chat-card,.tutor-message,.tutor-scratch-card
+):focus-within:not(:has(:is(
+  .stat-card,.continue-card,.skill-card,.side-panel,.activity-row,.gentle-note,
+  .question-card,.coach-card,.practice-progress-card,.solver-card,.quiz-topic-card,
+  .quiz-session,.quiz-complete,.progress-panel,.history-panel,.applied-intro,
+  .applied-field-card,.help-tools,.coursebook-feature-card,.coursebook-toc,
+  .coursebook-toc-link,.course-reader,.chapter-objectives,.reading-equation,
+  .reading-note,.worked-example,.recall-check,.course-next-steps,
+  .vocabulary-card,.agent-metric,.agent-model-panel,.agent-model-row,
+  .agent-playground,.agent-history-panel,.math-lab-card,.scratch-board-card,
+  .scratch-notes-card,.tutor-chat-card,.tutor-message,.tutor-scratch-card
+):focus-within)){
+  position:relative;
+  z-index:100;
+  transform:scale(1.2)!important;
+  transform-origin:center center;
+  box-shadow:0 20px 60px #000b!important;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+
+@media(max-width:700px){
+  .app-shell :is(
+    .stat-card,.continue-card,.skill-card,.side-panel,.activity-row,.gentle-note,
+    .question-card,.coach-card,.practice-progress-card,.solver-card,.quiz-topic-card,
+    .quiz-session,.quiz-complete,.progress-panel,.history-panel,.applied-intro,
+    .applied-field-card,.help-tools,.coursebook-feature-card,.coursebook-toc,
+    .coursebook-toc-link,.course-reader,.chapter-objectives,.reading-equation,
+    .reading-note,.worked-example,.recall-check,.course-next-steps,
+    .vocabulary-card,.agent-metric,.agent-model-panel,.agent-model-row,
+    .agent-playground,.agent-history-panel,.math-lab-card,.scratch-board-card,
+    .scratch-notes-card,.tutor-chat-card,.tutor-message,.tutor-scratch-card
+  ):focus-within:not(:has(:is(
+    .stat-card,.continue-card,.skill-card,.side-panel,.activity-row,.gentle-note,
+    .question-card,.coach-card,.practice-progress-card,.solver-card,.quiz-topic-card,
+    .quiz-session,.quiz-complete,.progress-panel,.history-panel,.applied-intro,
+    .applied-field-card,.help-tools,.coursebook-feature-card,.coursebook-toc,
+    .coursebook-toc-link,.course-reader,.chapter-objectives,.reading-equation,
+    .reading-note,.worked-example,.recall-check,.course-next-steps,
+    .vocabulary-card,.agent-metric,.agent-model-panel,.agent-model-row,
+    .agent-playground,.agent-history-panel,.math-lab-card,.scratch-board-card,
+    .scratch-notes-card,.tutor-chat-card,.tutor-message,.tutor-scratch-card
+  ):focus-within)){
+    transform:scale(1.2)!important;
+    transform-origin:center center;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .app-shell :is(
+    .stat-card,.continue-card,.skill-card,.side-panel,.activity-row,.gentle-note,
+    .question-card,.coach-card,.practice-progress-card,.solver-card,.quiz-topic-card,
+    .quiz-session,.quiz-complete,.progress-panel,.history-panel,.applied-intro,
+    .applied-field-card,.help-tools,.coursebook-feature-card,.coursebook-toc,
+    .coursebook-toc-link,.course-reader,.chapter-objectives,.reading-equation,
+    .reading-note,.worked-example,.recall-check,.course-next-steps,
+    .vocabulary-card,.agent-metric,.agent-model-panel,.agent-model-row,
+    .agent-playground,.agent-history-panel,.math-lab-card,.scratch-board-card,
+    .scratch-notes-card,.tutor-chat-card,.tutor-message,.tutor-scratch-card
+  ){transition:none!important}
+}
+
+.app-shell :is(
+  .stat-card,.continue-card,.skill-card,.activity-row,.gentle-note,
+  .question-card,.coach-card,.practice-progress-card,.solver-card,.quiz-topic-card,
+  .quiz-session,.quiz-complete,.progress-panel,.applied-intro,.applied-field-card,
+  .help-tools,.coursebook-feature-card,.coursebook-toc-link,.chapter-objectives,
+  .reading-equation,.reading-note,.worked-example,.recall-check,.course-next-steps,
+  .vocabulary-card,.agent-metric,.agent-model-row,.agent-playground,.math-lab-card,
+  .scratch-board-card,.scratch-notes-card,.tutor-message,.tutor-scratch-card
+){transition:transform .16s ease,box-shadow .16s ease}

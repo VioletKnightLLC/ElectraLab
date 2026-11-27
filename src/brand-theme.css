@@ -1,0 +1,237 @@
+.brand-mark{background:#7c2852!important;color:#fff;border:1px solid #a54373}.brand-mark span,.brand-name .brand-notation{color:#0fb7e0!important}
+.app-shell .coursebook-page .coursebook-progress-card,.app-shell .coursebook-page .coursebook-toc,.app-shell .coursebook-page .course-reader,.app-shell .vocabulary-page .vocabulary-progress,.app-shell .vocabulary-page .vocabulary-controls,.app-shell .vocabulary-page .vocabulary-card{background:#24252a!important;border-color:#44454e!important}
+.app-shell .coursebook-page .coursebook-heading h1,.app-shell .coursebook-page .chapter-header h2,.app-shell .coursebook-page .reading-section h3,.app-shell .coursebook-page .worked-example h3,.app-shell .coursebook-page .recall-check h3,.app-shell .vocabulary-page .vocabulary-heading h1,.app-shell .vocabulary-page .vocabulary-card h2{color:#f0f0f2!important}
+.app-shell .coursebook-page .coursebook-toc-link{color:#d0d1d6}.app-shell .coursebook-page .coursebook-toc-link:hover{background:#303137;color:#fff}.app-shell .coursebook-page .coursebook-toc-link.active{background:#3c2430;color:#fff}
+.app-shell .coursebook-page .coursebook-progress-track,.app-shell .vocabulary-page .vocabulary-progress>div{background:#414249}
+.app-shell .coursebook-page .coursebook-progress-track i,.app-shell .vocabulary-page .vocabulary-progress i{background:#0fb7e0}
+.app-shell .coursebook-page .coursebook-toc-footer,.app-shell .coursebook-page .chapter-meta,.app-shell .coursebook-page .chapter-read-status,.app-shell .coursebook-page .coursebook-unit>p,.app-shell .coursebook-page .chapter-pagination>span,.app-shell .vocabulary-page .vocabulary-category,.app-shell .vocabulary-page .vocabulary-result-count{color:#c0c1c7}
+.app-shell .coursebook-page .reading-prose,.app-shell .coursebook-page .worked-example-setup,.app-shell .coursebook-page .worked-example li,.app-shell .vocabulary-page .vocabulary-meaning,.app-shell .vocabulary-page .vocabulary-problem,.app-shell .vocabulary-page .vocabulary-example-body ol{font-family:'Atkinson Hyperlegible Next',Arial,sans-serif;color:#d8d8dd}
+.app-shell .coursebook-page .reading-prose{font-size:16px;line-height:1.8}.app-shell .coursebook-page .worked-example-setup,.app-shell .coursebook-page .worked-example li{font-size:14px;line-height:1.7}
+.app-shell .coursebook-page .chapter-objectives,.app-shell .coursebook-page .worked-example,.app-shell .coursebook-page .course-next-steps,.app-shell .coursebook-page .recall-check{background:#292a30!important;border-color:#44454e}
+.app-shell .coursebook-page .recall-option{background:#24252a;border-color:#50515a;color:#e3e3e7}.app-shell .coursebook-page .recall-option.selected{background:#163641;border-color:#0fb7e0;color:#fff}
+.app-shell .coursebook-page .reading-equation,.app-shell .coursebook-page .vocabulary-equation,.app-shell .vocabulary-page .vocabulary-symbol-wrap{background:#1c1d21!important;border-color:#414249!important}
+.app-shell .vocabulary-page .vocabulary-meaning{font-size:13px;line-height:1.65}.app-shell .vocabulary-page .vocabulary-say{color:#67d8f0}.app-shell .vocabulary-page .vocabulary-speak{background:#27343a;color:#70dcf5;border-color:#3e5b65}.app-shell .vocabulary-page .vocabulary-answer{background:#332a47;color:#d8c9ff}
+.app-shell .vocabulary-page .known-toggle{background:#2b2c32;border-color:#50515a;color:#e4e4e8}.app-shell .vocabulary-page .known-toggle.on{background:#173c2b;border-color:#09e82e;color:#d0ffd8}
+.app-shell .coursebook-page .course-next-steps .button-primary,.app-shell .vocabulary-page .button-primary{background:#0fb7e0;color:#07191e}
+.app-shell .week-summary strong small,.app-shell .complete-score span,.app-shell .applied-progress-number span,.app-shell .coursebook-progress-card>span small,.app-shell .vocabulary-progress>span small{font-family:'Atkinson Hyperlegible Next',Arial,sans-serif}
+@media(prefers-contrast:more){.app-shell .coursebook-page .coursebook-toc-link.active{outline:2px solid #0fb7e0;outline-offset:1px}.app-shell .vocabulary-page .known-toggle.on{outline:2px solid #09e82e}}
+:root{
+  color-scheme:dark;
+  color:#f0f0f2;
+  background:#1c1d21;
+  --ink:#f0f0f2;
+  --muted:#c0c1c7;
+  --line:#414249;
+  --paper:#24252a;
+  --green:#0fb7e0;
+  --forest:#0fb7e0;
+  --font-display:'Atkinson Hyperlegible Next',Arial,sans-serif;
+  --brand-bg:#1c1d21;
+  --brand-surface:#24252a;
+  --brand-raised:#2b2c32;
+  --brand-line:#44454e;
+  --brand-text:#f0f0f2;
+  --brand-muted:#c0c1c7;
+  --brand-burgundy:#7c2852;
+  --brand-cyan:#0fb7e0;
+  --brand-green:#09e82e;
+  --brand-purple:#3912a3;
+}
+html{color-scheme:dark;background:#1c1d21}
+body,.main-area{background:#1c1d21!important;color:#f0f0f2!important;font-family:'Atkinson Hyperlegible Next',Arial,sans-serif}
+button,input,select,textarea{font-family:'Atkinson Hyperlegible Next',Arial,sans-serif}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #0fb7e0!important;outline-offset:3px}
+a{color:#70dcf5}
+h1,h2,h3,h4,strong{color:#f1f1f4}
+.eyebrow{color:#c6c7cd}
+.brand,.brand-name{color:#f4f4f6}
+.brand-mark{background:#7c2852!important;color:#fff;border:1px solid #a54373}
+.brand-mark span,.brand-name .brand-notation{color:#0fb7e0!important}
+.sidebar{background:#17181c!important;border-color:#35363d!important}
+.sidebar-label{color:#c0c1c7}
+.nav-link{color:#d0d1d6}
+.nav-link:hover,.topic-link:hover{background:#2a2b31!important;color:#fff}
+.nav-link.active{position:relative;background:#3c2430!important;color:#fff!important}
+.nav-link.active::before{position:absolute;inset:8px auto 8px 0;width:3px;border-radius:3px;background:#0fb7e0;content:''}
+.nav-link.active svg{color:#66d9f2!important}
+.nav-dot,.online-dot{background:#09e82e}
+.topic-link{color:#d0d1d6}
+.lavender{background:#30264d!important;color:#cabaff!important}
+.mint{background:#173d33!important;color:#a8e7cf!important}
+.peach{background:#472a35!important;color:#f0bdd0!important}
+.blue{background:#173847!important;color:#9bdcf0!important}
+.offline-card,.profile-button{background:#202126!important;border-color:#3b3c43!important}
+.offline-card strong,.profile-copy strong{color:#f1f1f3}
+.offline-card div span,.profile-copy small{color:#c2c3c9}
+.offline-icon,.coach-orb{background:#35333e!important;color:#cbbcff!important}
+.avatar{background:#41313b!important;color:#ffd8e8!important}
+.topbar{background:#202126!important;border-color:#3a3b42!important}
+.breadcrumb,.topbar-date{color:#c0c1c7}
+.breadcrumb strong{color:#f1f1f3}
+.topbar-divider{border-color:#484951}
+.scratch-utility-trigger{background:#2a2b31!important;border-color:#50515a!important;color:#e8e8eb!important}
+.scratch-utility-trigger:hover:not(:disabled){background:#35363e!important;border-color:#0fb7e0!important}
+.streak-pill{background:#3912a3!important;color:#fff}
+.streak-pill span{color:#d2c5ff}
+.page-content{color:#ededf0}
+.sidebar,.topbar,.stat-card,.side-panel,.skill-card,.question-card,.practice-progress-card,.offline-note,.solver-card,.solver-support,.quiz-topic-card,.quiz-session,.quiz-complete,.progress-panel,.history-panel,.scratch-board-card,.scratch-notes-card,.tutor-chat-card,.tutor-hints,.agent-metric,.agent-model-panel,.agent-playground,.agent-history-panel,.math-lab-card{background:#24252a!important;border-color:#414249!important;box-shadow:none!important}
+.stat-label,.stat-note,.skill-detail,.activity-time,.week-summary>span,.empty-activity>span:last-child,.continue-duration,.mini-progress>span:last-child,.page-description,.welcome-subtitle,.progress-note,.question-prompt,.answer-prompt,.question-footnote,.quiz-no-timer,.footer{color:#c0c1c7!important}
+.stat-value,.continue-content h2,.section-heading h2,.panel-heading h2,.skill-title,.activity-copy strong,.agent-model-name strong{color:#f0f0f2}
+.stat-icon.purple{background:#352461!important;color:#d2c4ff}
+.stat-icon.green{background:#153c2a!important;color:#7ff39a}
+.stat-icon.orange{background:#512c3c!important;color:#f5bad0}
+.stat-icon.blue{background:#163a4c!important;color:#95def4}
+.continue-card,.applied-feature-card,.coursebook-feature-card{background:linear-gradient(110deg,#29262e,#24252a)!important;border-color:#4a3946!important}
+.continue-content p,.gentle-note p{color:#d0cdd3!important}
+.continue-icon,.applied-feature-icon,.coursebook-feature-icon{background:#3a2a35!important;color:#f1c7dc!important}
+.mini-progress-track,.skill-progress>span,.topic-progress-track,.quiz-step-track{background:#414249!important}
+.mini-progress-track span,.skill-progress i,.topic-progress-track>span,.topic-progress-track>i{background:#0fb7e0!important}
+.card-decoration,.applied-feature-equation{color:#393641!important}
+.applied-feature-copy small,.coursebook-feature-card small{color:#c0aaba!important}
+.applied-feature-copy strong,.coursebook-feature-card strong{color:#f1eaf0!important}
+.applied-feature-copy>span,.coursebook-feature-card>span:nth-child(2)>span{color:#cfccd2!important}
+.section-heading h2,.panel-heading h2{color:#f0f0f2}
+.text-link{color:#52d2ef!important}
+.text-link:hover{color:#9aeaff!important}
+.panel-menu{color:#c1c2c8}
+.button{min-height:38px;border-radius:7px;font-weight:600}
+.button-primary{background:#0fb7e0!important;color:#07191e!important}
+.button-primary:hover:not(:disabled){background:#39c8ea!important;color:#06161a!important}
+.button-secondary,.button-subtle{background:#2b2c32!important;border-color:#51525b!important;color:#f0f0f2!important}
+.button-secondary:hover:not(:disabled),.button-subtle:hover:not(:disabled){background:#35363e!important;border-color:#0fb7e0!important}
+.level-chip{background:#25262c!important;border-color:#4b4c55!important;color:#e4e5e8!important}
+.live-dot,.question-count-dot{background:#09e82e}
+.chart-grid-line{border-color:#3c3d44}
+.chart-bar{background:#33343a}
+.chart-day.today .chart-bar{background:#4b3a67}
+.chart-bar.has-activity{background:#0fb7e0}
+.chart-day small,.week-summary strong small{color:#c1c2c8}
+.week-summary,.activity-row,.question-top,.question-footnote{border-color:#414249!important}
+.activity-check.correct{background:#153c25;color:#09e82e}
+.activity-check.missed{background:#432b38;color:#f0bdd0}
+.gentle-note,.quiz-reassurance{background:#2c2b31!important}
+.gentle-note>span,.quiz-reassurance>span{color:#0fb7e0}
+.gentle-note p,.quiz-reassurance p{color:#d6d4db!important}
+.gentle-note strong,.quiz-reassurance strong{color:#fff!important}
+.question-topic select,.solver-mode,.tutor-model-picker select,.matrix-actions select,.calculus-controls select,.coursebook-select-label select{background:#1c1d21!important;border-color:#50515a!important;color:#f0f0f2!important}
+.question-count,.solver-example,.progress-note{color:#c0c1c7!important}
+.math-expression,.solver-result,.practice-progress-card,.progress-panel,.history-panel{background:#1e1f24!important;border-color:#414249!important;color:#f0f0f2}
+.answer-option{background:#222328!important;border-color:#484951!important;color:#e7e7eb!important}
+.answer-option:hover{background:#2c2d33!important;border-color:#0fb7e0!important}
+.answer-option.selected{background:#163642!important;border-color:#0fb7e0!important}
+.answer-letter{background:#2b2c32!important;border-color:#595a63!important;color:#d1d2d7!important}
+.answer-option.selected .answer-letter{background:#0b5365!important;border-color:#0fb7e0!important;color:#fff}
+.answer-option.answer-correct{background:#15362b!important;border-color:#09e82e!important}
+.answer-option.answer-wrong{background:#3b2632!important;border-color:#c45985!important}
+.feedback-good{background:#173427!important}
+.feedback-try{background:#352630!important}
+.feedback-mark{background:#244c32!important;color:#09e82e!important}
+.feedback-try .feedback-mark{background:#513147!important;color:#f4bdd5!important}
+.feedback-panel strong,.feedback-panel p,.feedback-panel ol{color:#f0f0f2!important}
+.coach-card,.reflection-panel{background:#25272d!important;border-color:#42434b!important}
+.coach-card h2,.reflection-panel h2{color:#f1f1f3!important}
+.coach-card>p:not(.eyebrow),.reflection-panel>p:not(.eyebrow){color:#d0d1d6!important}
+.solver-heading h2,.solver-label,.quiz-topic-card h2,.quiz-session-top h1{color:#f2f2f4}
+.solver-icon,.reflection-star{background:#302a45!important;color:#d0c2ff!important}
+.solver-mode{border-color:#4c4d56!important;color:#d6d7dc!important}
+.solver-mode.active{background:#3b2634!important;border-color:#7c2852!important;color:#ffeaf3!important}
+.solver-input-row input,.tutor-composer textarea,.agent-prompt-form textarea{background:#18191e!important;border-color:#4b4c55!important;color:#f2f2f4!important}
+.solver-input-row input::placeholder,.tutor-composer textarea::placeholder,.agent-prompt-form textarea::placeholder{color:#b2b4bd!important}
+.solver-error,.tutor-error{background:#3a2529!important;color:#ffc6c6!important;border-color:#73434b!important}
+.solver-result{background:#24262a!important;border-color:#45464d!important}
+.solver-steps{border-color:#44454d!important;color:#e0e0e4!important}
+.solver-example button{color:#0fb7e0}
+.solver-support>div{border-color:#414249}
+.solver-support>div>span{background:#30313a;color:#bcb0f9}
+.quiz-duration,.quiz-step,.quiz-step span{color:#c7c8ce}
+.quiz-step-track span{background:#0fb7e0}
+.quiz-reassurance{background:#292833}
+.quiz-complete .complete-score{color:#f1f1f3}
+.complete-burst{background:#392b61;color:#d6caff}
+.review-row,.review-row strong{color:#e4e4e8}
+.review-row,.history-panel .activity-row,.topic-detail-row{border-color:#414249}
+.review-icon{background:#383138;color:#f1d3e2}
+.review-icon.correct{background:#19452d;color:#09e82e}
+.reflection-panel .reflection-star{background:#302a45;color:#d0c2ff}
+.continue-kicker,.mini-progress>span:last-child{color:#ccd0c2}
+.week-summary{border-color:#414249}
+.chart-legend-dot{background:#0fb7e0}
+.illustration-orbit{border-color:#3e4146}
+.illustration-number{background:#303347;color:#d4ccff}
+.illustration-equation{background:#25262c;border-color:#44454d;color:#d6d7dc}
+.illustration-caption{color:#c4c8bb}
+.scratch-toolbar{border-color:#414249}
+.scratch-tool,.scratch-action{color:#d1d2d7}
+.scratch-tool:hover,.scratch-action:hover:not(:disabled){background:#33343a;color:#fff}
+.scratch-tool.active{background:#3b2634;border-color:#8e3a65;color:#ffe8f1}
+.scratch-canvas-wrap{background-color:#17191e;background-image:linear-gradient(#292b32 1px,transparent 1px),linear-gradient(90deg,#292b32 1px,transparent 1px)}
+.scratch-canvas-hint,.scratch-canvas-hint>span{color:#afb2bb}
+.scratch-canvas-hint>span{color:#0fb7e0}
+.scratch-board-footer,.scratch-notes-footer{border-color:#414249;color:#c0c1c7}
+.scratch-notes-card textarea{background:repeating-linear-gradient(to bottom,#1a1b20 0,#1a1b20 25px,#35363e 26px)!important;border-color:#4b4c55!important;color:#f0f0f2!important}
+.scratch-notes-card textarea::placeholder{color:#b5b6be!important}
+.scratch-idea{background:#292a30!important}
+.scratch-idea p,.scratch-share-note{color:#c7c8ce!important}
+.scratch-idea strong{color:#f3f3f4!important}
+.scratch-confirm{background:#392b24;color:#ffe1c4}
+.scratch-problem-context{background:#25272d;border-color:#414249}
+.scratch-problem-context p{color:#ededf0}
+.scratch-modal-backdrop{background:#090a0dcc}
+.scratch-modal{background:#1c1d21;border-color:#45464e;box-shadow:0 24px 80px #000b}
+.scratch-modal-close{background:#2b2c32;border-color:#51525b;color:#f0f0f2}
+.scratch-modal-close:hover{background:#383940}
+.tutor-transcript{background:#17181d}
+.tutor-chat-header,.tutor-composer{border-color:#404148}
+.tutor-avatar{background:#30264d;color:#d2c4ff}
+.tutor-message{background:#24252a;border-color:#414249}
+.tutor-message.user{background:#26323a;border-color:#395261}
+.tutor-message-label{color:#c4c5cb}
+.tutor-message p,.tutor-message-content{color:#e8e8eb}
+.tutor-copy-button{background:#2b2c32;border-color:#52535d;color:#e4e4e8}
+.tutor-copy-button:hover{background:#36373e;border-color:#0fb7e0;color:#fff}
+.tutor-inference-meter{background:#292a30;border-color:#474850;color:#c7c8ce}
+.tutor-inference-meter strong{color:#0fb7e0}
+.tutor-scratch-card{background:#28272f;border-color:#494550}
+.tutor-scratch-mark{background:#30264d;color:#d4c8ff}
+.tutor-scratch-card strong{color:#f0edf4}
+.tutor-scratch-card>div>span{color:#c7c3ce}
+.tutor-setup{background:#24252a;border-color:#414249}
+.tutor-setup p,.tutor-welcome>p:not(.eyebrow){color:#c9cad0}
+.tutor-welcome h2{color:#f1f1f3}
+.tutor-context{background:#25262c;border-color:#414249}
+.tutor-context>span{color:#0fb7e0}
+.agent-metric,.agent-model-panel,.agent-playground,.agent-history-panel,.math-lab-card{background:#24252a;border-color:#414249}
+.agent-metric>span,.agent-metric>small,.agent-model-name small,.agent-model-stat small{color:#c0c1c7}
+.agent-metric>strong,.agent-model-name strong,.agent-model-stat strong{color:#f0f0f2}
+.agent-status.connected .tutor-connection-dot,.agent-model-dot{background:#09e82e}
+.agent-local-badge{background:#272532;border-color:#4c4861;color:#d0c4ff}
+.agent-example-chip{background:#2b2c32;border-color:#4a4b54;color:#dddde2}
+.agent-example-chip:hover{background:#34353e;border-color:#0fb7e0}
+.agent-answer{background:#1c1d21;border-color:#414249}
+.agent-answer-heading,.agent-answer-content{color:#e3e3e7}
+.agent-history-row{border-color:#414249}
+.agent-history-model,.agent-history-row time{color:#c4c5cb}
+.agent-inference-details,.agent-inference-details>span{color:#d0d1d6}
+.agent-inference-details summary{color:#0fb7e0}
+.math-lab-symbol{background:#3a2434;color:#f1c9dc}
+.math-lab-heading h3{color:#f0f0f2}
+.math-lab-description,.calculus-controls label{color:#c4c5cb}
+.calculus-controls input,.matrix-input-field input{background:#191a1f;border-color:#4b4c55;color:#f0f0f2}
+.matrix-input-group{border-color:#44454e}
+.matrix-input-group legend,.matrix-input-field{color:#d1d2d7}
+.math-lab-result,.matrix-result{background:#1d1e23;border-color:#414249}
+.math-lab-steps{color:#d3d4d8}
+.coursebook-feature-card{background:linear-gradient(105deg,#28252d,#24252a)!important;border-color:#47424d}
+.coursebook-feature-icon{background:#39263a;color:#edcaeb}
+.coursebook-feature-card small{color:#d1b7cd}
+.coursebook-feature-card strong{color:#f4edf4}
+.coursebook-feature-card>span:nth-child(2)>span{color:#d0cad2}
+.vocabulary-speak,.vocabulary-ask,.known-toggle,.chapter-pagination .button{min-height:36px}
+.vocabulary-speak{background:#282c35;color:#72d7f0;border:1px solid #3f5158}
+.vocabulary-speak:hover{background:#263942}
+.known-toggle{background:#2b2c32;color:#e2e2e6;border-color:#4b4c55}
+.known-toggle.on{background:#193c27;border-color:#09e82e;color:#c8ffd1}
+.vocabulary-study-note>span{color:#0fb7e0}
+.agent-telemetry-warning{background:#332b1b;color:#f1dfa7}
+.matrix-result{color:#f0f0f2}
+.course-loading,.agent-loading{color:#d0d1d6}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 112" role="img" aria-labelledby="title description">
+  <title id="title">Calculus(t)</title>
+  <desc id="description">The Calculus(t) wordmark in burgundy, cyan, and charcoal.</desc>
+  <rect width="600" height="112" rx="22" fill="#1c1d21"/>
+  <rect x="16" y="16" width="80" height="80" rx="24" fill="#7c2852" stroke="#a54373" stroke-width="2"/>
+  <text x="34" y="78" fill="#f0f0f2" font-family="Atkinson Hyperlegible Next, Arial, sans-serif" font-size="67" font-weight="700" letter-spacing="-6">c</text>
+  <circle cx="79" cy="78" r="4.5" fill="#0fb7e0"/>
+  <text x="119" y="73" fill="#f0f0f2" font-family="Atkinson Hyperlegible Next, Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="-1.6">
+    calcu<tspan font-weight="500">lus</tspan><tspan dx="2" fill="#0fb7e0" font-weight="600">(t)</tspan>
+  </text>
+  <path d="M122 87h42" stroke="#0fb7e0" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+</svg>

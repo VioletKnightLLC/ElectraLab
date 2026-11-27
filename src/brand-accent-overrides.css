@@ -1,0 +1,105 @@
+:root{
+  --brand-bg:#1c1d21;
+  --brand-surface:#24252a;
+  --brand-raised:#2b2c32;
+  --brand-line:#44454e;
+  --brand-text:#f0f0f2;
+  --brand-muted:#c0c1c7;
+  --brand-burgundy:#7c2852;
+  --brand-cyan:#0fb7e0;
+  --brand-green:#09e82e;
+  --brand-purple:#3912a3;
+  --green:#0fb7e0;
+  --forest:#7c2852;
+}
+.app-shell .brand-mark{background:#7c2852!important;color:#fff!important;border:1px solid #a54373}
+.app-shell .brand-mark span,.app-shell .brand-name .brand-notation{color:#0fb7e0!important}
+.app-shell .welcome-row h1 em,.app-shell .page-title-row h1 em,.app-shell .quiz-complete h1 em{color:#0fb7e0!important}
+.app-shell .coursebook-page .coursebook-heading h1 em,.app-shell .vocabulary-page .vocabulary-heading h1 em{color:#0fb7e0!important}
+.app-shell .nav-link.active{background:#3c2430!important;color:#fff!important}
+.app-shell .nav-link.active::before{background:#0fb7e0!important}
+.app-shell .nav-link.active svg,.app-shell .text-link,.app-shell .small-link,.app-shell .vocabulary-page .text-link{color:#0fb7e0!important}
+.app-shell .button-primary,.app-shell .coursebook-page .course-next-steps .button-primary,.app-shell .vocabulary-page .button-primary{background:#0fb7e0!important;color:#07191e!important}
+.app-shell .button-primary:hover:not(:disabled){background:#42c9e9!important;color:#07191e!important}
+.app-shell .level-chip,.app-shell .level-chip svg{color:#d7d8dd!important}
+.app-shell .level-chip.agent-status .tutor-connection-dot,.app-shell .tutor-connection-dot,.app-shell .online-dot,.app-shell .live-dot{background:#09e82e!important}
+.app-shell .streak-pill{background:#3912a3!important;color:#fff!important}
+.app-shell .streak-pill span{color:#ddd0ff!important}
+.app-shell .stat-icon.green{background:#173642!important;color:#0fb7e0!important}
+.app-shell .activity-check.correct,.app-shell .review-icon.correct{background:#16333b!important;color:#0fb7e0!important}
+.app-shell .chart-legend-dot,.app-shell .chart-bar.has-activity{background:#0fb7e0!important}
+.app-shell .chart-day.today .chart-bar{background:#3912a3!important}
+.app-shell .brand-mark{color:#fff!important}
+.app-shell .lavender{background:#30264d!important;color:#d5cbff!important}
+.app-shell .mint{background:#173642!important;color:#8be2f5!important}
+.app-shell .peach{background:#402638!important;color:#f3c1d9!important}
+.app-shell .blue{background:#173746!important;color:#91e2f3!important}
+.app-shell .skill-progress i,.app-shell .mini-progress-track span,.app-shell .topic-progress-track>span,.app-shell .topic-progress-track>i{background:#0fb7e0!important}
+.app-shell .applied-field-card.selected{background:#382431!important;border-color:#7c2852!important;box-shadow:0 0 0 2px #512b40!important}
+.app-shell .applied-field-card.selected .applied-field-name{color:#fff!important}
+.app-shell .applied-intro{background:linear-gradient(105deg,#2a242c,#24252a)!important;border-color:#49404a!important}
+.app-shell .applied-intro-symbol{background:#3c2430!important;color:#f0c8dc!important}
+.app-shell .applied-intro h2{color:#f0f0f2!important}
+.app-shell .applied-intro p:last-child{color:#d0d1d6!important}
+.app-shell .applied-intro-decoration{color:#3b343f!important}
+.app-shell .applied-field-card{background:#24252a!important;border-color:#44454e!important}
+.app-shell .applied-field-card .applied-field-name{color:#f0f0f2}
+.app-shell .applied-field-card .applied-field-detail{color:#c0c1c7}
+.app-shell .applied-field-card .applied-field-example{color:#0fb7e0!important}
+.app-shell .feedback-good{background:#19333b!important}
+.app-shell .feedback-good .feedback-mark{background:#17444c!important;color:#72e0ef!important}
+.app-shell .answer-option.answer-correct{background:#173038!important;border-color:#0fb7e0!important}
+.app-shell .coursebook-page .coursebook-toc-link.active{background:#3c2430!important;color:#fff!important}
+.app-shell .coursebook-page .chapter-status.read{background:#173642!important;border-color:#0fb7e0!important;color:#7be1f2!important}
+.app-shell .coursebook-page .coursebook-toc-footer>span:first-child{background:#3c2430!important;color:#f0c8dc!important}
+.app-shell .coursebook-page .chapter-objectives,.app-shell .coursebook-page .recall-check{background:#25262b!important;border-color:#44454e!important}
+.app-shell .coursebook-page .reading-note{background:#29252e!important;border-color:#49414f!important;color:#ddd9e2!important}
+.app-shell .coursebook-page .reading-note>span,.app-shell .coursebook-page .worked-example-kicker>span{color:#0fb7e0!important}
+.app-shell .coursebook-page .worked-example{background:linear-gradient(115deg,#29262d,#24252a)!important;border-color:#48424c!important}
+.app-shell .coursebook-page .worked-example li>span{background:#3c2430!important;color:#f4d5e4!important}
+.app-shell .coursebook-page .course-next-steps{background:#29262d!important}
+.app-shell .coursebook-page .coursebook-progress-track i{background:#0fb7e0!important}
+.app-shell .coursebook-page .recall-option input{accent-color:#0fb7e0!important}
+.app-shell .coursebook-page .recall-feedback.correct{background:#16333b!important;color:#d5f5fb!important}
+.app-shell .coursebook-page .recall-feedback.try-again{background:#3c2430!important;color:#f5dbe7!important}
+.app-shell .vocabulary-page .vocabulary-filters button.active{background:#3c2430!important;border-color:#7c2852!important;color:#fff!important}
+.app-shell .vocabulary-page .vocabulary-example summary{color:#0fb7e0!important}
+.app-shell .vocabulary-page .vocabulary-example summary::after{color:#0fb7e0!important}
+.app-shell .vocabulary-page .vocabulary-search,.app-shell .vocabulary-page .vocabulary-select-label select{background:#1c1d21!important;border-color:#44454e!important}
+.app-shell .vocabulary-page .vocabulary-symbol-wrap{background:#1c1d21!important}
+.app-shell .vocabulary-page .vocabulary-filters button{color:#d0d1d6}
+.app-shell .help-tools{background:#24252a!important;border-color:#44454e!important}
+.app-shell .help-tools-mark{background:#3c2430!important;color:#f0c8dc!important}
+.app-shell .illustration-spark,.app-shell .empty-icon,.app-shell .history-empty>span{color:#0fb7e0!important}
+.app-shell .vocabulary-page .vocabulary-card.mastered{background:#20272b!important;border-color:#0fb7e0!important}
+.app-shell .vocabulary-page .vocabulary-progress i{background:#0fb7e0!important}
+.app-shell .vocabulary-page .known-toggle.on{background:#173642!important;border-color:#0fb7e0!important;color:#e3faff!important}
+.app-shell .vocabulary-page .vocabulary-study-note{background:#29262d!important;border-color:#48424c!important}
+.app-shell .vocabulary-page .vocabulary-study-note>span{color:#0fb7e0!important}
+.app-shell .vocabulary-page .vocabulary-answer{background:#30264d!important;color:#e3dcff!important}
+.app-shell .tutor-inference-meter strong,.app-shell .agent-inference-details summary{color:#0fb7e0!important}
+.app-shell .tutor-inference-meter .inference-meter-track i,.app-shell .inference-meter-track i{background:#0fb7e0!important}
+.app-shell .agent-model-dot{background:#09e82e!important}
+.app-shell .agent-empty-models .agent-pulse{background:#0fb7e0!important}
+.app-shell .math-lab-symbol{background:#3c2430!important;color:#f0c8dc!important}
+.app-shell .scratch-color{box-shadow:0 0 0 1px #656670!important}
+.app-shell .scratch-color.selected{box-shadow:0 0 0 2px #0fb7e0!important}
+.app-shell .scratch-progress,.app-shell .coursebook-feature-card{border-color:#44454e}
+.app-shell .coursebook-feature-icon{background:#3c2430!important;color:#f0c8dc!important}
+.app-shell .coursebook-feature-card small{color:#d9bfd0!important}
+.app-shell .coursebook-feature-card strong{color:#f2edf1!important}
+.app-shell .coursebook-feature-arrow{color:#0fb7e0!important}
+.app-shell .week-summary strong,.app-shell .progress-summary .stat-value{color:#f0f0f2!important}
+.app-shell .tutor-scratch-mark{background:#3c2430!important;color:#f0c8dc!important}
+.app-shell .tutor-scratch-card .button{border-color:#51525b!important}
+.app-shell .vocabulary-page .vocabulary-say{color:#72d9f1!important}
+.app-shell .vocabulary-page .vocabulary-speak{background:#27343a!important;border-color:#3e5b65!important;color:#70dcf5!important}
+.app-shell .tutor-message.user{background:#292a30!important;border-color:#44454e!important}
+.app-shell .tutor-scratch-card{background:#28292e!important;border-color:#44454e!important}
+.app-shell .scratch-problem-context{background:#25262b!important;border-color:#44454e!important}
+.app-shell .scratch-tool.active{background:#3c2430!important;border-color:#7c2852!important;color:#f5dce8!important}
+.app-shell .recall-option:hover{background:#303137!important;border-color:#0fb7e0!important}
+.app-shell .agent-example-chip:hover{background:#303137!important;border-color:#0fb7e0!important}
+.app-shell .vocabulary-page .vocabulary-ask{background:#2b2c32!important;border-color:#50515a!important;color:#f0f0f2!important}
+.app-shell .vocabulary-page .vocabulary-ask:hover{background:#35363e!important;border-color:#0fb7e0!important}
+@media(prefers-contrast:more){.app-shell :focus-visible{outline-color:#fff!important;outline-width:4px!important}.app-shell .nav-link.active,.app-shell .vocabulary-filters button.active{outline:1px solid #0fb7e0}}

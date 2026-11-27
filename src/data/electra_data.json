@@ -1,0 +1,713 @@
+{
+  "courseChapters": [
+    {
+      "id": "ohms-law",
+      "unit": "Unit 3 · Current Electricity",
+      "title": "Ohm's Law and Resistance",
+      "subtitle": "The fundamental relationship between voltage, current, and resistance.",
+      "minutes": 8,
+      "summary": "Understand how voltage drives current through a conductor and how resistance opposes it.",
+      "objectives": [
+        "State and apply Ohm's Law (V = IR)",
+        "Calculate resistance, voltage, or current in a simple circuit",
+        "Understand the factors affecting resistance of a conductor"
+      ],
+      "sections": [
+        {
+          "heading": "Ohm's Law",
+          "paragraphs": [
+            "Ohm's Law states that the current through a conductor between two points is directly proportional to the voltage across the two points, provided the temperature remains constant.",
+            "The mathematical form is V = I × R, where V is voltage in volts (V), I is current in amperes (A), and R is resistance in ohms (Ω)."
+          ],
+          "formula": "V = I R",
+          "note": "Ohm's Law is an empirical law valid for many conductors (ohmic conductors) but not for semiconductors or diodes."
+        },
+        {
+          "heading": "Factors Affecting Resistance",
+          "paragraphs": [
+            "The resistance of a conductor depends on its length (L), cross-sectional area (A), and the material's resistivity (ρ).",
+            "Resistance increases with length and decreases with cross-sectional area. Different materials have different resistivities — copper has low resistivity, while nichrome has high resistivity."
+          ],
+          "formula": "R = \\rho \\frac{L}{A}",
+          "note": "Resistivity ρ is a material property with units of ohm-metres (Ω·m). It changes with temperature."
+        },
+        {
+          "heading": "Temperature Dependence",
+          "paragraphs": [
+            "For most metals, resistance increases with temperature. The temperature coefficient of resistance (α) describes this change.",
+            "At higher temperatures, lattice vibrations increase, causing more frequent electron collisions and higher resistance."
+          ],
+          "formula": "R_T = R_0 [1 + \\alpha (T - T_0)]",
+          "note": "For semiconductors, resistance decreases with temperature (negative temperature coefficient)."
+        }
+      ],
+      "example": {
+        "title": "Find the current in a circuit",
+        "setup": "A 12 V battery is connected to a resistor of 6 Ω. Calculate the current flowing through the circuit.",
+        "steps": [
+          "Apply Ohm's Law: V = I × R.",
+          "Rearrange for current: I = V / R.",
+          "Substitute values: I = 12 V / 6 Ω = 2 A."
+        ]
+      },
+      "check": {
+        "question": "If the voltage across a resistor is doubled while its resistance stays constant, what happens to the current?",
+        "options": ["It halves", "It stays the same", "It doubles", "It quadruples"],
+        "answer": "It doubles",
+        "explanation": "From V = IR, if V doubles and R is constant, I must also double."
+      },
+      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice Ohm's Law problems" }
+    },
+    {
+      "id": "drift-velocity",
+      "unit": "Unit 3 · Current Electricity",
+      "title": "Drift Velocity and Current Density",
+      "subtitle": "Microscopic view of current as moving charge carriers.",
+      "minutes": 7,
+      "summary": "Connect macroscopic current to the microscopic motion of electrons in a conductor.",
+      "objectives": [
+        "Define drift velocity and current density",
+        "Relate current to drift velocity: I = n A e v_d",
+        "Calculate drift velocity for typical conductors"
+      ],
+      "sections": [
+        {
+          "heading": "Microscopic Origin of Current",
+          "paragraphs": [
+            "In a conductor, free electrons move randomly at high speeds (~10^6 m/s) due to thermal motion. When an electric field is applied, they gain a small net drift velocity (v_d) opposite to the field direction.",
+            "Drift velocity is typically very small (~10^-4 m/s), yet current is established almost instantly because the electric field propagates at near the speed of light."
+          ],
+          "formula": "I = n A e v_d",
+          "note": "n = number density of charge carriers (m⁻³), A = cross-sectional area (m²), e = elementary charge (1.6 × 10⁻¹⁹ C), v_d = drift velocity (m/s)."
+        },
+        {
+          "heading": "Current Density",
+          "paragraphs": [
+            "Current density J is the current per unit area. It is a vector quantity pointing in the direction of positive charge flow.",
+            "For a uniform conductor, J = I / A = n e v_d. The direction of J is opposite to the electron drift velocity since electrons carry negative charge."
+          ],
+          "formula": "\\mathbf{J} = n e \\mathbf{v}_d",
+          "note": "Units of current density are amperes per square metre (A/m²)."
+        }
+      ],
+      "example": {
+        "title": "Calculate drift velocity in copper wire",
+        "setup": "A copper wire of cross-sectional area 1 mm² carries a current of 5 A. The number density of free electrons in copper is 8.5 × 10²⁸ m⁻³. Find the drift velocity.",
+        "steps": [
+          "Use I = n A e v_d and solve for v_d: v_d = I / (n A e).",
+          "Convert area: A = 1 mm² = 1 × 10⁻⁶ m².",
+          "Substitute: v_d = 5 / (8.5 × 10²⁸ × 1 × 10⁻⁶ × 1.6 × 10⁻¹⁹) ≈ 3.7 × 10⁻⁴ m/s."
+        ]
+      },
+      "check": {
+        "question": "What happens to drift velocity if the cross-sectional area of a wire is doubled while current stays the same?",
+        "options": ["It doubles", "It halves", "It stays the same", "It quadruples"],
+        "answer": "It halves",
+        "explanation": "From I = n A e v_d, if A doubles and I is constant, v_d must halve."
+      },
+      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice drift velocity problems" }
+    },
+    {
+      "id": "kirchhoff-laws",
+      "unit": "Unit 3 · Current Electricity",
+      "title": "Kirchhoff's Laws and Circuit Analysis",
+      "subtitle": "Analyze complex circuits using junction and loop rules.",
+      "minutes": 9,
+      "summary": "Apply Kirchhoff's Current Law (junction rule) and Voltage Law (loop rule) to solve multi-loop circuits.",
+      "objectives": [
+        "Apply Kirchhoff's Current Law (KCL) at junctions",
+        "Apply Kirchhoff's Voltage Law (KVL) around loops",
+        "Solve for unknown currents and voltages in multi-loop circuits"
+      ],
+      "sections": [
+        {
+          "heading": "Kirchhoff's Current Law (KCL)",
+          "paragraphs": [
+            "At any junction in an electrical circuit, the sum of currents entering the junction equals the sum of currents leaving the junction.",
+            "This is a consequence of charge conservation — charge cannot accumulate at a junction."
+          ],
+          "formula": "\\sum I_{\\text{in}} = \\sum I_{\\text{out}}",
+          "note": "Convention: currents entering are positive, currents leaving are negative (or vice versa, but be consistent)."
+        },
+        {
+          "heading": "Kirchhoff's Voltage Law (KVL)",
+          "paragraphs": [
+            "The algebraic sum of all voltages around any closed loop in a circuit is zero.",
+            "This follows from energy conservation — the net work done on a charge moving around a closed loop is zero."
+          ],
+          "formula": "\\sum V = 0",
+          "note": "Traverse the loop in one direction. Voltage rises (batteries, from - to +) are positive; voltage drops (resistors, in current direction) are negative."
+        },
+        {
+          "heading": "Series and Parallel Resistors",
+          "paragraphs": [
+            "In series, current is the same through all resistors, and total resistance is the sum: R_eq = R₁ + R₂ + …",
+            "In parallel, voltage is the same across all resistors, and reciprocals add: 1/R_eq = 1/R₁ + 1/R₂ + …"
+          ],
+          "formula": "R_{\\text{eq,series}} = \\sum R_i \\qquad \\frac{1}{R_{\\text{eq,parallel}}} = \\sum \\frac{1}{R_i}",
+          "note": "For two resistors in parallel: R_eq = (R₁ R₂) / (R₁ + R₂)."
+        }
+      ],
+      "example": {
+        "title": "Find equivalent resistance of a mixed circuit",
+        "setup": "A 10 Ω and a 20 Ω resistor are connected in parallel, and this combination is in series with a 5 Ω resistor. Find the total resistance.",
+        "steps": [
+          "First, find parallel equivalent: 1/R_parallel = 1/10 + 1/20 = 3/20, so R_parallel = 20/3 ≈ 6.67 Ω.",
+          "Then add series resistor: R_total = 6.67 Ω + 5 Ω = 11.67 Ω."
+        ]
+      },
+      "check": {
+        "question": "Three identical resistors are connected in parallel. How does the equivalent resistance compare to one resistor?",
+        "options": ["It is 3 times larger", "It is the same", "It is 1/3 of one resistor", "It is 1/9 of one resistor"],
+        "answer": "It is 1/3 of one resistor",
+        "explanation": "For n identical resistors R in parallel: R_eq = R/n. Here n = 3, so R_eq = R/3."
+      },
+      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice Kirchhoff's Laws" }
+    },
+    {
+      "id": "meter-construction",
+      "unit": "Unit 3 · Current Electricity",
+      "title": "Ammeter and Voltmeter Construction",
+      "subtitle": "How to convert a galvanometer into measuring instruments.",
+      "minutes": 6,
+      "summary": "Understand how to extend the range of a galvanometer using shunt resistors (ammeter) and series resistors (voltmeter).",
+      "objectives": [
+        "Convert a galvanometer into an ammeter using a shunt resistor",
+        "Convert a galvanometer into a voltmeter using a series resistor",
+        "Calculate the required shunt or series resistance"
+      ],
+      "sections": [
+        {
+          "heading": "Ammeter (Shunt Resistor)",
+          "paragraphs": [
+            "A galvanometer has a small internal resistance G and gives full-scale deflection for a small current I_g. To measure larger currents, a low-resistance shunt (S) is connected in parallel.",
+            "The shunt bypasses most of the current, allowing only I_g through the galvanometer."
+          ],
+          "formula": "S = \\frac{I_g G}{I - I_g}",
+          "note": "The ammeter resistance (galvanometer + shunt in parallel) should be very low to avoid affecting the circuit."
+        },
+        {
+          "heading": "Voltmeter (Series Resistor)",
+          "paragraphs": [
+            "To measure voltage, a high-resistance series resistor (R_s) is connected with the galvanometer.",
+            "The series resistor limits the current through the galvanometer to I_g when the maximum voltage is applied."
+          ],
+          "formula": "R_s = \\frac{V}{I_g} - G",
+          "note": "The voltmeter resistance should be very high to draw negligible current from the circuit."
+        }
+      ],
+      "example": {
+        "title": "Design an ammeter",
+        "setup": "A galvanometer of resistance 100 Ω gives full-scale deflection for 1 mA. What shunt resistance is needed to measure up to 10 A?",
+        "steps": [
+          "Use S = (I_g × G) / (I - I_g).",
+          "Substitute: I_g = 0.001 A, G = 100 Ω, I = 10 A.",
+          "S = (0.001 × 100) / (10 - 0.001) ≈ 0.01 Ω."
+        ]
+      },
+      "check": {
+        "question": "To convert a galvanometer into a voltmeter, you connect a resistor in...",
+        "options": ["Parallel (shunt)", "Series", "Series-parallel combination", "Not needed"],
+        "answer": "Series",
+        "explanation": "A series resistor limits current through the galvanometer, allowing it to measure higher voltages."
+      },
+      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice meter construction" }
+    },
+    {
+      "id": "semiconductor-types",
+      "unit": "Unit 14 · Semiconductors",
+      "title": "Semiconductor Types and Energy Bands",
+      "subtitle": "Intrinsic and extrinsic semiconductors, energy band diagrams.",
+      "minutes": 8,
+      "summary": "Understand the difference between conductors, insulators, and semiconductors through band theory.",
+      "objectives": [
+        "Explain energy bands: valence band, conduction band, forbidden gap",
+        "Distinguish intrinsic and extrinsic (n-type, p-type) semiconductors",
+        "Describe donor and acceptor energy levels"
+      ],
+      "sections": [
+        {
+          "heading": "Energy Band Theory",
+          "paragraphs": [
+            "In solids, discrete atomic energy levels merge into bands. The valence band is filled with electrons at 0 K. The conduction band is empty at 0 K. The energy gap between them is the forbidden gap (E_g).",
+            "Conductors: bands overlap or valence band partially filled. Insulators: large gap (> 5 eV). Semiconductors: small gap (~1 eV for Si, ~0.7 eV for Ge)."
+          ],
+          "formula": "E_g = E_c - E_v",
+          "note": "At room temperature, some electrons in semiconductors gain enough thermal energy to jump the gap, creating electron-hole pairs."
+        },
+        {
+          "heading": "Intrinsic Semiconductors",
+          "paragraphs": [
+            "A pure semiconductor with no impurities. The number of free electrons (n) equals the number of holes (p): n = p = n_i (intrinsic carrier concentration).",
+            "n_i depends strongly on temperature and band gap: n_i² = N_c N_v exp(-E_g/kT)."
+          ],
+          "formula": "n = p = n_i",
+          "note": "For silicon at 300 K, n_i ≈ 1.5 × 10¹⁰ cm⁻³."
+        },
+        {
+          "heading": "Extrinsic Semiconductors: Doping",
+          "paragraphs": [
+            "Adding controlled impurities (dopants) dramatically increases conductivity. n-type: donor atoms (Group V) add extra electrons. p-type: acceptor atoms (Group III) create holes.",
+            "In n-type: n ≈ N_d (donor concentration), p = n_i²/N_d. In p-type: p ≈ N_a (acceptor concentration), n = n_i²/N_a."
+          ],
+          "formula": "n p = n_i^2 \\quad \\text{(mass action law)}",
+          "note": "The product of electron and hole concentrations remains constant at a given temperature."
+        }
+      ],
+      "example": {
+        "title": "Find carrier concentrations in doped silicon",
+        "setup": "Silicon is doped with 10¹⁶ cm⁻³ phosphorus atoms (donors). At 300 K, n_i = 1.5 × 10¹⁰ cm⁻³. Find the electron and hole concentrations.",
+        "steps": [
+          "For n-type: n ≈ N_d = 10¹⁶ cm⁻³.",
+          "Use mass action law: p = n_i² / n = (1.5 × 10¹⁰)² / 10¹⁶ = 2.25 × 10⁴ cm⁻³.",
+          "Electrons are majority carriers; holes are minority carriers."
+        ]
+      },
+      "check": {
+        "question": "In an n-type semiconductor, which are the majority charge carriers?",
+        "options": ["Electrons", "Holes", "Both equal", "Neither"],
+        "answer": "Electrons",
+        "explanation": "Donor impurities add extra electrons, making them the majority carriers in n-type material."
+      },
+      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice semiconductor doping" }
+    },
+    {
+      "id": "pn-junction",
+      "unit": "Unit 14 · Semiconductors",
+      "title": "PN Junction Formation and Depletion Region",
+      "subtitle": "What happens when p-type and n-type materials meet.",
+      "minutes": 9,
+      "summary": "Understand the formation of the depletion region, built-in potential, and junction capacitance.",
+      "objectives": [
+        "Describe the formation of the depletion region at a p-n junction",
+        "Explain the built-in potential barrier",
+        "Understand forward and reverse bias conditions"
+      ],
+      "sections": [
+        {
+          "heading": "Formation of the Depletion Region",
+          "paragraphs": [
+            "When p-type and n-type semiconductors are joined, electrons from the n-side diffuse to the p-side and recombine with holes. Holes from the p-side diffuse to the n-side and recombine with electrons.",
+            "This leaves behind fixed ionized donors (positive) on the n-side and fixed ionized acceptors (negative) on the p-side, creating a region depleted of mobile carriers — the depletion region."
+          ],
+          "formula": "W = \\sqrt{\\frac{2 \\varepsilon_s V_{bi}}{q} \\left( \\frac{1}{N_a} + \\frac{1}{N_d} \\right)}",
+          "note": "W = depletion width, ε_s = permittivity of semiconductor, V_bi = built-in potential, q = electron charge."
+        },
+        {
+          "heading": "Built-in Potential",
+          "paragraphs": [
+            "The electric field in the depletion region creates a potential difference called the built-in potential (V_bi) or contact potential. It prevents further diffusion of majority carriers.",
+            "V_bi depends on doping concentrations and temperature: V_bi = (kT/q) ln(N_a N_d / n_i²)."
+          ],
+          "formula": "V_{bi} = \\frac{kT}{q} \\ln\\left(\\frac{N_a N_d}{n_i^2}\\right)",
+          "note": "For silicon at room temperature, V_bi is typically 0.6–0.8 V."
+        }
+      ],
+      "example": {
+        "title": "Calculate built-in potential",
+        "setup": "A silicon p-n junction has N_a = 10¹⁷ cm⁻³ and N_d = 10¹⁶ cm⁻³ at 300 K (n_i = 1.5 × 10¹⁰ cm⁻³). Find V_bi.",
+        "steps": [
+          "Use V_bi = (kT/q) ln(N_a N_d / n_i²).",
+          "At 300 K, kT/q ≈ 0.0259 V.",
+          "V_bi = 0.0259 × ln((10¹⁷ × 10¹⁶) / (1.5 × 10¹⁰)²) ≈ 0.0259 × ln(4.44 × 10¹²) ≈ 0.75 V."
+        ]
+      },
+      "check": {
+        "question": "What happens to the depletion region width when a p-n junction is forward biased?",
+        "options": ["It increases", "It decreases", "It stays the same", "It disappears completely"],
+        "answer": "It decreases",
+        "explanation": "Forward bias reduces the potential barrier, narrowing the depletion region and allowing majority carriers to flow across the junction."
+      },
+      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice p-n junction" }
+    },
+    {
+      "id": "diode-characteristics",
+      "unit": "Unit 14 · Semiconductors",
+      "title": "Diode I-V Characteristics and Biasing",
+      "subtitle": "Forward bias, reverse bias, and the Shockley diode equation.",
+      "minutes": 8,
+      "summary": "Analyze the current-voltage relationship of a p-n junction diode under different biasing conditions.",
+      "objectives": [
+        "Describe forward and reverse bias I-V characteristics",
+        "Apply the Shockley diode equation",
+        "Understand knee voltage, breakdown, and dynamic resistance"
+      ],
+      "sections": [
+        {
+          "heading": "Shockley Diode Equation",
+          "paragraphs": [
+            "The current through an ideal p-n junction diode is given by the Shockley equation, which accounts for diffusion of minority carriers across the junction.",
+            "I = I₀ [exp(qV / nkT) - 1], where I₀ is the reverse saturation current, n is the ideality factor (1–2), V is the applied voltage (positive for forward bias)."
+          ],
+          "formula": "I = I_0 \\left[ e^{\\frac{qV}{nkT}} - 1 \\right]",
+          "note": "For V > few kT/q, the -1 term is negligible and current grows exponentially with voltage."
+        },
+        {
+          "heading": "Forward and Reverse Bias",
+          "paragraphs": [
+            "Forward bias: p-side connected to positive terminal. Depletion region narrows. Current flows easily once voltage exceeds the knee voltage (~0.7 V for Si).",
+            "Reverse bias: p-side connected to negative terminal. Depletion region widens. Only tiny reverse saturation current I₀ flows until breakdown voltage is reached."
+          ],
+          "formula": "r_d = \\frac{nkT}{qI} \\quad \\text{(dynamic resistance in forward bias)}",
+          "note": "Dynamic resistance decreases as forward current increases."
+        },
+        {
+          "heading": "Reverse Breakdown",
+          "paragraphs": [
+            "At high reverse voltage, the diode enters breakdown. Two mechanisms: Zener breakdown (heavily doped, < 5 V) and avalanche breakdown (lightly doped, > 5 V).",
+            "Zener diodes are designed to operate in reverse breakdown as voltage references."
+          ],
+          "formula": "",
+          "note": "Breakdown is not destructive if current is limited externally."
+        }
+      ],
+      "example": {
+        "title": "Find diode current at a given forward voltage",
+        "setup": "A silicon diode has I₀ = 10⁻¹² A and ideality factor n = 1. Find the forward current at V = 0.7 V (T = 300 K, kT/q = 0.0259 V).",
+        "steps": [
+          "Use I = I₀ [exp(qV / nkT) - 1].",
+          "Exponent: qV/nkT = 0.7 / 0.0259 ≈ 27.0.",
+          "exp(27.0) ≈ 5.3 × 10¹¹, so I ≈ 10⁻¹² × 5.3 × 10¹¹ ≈ 0.53 A."
+        ]
+      },
+      "check": {
+        "question": "What is the typical knee voltage (cut-in voltage) for a silicon p-n junction diode?",
+        "options": ["0.2 V", "0.7 V", "1.2 V", "2.0 V"],
+        "answer": "0.7 V",
+        "explanation": "Silicon diodes typically start conducting significantly around 0.6–0.7 V forward bias."
+      },
+      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice diode characteristics" }
+    },
+    {
+      "id": "bjt-operation",
+      "unit": "Unit 14 · Semiconductors",
+      "title": "Bipolar Junction Transistor (BJT) Operation",
+      "subtitle": "NPN and PNP transistors: current amplification and switching.",
+      "minutes": 9,
+      "summary": "Understand BJT structure, current gain (β), and the three operating regions: cutoff, active, and saturation.",
+      "objectives": [
+        "Describe NPN and PNP transistor structure and current flow",
+        "Define current gains: α (common base) and β (common emitter)",
+        "Identify the three operating regions and their applications"
+      ],
+      "sections": [
+        {
+          "heading": "BJT Structure and Currents",
+          "paragraphs": [
+            "A BJT has three regions: emitter (heavily doped), base (thin, lightly doped), and collector (moderately doped, largest). Two p-n junctions: emitter-base (EB) and collector-base (CB).",
+            "In an NPN transistor: electrons are injected from emitter to base. Most diffuse across the thin base to the collector. A small base current controls a large collector current."
+          ],
+          "formula": "I_E = I_B + I_C \\quad \\alpha = \\frac{I_C}{I_E} \\quad \\beta = \\frac{I_C}{I_B} = \\frac{\\alpha}{1-\\alpha}",
+          "note": "Typical α ≈ 0.98, so β ≈ 49. In common-emitter configuration, β is the current gain."
+        },
+        {
+          "heading": "Operating Regions",
+          "paragraphs": [
+            "Cutoff: Both EB and CB junctions reverse-biased. I_C ≈ 0. Transistor is OFF (switch open).",
+            "Active: EB forward-biased, CB reverse-biased. I_C = β I_B. Used for amplification.",
+            "Saturation: Both EB and CB forward-biased. I_C < β I_B. Transistor is fully ON (switch closed), V_CE ≈ 0.2 V."
+          ],
+          "formula": "",
+          "note": "For a switch, drive the transistor into saturation by providing enough base current (I_B > I_C/β)."
+        }
+      ],
+      "example": {
+        "title": "Calculate collector current and check region",
+        "setup": "An NPN transistor has β = 100. Base current I_B = 20 μA, collector supply V_CC = 10 V, collector resistor R_C = 1 kΩ. Find I_C and determine if the transistor is in active or saturation region.",
+        "steps": [
+          "Active region prediction: I_C = β I_B = 100 × 20 μA = 2 mA.",
+          "Voltage drop across R_C: V_RC = I_C × R_C = 2 mA × 1 kΩ = 2 V.",
+          "Collector voltage: V_C = V_CC - V_RC = 10 - 2 = 8 V. Since V_C > V_B (≈0.7 V), CB junction is reverse-biased — active region confirmed."
+        ]
+      },
+      "check": {
+        "question": "In a BJT, the relationship between α (common-base current gain) and β (common-emitter current gain) is:",
+        "options": ["β = α / (1 - α)", "β = α × (1 - α)", "β = 1 / (1 - α)", "β = α - 1"],
+        "answer": "β = α / (1 - α)",
+        "explanation": "From I_C = α I_E and I_E = I_B + I_C, we get β = I_C/I_B = α/(1-α)."
+      },
+      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice BJT operation" }
+    },
+    {
+      "id": "fet-operation",
+      "unit": "Unit 14 · Semiconductors",
+      "title": "Field-Effect Transistor (FET) Operation",
+      "subtitle": "JFET and MOSFET: voltage-controlled devices.",
+      "minutes": 8,
+      "summary": "Understand JFET and MOSFET structures, pinch-off, and voltage-controlled current flow.",
+      "objectives": [
+        "Distinguish JFET and MOSFET (depletion and enhancement types)",
+        "Understand gate-source voltage control of drain current",
+        "Apply the Shockley equation for JFET and square-law for MOSFET"
+      ],
+      "sections": [
+        {
+          "heading": "JFET Operation",
+          "paragraphs": [
+            "A JFET has a channel of n-type (or p-type) material with a p-type (or n-type) gate region forming a p-n junction. The gate-channel junction is reverse-biased.",
+            "Increasing reverse gate-source voltage (V_GS) widens the depletion region, narrowing the channel and reducing drain current (I_D). At pinch-off voltage (V_P), the channel closes completely."
+          ],
+          "formula": "I_D = I_{DSS} \\left(1 - \\frac{V_{GS}}{V_P}\\right)^2",
+          "note": "I_DSS = drain current with V_GS = 0. V_P = pinch-off voltage (negative for n-channel)."
+        },
+        {
+          "heading": "MOSFET Operation",
+          "paragraphs": [
+            "MOSFETs have an insulated gate (metal-oxide-semiconductor). No gate current flows (essentially). Two types: enhancement-mode (normally OFF) and depletion-mode (normally ON).",
+            "For n-channel enhancement MOSFET: channel forms when V_GS > V_th (threshold voltage). Drain current in saturation: I_D = k (V_GS - V_th)²."
+          ],
+          "formula": "I_D = k (V_{GS} - V_{th})^2 \\quad \\text{(saturation region)}",
+          "note": "k = μ_n C_ox (W/L) / 2. MOSFETs are voltage-controlled; JFETs are also voltage-controlled but with a p-n junction gate."
+        }
+      ],
+      "example": {
+        "title": "Find JFET drain current",
+        "setup": "An n-channel JFET has I_DSS = 8 mA and V_P = -4 V. Find I_D when V_GS = -1 V.",
+        "steps": [
+          "Use I_D = I_DSS (1 - V_GS/V_P)².",
+          "Substitute: I_D = 8 × (1 - (-1)/(-4))² = 8 × (1 - 0.25)² = 8 × 0.75² = 8 × 0.5625 = 4.5 mA."
+        ]
+      },
+      "check": {
+        "question": "What is the key difference between a JFET and a MOSFET gate?",
+        "options": ["MOSFET gate draws more current", "JFET gate is insulated", "MOSFET gate is insulated (oxide layer)", "No difference"],
+        "answer": "MOSFET gate is insulated (oxide layer)",
+        "explanation": "MOSFET gate is separated from the channel by a thin oxide layer, giving essentially zero gate current. JFET gate forms a p-n junction with the channel."
+      },
+      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice FET operation" }
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "ohms-law",
+      "category": "Current Electricity",
+      "title": "Ohm's Law",
+      "latex": "V = IR",
+      "say": "ohms law",
+      "meaning": "The voltage across a conductor is directly proportional to the current through it, with resistance as the constant of proportionality.",
+      "example": {
+        "prompt": "A 12 V battery is connected across a 4 Ω resistor. Find the current.",
+        "latex": "I = \\frac{V}{R} = \\frac{12}{4} = 3\\,\\mathrm{A}",
+        "steps": ["Identify V = 12 V and R = 4 Ω.", "Use I = V/R.", "Calculate: 12/4 = 3 A."],
+        "answer": "3 A",
+        "spoken": "Twelve volts divided by four ohms equals three amperes."
+      },
+      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice Ohm's Law" }
+    },
+    {
+      "id": "resistivity",
+      "category": "Current Electricity",
+      "title": "Resistivity",
+      "latex": "\\rho",
+      "say": "rho",
+      "meaning": "An intrinsic property of a material that quantifies how strongly it opposes the flow of electric current. Units: ohm-metres (Ω·m).",
+      "example": {
+        "prompt": "A copper wire of length 10 m and cross-section 1 mm² has resistance 0.17 Ω. Find the resistivity of copper.",
+        "latex": "\\rho = R \\frac{A}{L} = 0.17 \\times \\frac{1 \\times 10^{-6}}{10} = 1.7 \\times 10^{-8}\\,\\Omega\\cdot\\mathrm{m}",
+        "steps": ["Use ρ = R × A/L.", "Convert area to m²: 1 mm² = 1×10⁻⁶ m².", "Calculate ρ."],
+        "answer": "1.7 × 10⁻⁸ Ω·m",
+        "spoken": "One point seven times ten to the minus eight ohm metres."
+      },
+      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice resistivity" }
+    },
+    {
+      "id": "drift-velocity",
+      "category": "Current Electricity",
+      "title": "Drift Velocity",
+      "latex": "v_d",
+      "say": "drift velocity",
+      "meaning": "The average net velocity of charge carriers (e.g., electrons) in a conductor under the influence of an electric field. Typically ~10⁻⁴ m/s.",
+      "example": {
+        "prompt": "A copper wire (n = 8.5×10²⁸ m⁻³) of area 2 mm² carries 4 A. Find v_d.",
+        "latex": "v_d = \\frac{I}{nAe} = \\frac{4}{8.5\\times10^{28} \\times 2\\times10^{-6} \\times 1.6\\times10^{-19}} \\approx 1.5\\times10^{-4}\\,\\mathrm{m/s}",
+        "steps": ["Use v_d = I/(nAe).", "Convert area to m².", "Substitute and calculate."],
+        "answer": "1.5 × 10⁻⁴ m/s",
+        "spoken": "One point five times ten to the minus four metres per second."
+      },
+      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice drift velocity" }
+    },
+    {
+      "id": "kcl",
+      "category": "Current Electricity",
+      "title": "Kirchhoff's Current Law (KCL)",
+      "latex": "\\sum I_{\\text{in}} = \\sum I_{\\text{out}}",
+      "say": "kirchhoff's current law",
+      "meaning": "At any junction, the algebraic sum of currents is zero. Charge is conserved — what goes in must come out.",
+      "example": {
+        "prompt": "At a junction, three currents enter: 2 A, 3 A, and 1 A. One current of 4 A leaves. Find the other leaving current.",
+        "latex": "2 + 3 + 1 = 4 + I_2 \\Rightarrow I_2 = 2\\,\\mathrm{A}",
+        "steps": ["Sum entering currents: 2 + 3 + 1 = 6 A.", "Sum leaving currents must equal 6 A.", "6 = 4 + I₂, so I₂ = 2 A."],
+        "answer": "2 A",
+        "spoken": "Two amperes."
+      },
+      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice KCL" }
+    },
+    {
+      "id": "kvl",
+      "category": "Current Electricity",
+      "title": "Kirchhoff's Voltage Law (KVL)",
+      "latex": "\\sum V = 0",
+      "say": "kirchhoff's voltage law",
+      "meaning": "Around any closed loop, the algebraic sum of all voltage rises and drops is zero. Energy is conserved.",
+      "example": {
+        "prompt": "A loop has a 12 V battery, a 4 Ω resistor with 2 A current, and an unknown voltage V_x. Find V_x.",
+        "latex": "12 - (2 \\times 4) - V_x = 0 \\Rightarrow V_x = 4\\,\\mathrm{V}",
+        "steps": ["Battery is a rise: +12 V.", "Resistor drop: -IR = -8 V.", "Sum = 0: 12 - 8 - V_x = 0 → V_x = 4 V."],
+        "answer": "4 V",
+        "spoken": "Four volts."
+      },
+      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice KVL" }
+    },
+    {
+      "id": "depletion-region",
+      "category": "Semiconductors",
+      "title": "Depletion Region",
+      "latex": "W",
+      "say": "depletion region",
+      "meaning": "The region near a p-n junction depleted of mobile charge carriers, containing only fixed ionized dopants. It creates a built-in electric field.",
+      "example": {
+        "prompt": "Explain why the depletion region forms at a p-n junction.",
+        "latex": "",
+        "steps": ["Electrons diffuse from n to p and recombine.", "Holes diffuse from p to n and recombine.", "Fixed positive ions remain on n-side; fixed negative ions on p-side.", "This charge-free region is the depletion region."],
+        "answer": "Diffusion leaves behind fixed ionized dopants, creating a region with no mobile carriers.",
+        "spoken": "Diffusion leaves behind fixed ionized dopants, creating a region with no mobile carriers."
+      },
+      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice p-n junction" }
+    },
+    {
+      "id": "forward-bias",
+      "category": "Semiconductors",
+      "title": "Forward Bias",
+      "latex": "V > 0",
+      "say": "forward bias",
+      "meaning": "Applying positive voltage to p-side relative to n-side. Reduces the potential barrier, narrows the depletion region, and allows majority carrier current to flow.",
+      "example": {
+        "prompt": "A silicon diode is forward biased at 0.7 V. What happens to the depletion region?",
+        "latex": "",
+        "steps": ["Forward bias reduces the built-in potential barrier.", "The depletion region width decreases.", "Majority carriers are injected across the junction.", "Exponential current flows."],
+        "answer": "The depletion region narrows and current flows exponentially.",
+        "spoken": "The depletion region narrows and current flows exponentially."
+      },
+      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice diode biasing" }
+    },
+    {
+      "id": "reverse-bias",
+      "category": "Semiconductors",
+      "title": "Reverse Bias",
+      "latex": "V < 0",
+      "say": "reverse bias",
+      "meaning": "Applying negative voltage to p-side relative to n-side. Increases the potential barrier, widens the depletion region, and only a tiny reverse saturation current flows.",
+      "example": {
+        "prompt": "What is the current through a silicon diode reverse biased at -10 V, if I₀ = 1 nA?",
+        "latex": "I \\approx -I_0 = -1\\,\\mathrm{nA}",
+        "steps": ["In reverse bias, V is negative and large in magnitude.", "The exponential term exp(qV/kT) ≈ 0.", "I = I₀[exp(qV/kT) - 1] ≈ -I₀."],
+        "answer": "-1 nA (reverse saturation current)",
+        "spoken": "Negative one nanoampere."
+      },
+      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice reverse bias" }
+    },
+    {
+      "id": "hall-effect",
+      "category": "Current Electricity",
+      "title": "Hall Effect",
+      "latex": "V_H = \\frac{IB}{n t e}",
+      "say": "hall effect",
+      "meaning": "When a current-carrying conductor is placed in a perpendicular magnetic field, a voltage (Hall voltage) develops across the conductor perpendicular to both current and field. Used to determine carrier type and concentration.",
+      "example": {
+        "prompt": "A Hall probe with thickness 1 mm carries 5 A in a 0.5 T field. The Hall voltage is 2 mV. Find the carrier concentration n.",
+        "latex": "n = \\frac{IB}{V_H t e} = \\frac{5 \\times 0.5}{2\\times10^{-3} \\times 1\\times10^{-3} \\times 1.6\\times10^{-19}} \\approx 7.8\\times10^{28}\\,\\mathrm{m}^{-3}",
+        "steps": ["Use n = IB/(V_H t e).", "Substitute I = 5 A, B = 0.5 T, V_H = 2×10⁻³ V, t = 1×10⁻³ m, e = 1.6×10⁻¹⁹ C.", "Calculate n."],
+        "answer": "7.8 × 10²⁸ m⁻³",
+        "spoken": "Seven point eight times ten to the twenty-eight per cubic metre."
+      },
+      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice Hall effect" }
+    },
+    {
+      "id": "carrier-concentration",
+      "category": "Semiconductors",
+      "title": "Carrier Concentration",
+      "latex": "n, p",
+      "say": "carrier concentration",
+      "meaning": "The number of free electrons (n) and holes (p) per unit volume in a semiconductor. Related by the mass action law: n p = n_i².",
+      "example": {
+        "prompt": "In p-type silicon, p = 10¹⁷ cm⁻³. At 300 K, n_i = 1.5×10¹⁰ cm⁻³. Find n.",
+        "latex": "n = \\frac{n_i^2}{p} = \\frac{(1.5\\times10^{10})^2}{10^{17}} = 2.25\\times10^3\\,\\mathrm{cm}^{-3}",
+        "steps": ["Use mass action law: n p = n_i².", "Solve for n: n = n_i²/p.", "Substitute and calculate."],
+        "answer": "2.25 × 10³ cm⁻³",
+        "spoken": "Two point two five times ten to the three per cubic centimetre."
+      },
+      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice carrier concentration" }
+    },
+    {
+      "id": "beta-alpha",
+      "category": "Semiconductors",
+      "title": "Current Gain (β and α)",
+      "latex": "\\beta = \\frac{I_C}{I_B}, \\quad \\alpha = \\frac{I_C}{I_E}",
+      "say": "beta and alpha",
+      "meaning": "β (beta) is the common-emitter current gain (I_C/I_B). α (alpha) is the common-base current gain (I_C/I_E). They are related: β = α/(1-α).",
+      "example": {
+        "prompt": "A BJT has α = 0.99. Find β.",
+        "latex": "\\beta = \\frac{\\alpha}{1-\\alpha} = \\frac{0.99}{0.01} = 99",
+        "steps": ["Use β = α/(1-α).", "Substitute α = 0.99.", "Calculate: 0.99/0.01 = 99."],
+        "answer": "99",
+        "spoken": "Ninety-nine."
+      },
+      "practice": { "kind": "skill", "value": "Semiconductors", "label": "Practice current gain" }
+    },
+    {
+      "id": "equivalent-resistance",
+      "category": "Current Electricity",
+      "title": "Equivalent Resistance",
+      "latex": "R_{\\text{eq}} = R_1 + R_2 + \\cdots \\quad \\text{(series)}, \\quad \\frac{1}{R_{\\text{eq}}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\cdots \\quad \\text{(parallel)}",
+      "say": "equivalent resistance",
+      "meaning": "The single resistance that can replace a combination of resistors without changing the circuit behavior.",
+      "example": {
+        "prompt": "Find the equivalent resistance of 6 Ω and 3 Ω in parallel.",
+        "latex": "\\frac{1}{R_{\\text{eq}}} = \\frac{1}{6} + \\frac{1}{3} = \\frac{1}{2} \\Rightarrow R_{\\text{eq}} = 2\\,\\Omega",
+        "steps": ["Use 1/R_eq = 1/R₁ + 1/R₂.", "Calculate: 1/6 + 1/3 = 1/2.", "Take reciprocal: R_eq = 2 Ω."],
+        "answer": "2 Ω",
+        "spoken": "Two ohms."
+      },
+      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice equivalent resistance" }
+    },
+    {
+      "id": "power-formula",
+      "category": "Current Electricity",
+      "title": "Electric Power",
+      "latex": "P = VI = I^2R = \\frac{V^2}{R}",
+      "say": "electric power",
+      "meaning": "The rate at which electrical energy is transferred. Three equivalent forms using Ohm's Law. Unit: watt (W).",
+      "example": {
+        "prompt": "A 12 V, 60 W bulb. Find its resistance and operating current.",
+        "latex": "I = P/V = 60/12 = 5\\,\\mathrm{A}, \\quad R = V^2/P = 144/60 = 2.4\\,\\Omega",
+        "steps": ["Use P = VI to find I.", "Use P = V²/R to find R.", "Alternatively: R = V/I = 12/5 = 2.4 Ω."],
+        "answer": "I = 5 A, R = 2.4 Ω",
+        "spoken": "Five amperes, two point four ohms."
+      },
+      "practice": { "kind": "skill", "value": "Current Electricity", "label": "Practice electric power" }
+    }
+  ],
+  "solverSkills": [
+    { "name": "Ohm's Law", "detail": "V = I R", "icon": "Ω", "tone": "blue", "progress": 0 },
+    { "name": "Power", "detail": "P = V I = I²R = V²/R", "icon": "P", "tone": "mint", "progress": 0 },
+    { "name": "Series/Parallel", "detail": "Equivalent resistance", "icon": "∥", "tone": "peach", "progress": 0 },
+    { "name": "Drift Velocity", "detail": "I = n A e v_d", "icon": "v_d", "tone": "lavender", "progress": 0 },
+    { "name": "Carrier Concentration", "detail": "n p = n_i²", "icon": "n,p", "tone": "orange", "progress": 0 },
+    { "name": "Diode Equation", "detail": "I = I₀[e^(qV/nkT) - 1]", "icon": "I₀", "tone": "red", "progress": 0 },
+    { "name": "BJT Gains", "detail": "β = I_C/I_B, α = I_C/I_E", "icon": "β", "tone": "purple", "progress": 0 },
+    { "name": "JFET/MOSFET", "detail": "I_D = I_DSS(1 - V_GS/V_P)²", "icon": "I_D", "tone": "green", "progress": 0 }
+  ],
+  "quizTopics": [
+    { "name": "Ohm's Law & Resistance", "skill": "Ohm's Law", "questions": 5, "time": "5 min", "icon": "Ω", "tone": "blue" },
+    { "name": "Drift Velocity & Current Density", "skill": "Drift Velocity", "questions": 5, "time": "5 min", "icon": "v_d", "tone": "mint" },
+    { "name": "Kirchhoff's Laws", "skill": "Series/Parallel", "questions": 5, "time": "5 min", "icon": "∑", "tone": "peach" },
+    { "name": "Semiconductor Doping", "skill": "Carrier Concentration", "questions": 5, "time": "5 min", "icon": "n,p", "tone": "lavender" },
+    { "name": "PN Junction & Diodes", "skill": "Diode Equation", "questions": 5, "time": "5 min", "icon": "I₀", "tone": "red" },
+    { "name": "BJT & FET Operation", "skill": "BJT Gains", "questions": 5, "time": "5 min", "icon": "β", "tone": "purple" }
+  ],
+  "appliedFields": [
+    { "name": "Circuit Analysis", "icon": "⚡", "detail": "Analyze DC circuits using Ohm's Law, Kirchhoff's Laws, and equivalent resistance.", "example": "Multi-loop circuit", "tone": "blue" },
+    { "name": "Semiconductor Devices", "icon": "🔬", "detail": "Calculate carrier concentrations, diode currents, and transistor biasing.", "example": "Diode/transistor design", "tone": "mint" },
+    { "name": "Electronic Design", "icon": "📐", "detail": "Design simple amplifiers, switches, and voltage regulators.", "example": "Amplifier biasing", "tone": "lavender" }
+  ]
+}

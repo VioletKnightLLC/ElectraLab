@@ -1,0 +1,20 @@
+.app-shell .coursebook-page :is(
+  .coursebook-progress-card,.coursebook-toc,.coursebook-toc-link,.coursebook-toc-footer,
+  .coursebook-unit,.course-reader,.chapter-header,.chapter-header-actions,
+  .chapter-objectives,.reading-section,.reading-equation,.reading-note,
+  .worked-example,.recall-check,.recall-option,.course-next-steps,.chapter-pagination
+){
+  transform:none!important;
+  transition:none!important;
+  box-shadow:none!important;
+  z-index:auto!important;
+}
+.app-shell .coursebook-page *:hover,
+.app-shell .coursebook-page *:focus-within{
+  transform:none!important;
+  box-shadow:none!important;
+  z-index:auto!important;
+}
+.app-shell .coursebook-page *{
+  transition-property:background-color,border-color,color!important;
+}

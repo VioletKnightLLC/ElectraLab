@@ -1,0 +1,21 @@
+@media(hover:hover) and (pointer:fine){
+  .app-shell :is(.answer-option,.recall-option,.solver-mode,.agent-example-chip,.vocabulary-filters button,.known-toggle):hover{
+    position:relative;
+    z-index:140;
+    transform:scale(1.2)!important;
+    transform-origin:center;
+    box-shadow:0 8px 24px #0008;
+    transition:transform .16s ease,box-shadow .16s ease;
+  }
+}
+.app-shell :is(.answer-option,.recall-option,.solver-mode,.agent-example-chip,.vocabulary-filters button,.known-toggle):focus-within,
+.app-shell :is(.answer-option,.recall-option,.solver-mode,.agent-example-chip,.vocabulary-filters button,.known-toggle):focus-visible{
+  position:relative;
+  z-index:140;
+  transform:scale(1.2)!important;
+  transform-origin:center;
+  box-shadow:0 8px 24px #0008;
+}
+@media(prefers-reduced-motion:reduce){
+  .app-shell :is(.answer-option,.recall-option,.solver-mode,.agent-example-chip,.vocabulary-filters button,.known-toggle){transition:none!important}
+}

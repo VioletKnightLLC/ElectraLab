@@ -1,0 +1,68 @@
+.math-typeset.math-render-error {
+  max-width: 100%;
+}
+
+.math-render-fallback {
+  gap: 4px;
+  align-items: center;
+  max-width: 100%;
+  padding: 2px 4px;
+  border: 1px solid #584936;
+  border-radius: 4px;
+  background: #29251f;
+  color: #d9c5a5;
+  vertical-align: baseline;
+}
+
+.math-render-fallback.inline {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.math-render-fallback.display {
+  display: flex;
+  flex-wrap: wrap;
+  margin: .3em 0;
+}
+
+.math-render-fallback-label,
+.math-render-fallback-button,
+.math-render-fallback-status {
+  font-size: 8px;
+}
+
+.math-render-fallback-label {
+  color: #d9c5a5;
+}
+
+.math-render-fallback-button {
+  padding: 2px 4px;
+  border: 1px solid #65543c;
+  border-radius: 3px;
+  background: #363027;
+  color: #f0dbb7;
+  cursor: pointer;
+}
+
+.math-render-fallback-button:hover {
+  border-color: #0fb7e0;
+  color: #fff;
+}
+
+.math-render-fallback-source {
+  flex-basis: 100%;
+  max-width: 100%;
+  max-height: 120px;
+  overflow: auto;
+  padding: 4px;
+  border-radius: 3px;
+  background: #1c1d21;
+  color: #e2ded5;
+  font: 8px/1.5 var(--mono);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.math-render-fallback-status {
+  color: #b8c5ce;
+}
