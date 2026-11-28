@@ -74,6 +74,7 @@ const LazyMathDisplay = lazy(() => import('./MathDisplay.jsx').then((module) => 
 const LazyMathContent = lazy(() => import('./MathContent.jsx'))
 const LazyAgentPage = lazy(() => import('./AgentPage.jsx'))
 const LazyChipDesignLab = lazy(() => import('./ChipDesignLab.jsx'))
+const LazyUniversalSearch = lazy(() => import('./UniversalSearch.jsx'))
 const LazyCoursebookPage = lazy(() => import('./CoursebookPage.jsx'))
 const LazyVocabularyPage = lazy(() => import('./VocabularyPage.jsx'))
 
@@ -119,6 +120,7 @@ function Icon({ name, size = 18 }) {
     menu: <><path d="M4 7h16M4 12h16M4 17h16" /></>,
     volume: <><path d="M4 10v4h4l5 4V6l-5 4H4Z" /><path d="M17 9a5 5 0 0 1 0 6M19.5 6.5a9 9 0 0 1 0 11" /></>,
     chip: <><rect x="7" y="7" width="10" height="10" rx="2" /><rect x="10.5" y="10.5" width="3" height="3" /><path d="M9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4" /></>,
+    search: <><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></>,
   }
   return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">{paths[name] || paths.spark}</svg>
 }
@@ -149,11 +151,14 @@ function App() {
   const [appliedFeedback, setAppliedFeedback] = useState(null)
   const [scratchModalOpen, setScratchModalOpen] = useState(false)
   const [calculatorModalOpen, setCalculatorModalOpen] = useState(false)
+  const [searchModalOpen, setSearchModalOpen] = useState(false)
+  const [searchContext, setSearchContext] = useState('')
   const [inferenceHistory, setInferenceHistory] = useState(loadInferenceHistory)
   const [copiedMessage, setCopiedMessage] = useState(null)
   const [copyError, setCopyError] = useState('')
   const scratchUtilityRef = useRef(null)
   const calculatorUtilityRef = useRef(null)
+  const searchUtilityRef = useRef(null)
 
   useEffect(() => {
     loadElectraData().then((data) => {
@@ -205,16 +210,53 @@ function App() {
     }
   }, [calculatorModalOpen])
 
+  useEffect(() => {
+    if (!searchModalOpen) return undefined
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    function closeOnEscape(event) {
+      if (event.key === 'Escape') closeSearchModal()
+    }
+    window.addEventListener('keydown', closeOnEscape)
+    return () => {
+      document.body.style.overflow = previousOverflow
+      window.removeEventListener('keydown', closeOnEscape)
+    }
+  }, [searchModalOpen])
+
   const NAV_ITEMS = electraData?.navItems || FALLBACK_NAV_ITEMS
   const SKILLS = electraData?.solverSkills || FALLBACK_SKILLS
   const QUIZ_TOPICS = electraData?.quizTopics || FALLBACK_QUIZ_TOPICS
   const APPLIED_FIELDS = electraData?.appliedFields || FALLBACK_APPLIED_FIELDS
+
+  const SEARCH_INDEX = useMemo(() => {
+    const items = NAV_ITEMS.map((nav) => ({ kind: 'page', id: nav.id, title: nav.label, detail: 'Open the page', keywords: `${nav.id} navigate go` }))
+    for (const s of SKILLS) {
+      items.push({ kind: 'practice', name: s.name, title: `Practice ${s.name}`, detail: s.detail, keywords: 'practice problems skill learn' })
+      items.push({ kind: 'solver', name: s.name, title: `Solve with ${s.name}`, detail: s.detail, keywords: 'solver equation calculate compute' })
+    }
+    for (const q of QUIZ_TOPICS) items.push({ kind: 'quiz', name: q.name, skill: q.skill, title: `${q.name} quiz`, detail: `${q.questions} questions · ${q.time}`, keywords: 'quiz test check knowledge' })
+    for (const f of APPLIED_FIELDS) items.push({ kind: 'field', name: f.name, title: `The Lab: ${f.name}`, detail: f.detail, keywords: 'lab applied scenario design' })
+    for (const c of electraData?.courseChapters || []) items.push({ kind: 'chapter', id: c.id, title: c.title, detail: c.unit, keywords: 'coursebook chapter read theory' })
+    for (const v of electraData?.vocabulary || []) items.push({ kind: 'vocab', id: v.id, title: v.title, detail: v.meaning.slice(0, 90), keywords: 'vocabulary term definition ' + v.say })
+    return items
+  }, [NAV_ITEMS, SKILLS, QUIZ_TOPICS, APPLIED_FIELDS, electraData])
 
   const records = progress.records
   const practiceRecords = records.filter((record) => record.source !== 'solver')
   const accuracy = practiceRecords.length ? Math.round((practiceRecords.filter((record) => record.correct).length / practiceRecords.length) * 100) : 0
   const level = Math.min(5, Math.max(1, 1 + Math.floor(practiceRecords.filter((record) => record.correct).length / 3) - Math.floor(practiceRecords.filter((record) => !record.correct).length / 4)))
   const streak = calculateStreak(records)
+
+  const pageSearchContext = (() => {
+    const label = NAV_ITEMS.find((item) => item.id === page)?.label || page
+    const parts = [`the "${label}" page`]
+    if (page === 'practice' && problem) parts.push(`practicing ${skill}: "${problem.prompt}"`)
+    if (page === 'quizzes' && quiz) parts.push(`on question ${quizIndex + 1} of a ${skill} quiz`)
+    if (page === 'applied') parts.push(`in the ${appliedField} lab field`)
+    if (page === 'solver') parts.push(`using the ${solverMode} solver`)
+    return `User is on ${parts.join('; ')}.`
+  })()
 
   function startPractice(nextSkill = "Ohm's Law", asQuiz = false) {
     setSkill(nextSkill)
@@ -344,6 +386,7 @@ function App() {
   function openTutor(context = '') {
     setScratchModalOpen(false)
     setCalculatorModalOpen(false)
+    setSearchModalOpen(false)
     if (scratchModalOpen) window.requestAnimationFrame(() => scratchUtilityRef.current?.focus())
     setTutorContext(context)
     setTutorReturnPage(page)
@@ -385,6 +428,38 @@ function App() {
   function closeCalculatorModal() {
     setCalculatorModalOpen(false)
     window.requestAnimationFrame(() => calculatorUtilityRef.current?.focus())
+  }
+
+  function openSearchModal(context = '') {
+    setSearchContext(context)
+    setSearchModalOpen(true)
+  }
+
+  function closeSearchModal() {
+    setSearchModalOpen(false)
+    window.requestAnimationFrame(() => searchUtilityRef.current?.focus())
+  }
+
+  function runSearchAction(item) {
+    setSearchModalOpen(false)
+    if (item.kind === 'page') setPage(item.id)
+    else if (item.kind === 'solver') {
+      setSolverMode(item.name)
+      setSolverResult(null)
+      setSolverError('')
+      setPage('solver')
+    } else if (item.kind === 'practice') {
+      startPractice(item.name)
+      return
+    } else if (item.kind === 'quiz') {
+      startPractice(item.skill, true)
+      return
+    } else if (item.kind === 'field') {
+      openAppliedField(item.name)
+      return
+    } else if (item.kind === 'chapter') setPage('coursebook')
+    else if (item.kind === 'vocab') setPage('vocabulary')
+    setMobileNavOpen(false)
   }
 
   function recordInference(metrics) {
@@ -447,7 +522,7 @@ function App() {
         <header className="topbar">
           <button className="mobile-menu" aria-label="Open menu" onClick={() => setMobileNavOpen(true)}><Icon name="menu" /></button>
           <div className="breadcrumb">ElectraLab <span>/</span> <strong>{pageLabel(page)}</strong></div>
-          <div className="topbar-right"><button ref={scratchUtilityRef} className="scratch-utility-trigger" onClick={() => openScratchModal()} disabled={page === 'scratch'} aria-label="Open scratch pad utility"><Icon name="pencil" size={15} /><span>Scratch pad</span></button><button ref={calculatorUtilityRef} className="scratch-utility-trigger calculator-utility-trigger" onClick={openCalculatorModal} disabled={page === 'calculator'} aria-label="Open calculator utility"><Icon name="calculator" size={15} /><span>Calculator</span></button><span className="streak-pill"><span>✳</span> {streak} day streak</span><span className="topbar-divider" /><span className="topbar-date">{new Intl.DateTimeFormat('en', { weekday: 'short', month: 'short', day: 'numeric' }).format(new Date())}</span></div>
+          <div className="topbar-right"><button ref={scratchUtilityRef} className="scratch-utility-trigger" onClick={() => openScratchModal()} disabled={page === 'scratch'} aria-label="Open scratch pad utility"><Icon name="pencil" size={15} /><span>Scratch pad</span></button><button ref={calculatorUtilityRef} className="scratch-utility-trigger calculator-utility-trigger" onClick={openCalculatorModal} disabled={page === 'calculator'} aria-label="Open calculator utility"><Icon name="calculator" size={15} /><span>Calculator</span></button><button ref={searchUtilityRef} className="scratch-utility-trigger search-utility-trigger" onClick={() => openSearchModal()} aria-label="Open universal search"><Icon name="search" size={15} /><span>Search</span></button><span className="streak-pill"><span>✳</span> {streak} day streak</span><span className="topbar-divider" /><span className="topbar-date">{new Intl.DateTimeFormat('en', { weekday: 'short', month: 'short', day: 'numeric' }).format(new Date())}</span></div>
         </header>
         <div className="page-content">
           {page === 'overview' && <Dashboard onNavigate={navigate} onPractice={startPractice} progress={progress} accuracy={accuracy} level={level} streak={streak} skills={SKILLS} />}
@@ -468,6 +543,7 @@ function App() {
       </main>
       {scratchModalOpen && <ScratchPadModal context={scratchContext} onClose={closeScratchModal} onAskTutor={openTutor} />}
       {calculatorModalOpen && <CalculatorModal onClose={closeCalculatorModal} onAskTutor={openTutor} />}
+      {searchModalOpen && <Suspense fallback={null}><LazyUniversalSearch context={searchContext} pageContext={pageSearchContext} index={SEARCH_INDEX} onAction={runSearchAction} onClose={closeSearchModal} onInference={recordInference} /></Suspense>}
       <NotationZoomLayer />
     </div>
   )
