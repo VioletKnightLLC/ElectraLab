@@ -19,6 +19,7 @@ import './calculator.css'
 import './tutor-formatting.css'
 import './chip-lab.css'
 import './universal-search.css'
+import './admin.css'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -1,0 +1,151 @@
+/* Admin & settings page — dark cards over the neon theme */
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.admin-card {
+  padding: 18px;
+  border: 1px solid #333;
+  border-radius: 12px;
+  background: #141414;
+}
+.admin-card-head { margin-bottom: 14px; }
+.admin-card-head .eyebrow { margin-bottom: 4px; }
+.admin-card-head h2 { margin: 0; font-size: 16px; color: #F0F0F2; }
+
+.admin-stat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px solid #262626;
+  font-size: 12px;
+  color: #888;
+}
+.admin-stat:first-of-type { border-top: 0; padding-top: 0; }
+.admin-stat strong { color: #8AE600; font-family: var(--mono); font-size: 13px; }
+
+.admin-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.admin-note { margin: 12px 0 0; font-size: 10.5px; line-height: 1.6; color: #888; }
+.admin-file-input { display: none; }
+.admin-import-status {
+  margin: 10px 0 0;
+  padding: 9px 12px;
+  border: 1px solid #2f4420;
+  border-radius: 8px;
+  background: #0e1609;
+  color: #9fb78a;
+  font-size: 11px;
+}
+
+/* ---------- settings fields ---------- */
+.admin-field { display: grid; gap: 7px; margin-bottom: 15px; }
+.admin-field:last-child { margin-bottom: 0; }
+.admin-field-label { display: flex; align-items: baseline; justify-content: space-between; font-size: 12px; color: #CCC; font-weight: 600; }
+.admin-field-value { color: #8AE600; font-family: var(--mono); font-weight: 500; }
+.admin-field small { font-size: 9.5px; line-height: 1.5; color: #888; }
+.admin-field select {
+  padding: 9px 11px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #101010;
+  color: #8AE600;
+  font: 500 11.5px var(--mono);
+}
+.admin-field select:disabled { opacity: .55; }
+.admin-field input[type="range"] { width: 100%; accent-color: #76B900; cursor: pointer; }
+.admin-toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.admin-toggle {
+  flex: none;
+  position: relative;
+  width: 40px;
+  height: 22px;
+  border: 1px solid #444;
+  border-radius: 999px;
+  background: #1c1c1c;
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+.admin-toggle span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #666;
+  transition: transform .15s, background .15s;
+}
+.admin-toggle.on { border-color: #76B900; background: #12240a; }
+.admin-toggle.on span { transform: translateX(18px); background: #8AE600; box-shadow: 0 0 7px rgba(138, 230, 0, .6); }
+
+/* ---------- storage usage ---------- */
+.admin-usage { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.admin-usage li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 7px 10px;
+  border: 1px solid #262626;
+  border-radius: 7px;
+  background: #101010;
+  font-size: 10.5px;
+}
+.admin-usage-key { color: #9fb78a; font-family: var(--mono); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.admin-usage strong { flex: none; color: #CCC; font-family: var(--mono); font-size: 10.5px; }
+
+/* ---------- danger zone ---------- */
+.admin-danger-list { display: grid; gap: 8px; }
+.admin-danger-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  background: #101010;
+}
+.admin-danger-row strong { display: block; font-size: 12px; color: #CCC; }
+.admin-danger-row small { display: block; margin-top: 2px; font-size: 9.5px; color: #777; }
+.admin-danger-row.nuclear { border-color: #5c2a1c; background: #160d09; }
+.admin-danger {
+  flex: none;
+  padding: 8px 12px;
+  border: 1px solid #5c2a1c;
+  border-radius: 8px;
+  background: #1d0f0a;
+  color: #FFB86B;
+  font: 600 10px var(--mono);
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.admin-danger:hover { border-color: #FF7A45; }
+.admin-danger.armed {
+  border-color: #FF7A45;
+  background: #FF7A45;
+  color: #000;
+  animation: admin-danger-armed 1s ease-in-out infinite;
+}
+.admin-danger.nuclear.armed { background: #e8362a; border-color: #e8362a; color: #fff; animation: none; }
+@keyframes admin-danger-armed {
+  0%, 100% { box-shadow: 0 0 0 rgba(255, 122, 69, 0); }
+  50% { box-shadow: 0 0 12px rgba(255, 122, 69, .55); }
+}
+
+@media (max-width: 900px) {
+  .admin-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- reduce-motion setting ---------- */
+html.reduce-motion *,
+html.reduce-motion *::before,
+html.reduce-motion *::after {
+  animation-duration: .01s !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: .01s !important;
+}

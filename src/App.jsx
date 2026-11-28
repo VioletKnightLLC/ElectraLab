@@ -3,6 +3,7 @@ import { createAppliedProblem, createProblem, solveMathInput } from './math.js'
 import { prepareMathPreviewContent } from './math-markdown.js'
 import { askOllamaStream, checkOllama, getInferenceMetrics, normalizeTutorResponse } from './ollama.js'
 import NotationZoomLayer from './NotationZoomLayer.jsx'
+import { DEFAULT_SETTINGS, SETTINGS_KEY, settingsWithDefaults } from './adminTools.js'
 import ScratchPad from './ScratchPad.jsx'
 import MathNotationPicker from './MathNotationPicker.jsx'
 import CalculatorPage from './CalculatorPage.jsx'
@@ -31,6 +32,7 @@ const FALLBACK_NAV_ITEMS = [
   { id: 'practice', label: 'Practice', icon: 'spark' },
   { id: 'quizzes', label: 'Quizzes', icon: 'clipboard' },
   { id: 'progress', label: 'My progress', icon: 'chart' },
+  { id: 'admin', label: 'Admin', icon: 'settings' },
 ]
 
 const FALLBACK_SKILLS = [
@@ -75,6 +77,7 @@ const LazyMathContent = lazy(() => import('./MathContent.jsx'))
 const LazyAgentPage = lazy(() => import('./AgentPage.jsx'))
 const LazyChipDesignLab = lazy(() => import('./ChipDesignLab.jsx'))
 const LazyUniversalSearch = lazy(() => import('./UniversalSearch.jsx'))
+const LazyAdminPage = lazy(() => import('./AdminPage.jsx'))
 const LazyCoursebookPage = lazy(() => import('./CoursebookPage.jsx'))
 const LazyVocabularyPage = lazy(() => import('./VocabularyPage.jsx'))
 
@@ -86,6 +89,14 @@ function loadProgress() {
     return saved && Array.isArray(saved.records) ? { ...initialProgress, ...saved } : initialProgress
   } catch {
     return initialProgress
+  }
+}
+
+function loadSettings() {
+  try {
+    return settingsWithDefaults(JSON.parse(localStorage.getItem(SETTINGS_KEY)))
+  } catch {
+    return { ...DEFAULT_SETTINGS }
   }
 }
 
@@ -121,6 +132,7 @@ function Icon({ name, size = 18 }) {
     volume: <><path d="M4 10v4h4l5 4V6l-5 4H4Z" /><path d="M17 9a5 5 0 0 1 0 6M19.5 6.5a9 9 0 0 1 0 11" /></>,
     chip: <><rect x="7" y="7" width="10" height="10" rx="2" /><rect x="10.5" y="10.5" width="3" height="3" /><path d="M9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4" /></>,
     search: <><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></>,
+    settings: <><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34h.01a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55h.01a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.01a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1Z" /></>,
   }
   return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">{paths[name] || paths.spark}</svg>
 }
@@ -154,6 +166,7 @@ function App() {
   const [searchModalOpen, setSearchModalOpen] = useState(false)
   const [searchContext, setSearchContext] = useState('')
   const [inferenceHistory, setInferenceHistory] = useState(loadInferenceHistory)
+  const [settings, setSettings] = useState(loadSettings)
   const [copiedMessage, setCopiedMessage] = useState(null)
   const [copyError, setCopyError] = useState('')
   const scratchUtilityRef = useRef(null)
@@ -181,6 +194,15 @@ function App() {
       // Keep the running session usable if browser storage is full.
     }
   }, [inferenceHistory])
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings))
+    } catch {
+      // Keep the running session usable if browser storage is full.
+    }
+    document.documentElement.classList.toggle('reduce-motion', settings.reduceMotion)
+  }, [settings])
 
   useEffect(() => {
     if (!scratchModalOpen) return undefined
@@ -300,7 +322,7 @@ function App() {
       window.speechSynthesis.cancel()
       const message = correct ? `That's right. ${problem.steps.join(' ')}` : `Not quite. The answer is ${problem.answer}. ${problem.steps.join(' ')}`
       const utterance = new SpeechSynthesisUtterance(message)
-      utterance.rate = 0.92
+      utterance.rate = 0.92 * settings.speechRate
       window.speechSynthesis.speak(utterance)
     }
   }
@@ -527,8 +549,8 @@ function App() {
         <div className="page-content">
           {page === 'overview' && <Dashboard onNavigate={navigate} onPractice={startPractice} progress={progress} accuracy={accuracy} level={level} streak={streak} skills={SKILLS} />}
           {page === 'coursebook' && <Suspense fallback={<div className="course-loading">Opening the coursebook…</div>}><LazyCoursebookPage onPractice={startPractice} onApplied={openAppliedField} onAgent={() => navigate('agent')} onAskTutor={openTutor} onOpenScratch={openScratchModal} /></Suspense>}
-          {page === 'vocabulary' && <Suspense fallback={<div className="course-loading">Opening the vocabulary guide…</div>}><LazyVocabularyPage onPractice={startPractice} onApplied={openAppliedField} onAgent={() => navigate('agent')} onAskTutor={openTutor} onOpenScratch={openScratchModal} onInference={recordInference} /></Suspense>}
-          {page === 'solver' && <ProblemSolverPage mode={solverMode} setMode={(mode) => { setSolverMode(mode); setSolverResult(null); setSolverError('') }} result={solverResult} error={solverError} onSolve={solveProblem} onAskTutor={openTutor} skills={SKILLS} />}
+          {page === 'vocabulary' && <Suspense fallback={<div className="course-loading">Opening the vocabulary guide…</div>}><LazyVocabularyPage onPractice={startPractice} onApplied={openAppliedField} onAgent={() => navigate('agent')} onAskTutor={openTutor} onOpenScratch={openScratchModal} onInference={recordInference} speechRate={settings.speechRate} /></Suspense>}
+          {page === 'solver' && <ProblemSolverPage mode={solverMode} setMode={(mode) => { setSolverMode(mode); setSolverResult(null); setSolverError('') }} result={solverResult} error={solverError} onSolve={solveProblem} onAskTutor={openTutor} skills={SKILLS} speechRate={settings.speechRate} />}
           {page === 'calculator' && <CalculatorPage onAskTutor={openTutor} />}
           {page === 'tutor' && <OllamaTutorPage initialContext={tutorContext} returnPage={tutorReturnPage} onBack={() => setPage(tutorReturnPage)} onOpenScratch={openScratchModal} onInference={recordInference} copiedMessage={copiedMessage} copyError={copyError} onCopy={copyTutorResponse} />}
           {page === 'agent' && <Suspense fallback={<div className="agent-loading">Loading local agent tools…</div>}><LazyAgentPage inferenceHistory={inferenceHistory} onInference={recordInference} onOpenScratch={openScratchModal} /></Suspense>}
@@ -538,6 +560,7 @@ function App() {
           {page === 'practice' && <PracticePage skill={skill} records={records} setSkill={(next) => { setSkill(next); setProblem(createProblem(next, level)); setFeedback(null); setSelected('') }} problem={problem} selected={selected} setSelected={setSelected} feedback={feedback} onSubmit={submitAnswer} onNext={nextProblem} onVoice={startListening} voiceMessage={voiceMessage} level={level} onAskTutor={openTutor} skills={SKILLS} />}
           {page === 'quizzes' && <QuizPage quiz={quiz} quizIndex={quizIndex} quizAnswers={quizAnswers} skill={skill} problem={problem} selected={selected} setSelected={setSelected} onStart={startPractice} onNext={handleQuizAnswer} onAskTutor={openTutor} onOpenScratch={openScratchModal} quizTopics={QUIZ_TOPICS} />}
           {page === 'progress' && <ProgressPage progress={progress} accuracy={accuracy} level={level} onPractice={startPractice} onNavigate={navigate} skills={SKILLS} />}
+          {page === 'admin' && <Suspense fallback={<div className="course-loading">Opening admin…</div>}><LazyAdminPage records={records} inferenceHistory={inferenceHistory} settings={settings} onSettingsChange={setSettings} onResetProgress={() => setProgress({ records: [] })} onResetInference={() => setInferenceHistory([])} /></Suspense>}
         </div>
         <footer className="footer"><span>Physics learning, offline-first.</span><span><Icon name="lock" size={13} /> Your learning data stays yours</span></footer>
       </main>
@@ -903,13 +926,15 @@ function OllamaTutorPage({ initialContext, returnPage, onBack, onOpenScratch, on
   )
 }
 
-function ProblemSolverPage({ mode, setMode, result, error, onSolve, onAskTutor, skills }) {
+function ProblemSolverPage({ mode, setMode, result, error, onSolve, onAskTutor, skills, speechRate = 1 }) {
   const [input, setInput] = useState('')
   const example = SOLVER_EXAMPLES[mode] || 'V = 12, R = 6'
   function readSteps() {
     if (!result || !('speechSynthesis' in window)) return
     window.speechSynthesis.cancel()
-    window.speechSynthesis.speak(new SpeechSynthesisUtterance(`${result.answer}. ${result.steps.join(' ')}`))
+    const utterance = new SpeechSynthesisUtterance(`${result.answer}. ${result.steps.join(' ')}`)
+    utterance.rate = speechRate
+    window.speechSynthesis.speak(utterance)
   }
   return (
     <div className="solver-page">

@@ -53,7 +53,7 @@ function buildVocabularyLookupPrompt(searchTerm) {
   ].join('\n\n')
 }
 
-export default function VocabularyPage({ onPractice, onApplied, onAgent, onAskTutor, onOpenScratch, onInference }) {
+export default function VocabularyPage({ onPractice, onApplied, onAgent, onAskTutor, onOpenScratch, onInference, speechRate = 1 }) {
   const [vocabulary, setVocabulary] = useState([])
   const [mastered, setMastered] = useState(loadMastered)
   const [search, setSearch] = useState('')
@@ -153,7 +153,7 @@ export default function VocabularyPage({ onPractice, onApplied, onAgent, onAskTu
     window.speechSynthesis.cancel()
     const utterance = new SpeechSynthesisUtterance(`${item.title}. Pronounced ${item.say}. ${item.meaning}`)
     utterance.lang = 'en-US'
-    utterance.rate = 0.88
+    utterance.rate = 0.88 * speechRate
     utterance.onstart = () => setSpeechStatus(`Speaking: ${item.say}`)
     utterance.onend = () => setSpeechStatus('')
     utterance.onerror = () => setSpeechStatus('Speech playback stopped. Use the written pronunciation guide.')
